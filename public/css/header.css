@@ -1,0 +1,189 @@
+@import 'color.css';
+
+
+.header {
+    height: 100%;
+    padding: 0 20px 0 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    border-bottom: 3px solid var(--secondary-color);
+
+}
+
+.header .logo {
+    width: initial;
+    height: 50px;
+    margin-right: 15px;
+    position: relative;
+}
+
+.header .logo>.logo-img {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.header .logo>.logo-img>:last-child {
+    margin-left: 10px;
+}
+
+.header .logo-list {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 51px;
+    display: none;
+}
+
+.header .logo-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 0 0 10px 0;
+    background-color: #fff;
+}
+
+.header .logo-list ul li a {
+    color: var(--primary-color);
+    display: block;
+    padding: 8px 0;
+    text-align: center;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.header .logo-list ul li:last-child a {
+    border-bottom: 0px;
+}
+
+.header .nav-md {
+    display: flex;
+    align-items: center;
+}
+
+.header .nav-md .nav-link-md {
+    display: none;
+    padding: 10px 20px 10px 0;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.header .nav-md .nav-link-md:last-child {
+    margin-right: 0px;
+}
+
+.header .nav-md .nav-link-md:hover {
+    color: var(--secondary-color);
+}
+
+.serch-bar {
+    width: 160px;
+    height: 30px;
+    padding: 0px 10px;
+    background-color: #fff;
+    border-radius: 25px;
+    border-color: #979797;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.serch-bar input {
+    width: 80%;
+}
+
+.notify-List {
+    display: flex;
+    align-items: center;
+}
+
+.notify-List>div,
+.notify-List>span {
+    margin-right: 15px;
+}
+
+.notify-List>:last-child {
+    margin-right: 0;
+}
+
+.icon-container {
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.icon-container>img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .3s;
+}
+
+.icon-container:hover>img:last-child {
+    opacity: 0;
+}
+
+
+/* 電腦版 RWD start*/
+@media (min-width: 768px) {
+    .header {
+        height: 50px;
+    }
+
+    .header .logo {
+        width: 150px;
+    }
+
+    .header .logo-list {
+        display: block;
+    }
+
+    .header .nav-md .nav-link-md {
+        display: block;
+    }
+
+    .header .nav {
+        display: none;
+    }
+}
+
+/* 電腦版 RWD end*/
+
+/* 手機選單 start*/
+.header .nav {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 51px;
+    background-color: #eee;
+}
+
+.header .nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header .nav ul li a {
+    width: 100%;
+    padding: 10px 0;
+    letter-spacing: 5px;
+    display: block;
+    text-align: center;
+}
+
+/* 手機選單 end*/
+
+
+/* Todo 選單出現互動待處理 */
+.header .logo-list {
+    display: none;
+}
+
+.header .nav {
+    display: none;
+}

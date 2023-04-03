@@ -1,0 +1,314 @@
+@font-face {
+    font-family: 'PingFang-TC';
+    src: url('../font/PingFang-TC.otf') format("truetype"),
+}
+
+body {
+    font-family: 'Montserrat', sans-serif, 'PingFang-TC';
+}
+
+/* 背景顏色 */
+.bg-primary {
+    background-color: var(--primary-color);
+}
+
+.bg-secondary {
+    background-color: var(--secondary-color);
+}
+
+.bg-gray {
+    background-color: var(--bg-gray);
+}
+
+/* 文字顏色 */
+.color-primary {
+    color: var(--primary-color);
+}
+
+.color-secondary {
+    color: var(--secondary-color);
+}
+
+.color-gray {
+    color: var(--bg-gray);
+}
+
+/* 邊框顏色 */
+.brd-color-primary {
+    border-color: var(--primary-color) !important;
+}
+
+.brd-colo-secondary {
+    border-color: var(--secondary-color) !important;
+}
+
+.brd-color-gray {
+    border-color: var(--bg-gray) !important;
+}
+
+.main-banner {
+    width: 100%;
+}
+
+.main-banner>img {
+    display: block;
+}
+
+.section {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.section-top-tab {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    transform: translate(0%, -100%);
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.section-top-tab-item {
+    padding: 10px 20px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.section-top-tab-item.active {
+    color: #fff;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+}
+
+.section-top-tab-item:hover {
+    border: 1px solid #fff;
+    color: var(--primary-color);
+    background-color: #fff;
+}
+
+
+.section .section-title {
+    width: 100%;
+    margin-bottom: 80px;
+    display: flex;
+    position: relative;
+}
+
+.section .section-title::before {
+    content: "";
+    width: 10%;
+    height: 3px;
+    position: relative;
+    bottom: -3px;
+    background-color: var(--secondary-color);
+    align-self: flex-end;
+}
+
+.section .section-title h2 {
+    margin: 0;
+    padding: 0 10px;
+    font-weight: normal;
+    position: relative;
+    bottom: -13px;
+}
+
+
+.section .card {
+    margin-bottom: 40px;
+}
+
+/*  卡片有圖片的樣式 start 
+    目前只有 lawyer-area 未來可能有共同區塊使用
+*/
+.lawyer-area .card .card-img {
+    position: relative;
+}
+
+.lawyer-area .card .card-img img {
+    width: 100%;
+    display: block;
+}
+
+.lawyer-area .card .card-title {
+    width: 46%;
+    height: 50px;
+    background: #fff;
+    color: var(--primary-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top-right-radius: 14px 45px;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 97%, 97% 91%, 97% 90%, 96% 83%, 96% 0);
+}
+
+.lawyer-area .card .card-title h3 {
+    width: calc(100% - 8px);
+    margin: 0;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 54px;
+}
+
+/* 卡片有圖片的樣式 end*/
+
+
+.section .card .card-paragraph {
+    padding: 40px 0;
+    margin: 0 10px;
+    border-bottom: 2px solid;
+    position: relative;
+}
+
+.section .card .card-date {
+    padding-left: 25px;
+    font-size: 18px;
+    position: absolute;
+    right: 0;
+    bottom: -6px;
+}
+
+.section .card .card-paragraph p {
+    margin: 0;
+    font-size: 20px;
+}
+
+
+/*  卡片無圖片的樣式 start 
+    目前只有 lawyer-area 未來可能有共同區塊使用
+*/
+.law-new-area .card .card-title h3 {
+    margin: 0 10px 0;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.law-new-area .card .card-paragraph {
+    padding: 20px 0 40px;
+}
+
+/* 卡片無圖片的樣式 start */
+
+/* 標題有 Tab 樣式 start */
+.section-title.title-tab {
+    flex-wrap: wrap;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.section-title.title-tab h2 {
+    margin-top: auto;
+    padding-right: 20px !important;
+}
+
+.section-title.title-tab .law-new-tab {
+    margin-top: 40px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.section-title.title-tab .law-new-tab-item {
+    padding: 10px 20px;
+    color: #fff;
+    border: 1px solid var(--secondary-color);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.section-title.title-tab .law-new-tab-item.active,
+.section-title.title-tab .law-new-tab-item:hover {
+    background-color: var(--secondary-color);
+}
+
+/* 標題有 Tab 樣式 end */
+@media (min-width: 576px) {
+    .container {
+        width: 540px;
+        margin: 0 auto;
+    }
+
+    .section .section-title h2 {
+        padding: 0;
+    }
+
+    .section .section-title::before {
+        width: 20%;
+        position: absolute;
+        left: -22%;
+    }
+
+    .card-area {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .section .card {
+        width: calc(50% - 10px);
+    }
+
+    .section-title.title-tab .law-new-tab {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 720px;
+    }
+
+    .section {
+        padding-top: 175px;
+        padding-bottom: 130px;
+    }
+
+    .section .card {
+        width: calc(33.333% - 26.666px);
+    }
+
+    .card-area {
+        gap: 40px;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 960px;
+    }
+
+    .section .card {
+        width: calc(33.333% - 40px);
+    }
+
+    .card-area {
+        gap: 60px;
+    }
+
+    .lawyer-area .card .card-title h3 {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1140px
+    }
+
+    .section .card {
+        width: calc(33.333% - 40px);
+    }
+
+    .card-area {
+        gap: 60px;
+    }
+}
