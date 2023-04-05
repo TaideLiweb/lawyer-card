@@ -17,6 +17,7 @@
     position: relative;
     width: 50px;
     height: 50px;
+    transition: all 0.3s;
 }
 
 .fix-tool ul li img {
@@ -24,9 +25,21 @@
     position: absolute;
     top: 0;
     left: 0;
-    transition: all .3s;
+    transition: all 0.3s;
 }
 
-.fix-tool ul li:hover img:last-child {
+.fix-tool ul li:hover > img:last-child {
     opacity: 0;
+}
+.fix-tool .mic-group {
+    gap: 8px;
+    overflow: hidden;
+}
+#mic-group-switch {
+    display: none;
+}
+#mic-group-switch:checked + .mic-group {
+    background-color: var(--secondary-color);
+    height: 174px;
+    border-radius: 22px;
 }
