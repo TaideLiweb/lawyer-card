@@ -136,24 +136,25 @@ body {
 }
 
 .lawyer-area .card .card-title {
-    width: 46%;
-    height: 50px;
-    background: #fff;
+    width: 37%;
+    height: 54px;
     color: var(--primary-color);
     position: absolute;
     bottom: 0;
     left: 0;
-    border-top-right-radius: 14px 45px;
-    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 97%, 97% 91%, 97% 90%, 96% 83%, 96% 0);
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22%23fff%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%20%20viewBox%3D%220%200%20330.92%20186.69%22%20%20style%3D%22enable-background%3Anew%200%200%20330.92%20186.69%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M244.59%2C106.4V67.56c0-4.42-3.58-8-8-8H63.1c0%2C40%2C0%2C60%2C0%2C60h193.8C248.7%2C119.56%2C244.59%2C115.17%2C244.59%2C106.4z%22%2F%3E%0A%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position: center 46%;
 }
 
 .lawyer-area .card .card-title h3 {
     width: calc(100% - 8px);
     margin: 0;
     font-size: 20px;
+    line-height: 54px;
     font-weight: normal;
     text-align: center;
-    line-height: 54px;
 }
 
 /* 卡片有圖片的樣式 end*/
@@ -259,6 +260,15 @@ body {
     .section-title.title-tab .law-new-tab {
         margin-top: 0;
     }
+
+    .lawyer-area .card .card-title {
+        width: 51%;
+        height: 42px;
+    }
+
+    .lawyer-area .card .card-title h3 {
+        line-height: 42px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -294,8 +304,14 @@ body {
         gap: 60px;
     }
 
+    .lawyer-area .card .card-title {
+        width: 41%;
+        height: 44px;
+    }
+
     .lawyer-area .card .card-title h3 {
         font-size: 24px;
+        line-height: 44px;
     }
 }
 
@@ -310,5 +326,14 @@ body {
 
     .card-area {
         gap: 60px;
+    }
+
+    .lawyer-area .card .card-title {
+        height: 53px;
+    }
+
+    .lawyer-area .card .card-title h3 {
+        font-size: 24px;
+        line-height: 53px;
     }
 }

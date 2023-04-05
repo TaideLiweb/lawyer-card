@@ -1,179 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>lawyer-card</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@500&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="/css/normalize.css" type="text/css" />
-        <link rel="stylesheet" href="/css/header.css" type="text/css" />
-        <link rel="stylesheet" href="/css/footer.css" type="text/css" />
-        <link rel="stylesheet" href="/css/fixTool.css" type="text/css" />
-        <link rel="stylesheet" href="/css/main.css" type="text/css" />
-    </head>
-    <body>
-        <header class="header">
-            <nav class="nav-md">
-                <div class="nav-link logo">
-                    <div class="logo-img">
-                        <img src="/images/logo/white.png" width="75px" alt="" />
-                        <img src="/images/icon/logo-arrow.png" width="17px" alt="" />
-                    </div>
-                    <div class="logo-list">
-                        <ul>
-                            <li>
-                                <a href="#">關於律卡</a>
-                            </li>
-                            <li>
-                                <a href="#">服務流程</a>
-                            </li>
-                            <li>
-                                <a href="#">常見問題</a>
-                            </li>
-                            <li>
-                                <a href="#">隱私政策</a>
-                            </li>
-                            <li>
-                                <a href="#">使用條款</a>
-                            </li>
-                            <li>
-                                <a href="#">聯絡我們</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <a class="nav-link-md active" aria-current="page" href="#">律卡部落</a>
-                <a class="nav-link-md" href="#">律師卡片</a>
-                <a class="nav-link-md" href="#">書狀服務</a>
-            </nav>
-
-            <div class="notify-List">
-                <div class="serch-bar">
-                    <input type="text" placeholder="..." />
-                    <span><img src="/images/icon/search-icon.png" alt="" width="16px" height="16px" /></span>
-                </div>
-                <span class="icon-container icon-notify">
-                    <img src="/images/icon/notify-ball-hover.png" alt="" />
-                    <img src="/images/icon/notify-ball.png" alt="" />
-                </span>
-                <span class="icon-container icon-personal">
-                    <img src="/images/icon/personal-hover.png" alt="" />
-                    <img src="/images/icon/personal.png" alt="" />
-                </span>
-            </div>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#">律卡部落</a></li>
-                    <li><a href="#">服務流程</a></li>
-                    <li><a href="#">常見問題</a></li>
-                    <li><a href="#">隱私政策</a></li>
-                    <li><a href="#">使用條款</a></li>
-                    <li><a href="#">聯絡我們</a></li>
-                </ul>
-            </nav>
-        </header>
-        <%- body %>
-        <footer>
-            <div class="container">
-                <div class="footer-nav">
-                    <ul class="footer-nav-child-1">
-                        <li>
-                            <a href="">關於律卡</a>
-                        </li>
-                        <li>
-                            <a href="">隱私政策</a>
-                        </li>
-                        <li>
-                            <a href="">使用條款</a>
-                        </li>
-                    </ul>
-                    <div class="footer-nav-child-2">
-                        <ul>
-                            <li>
-                                <a href="">品牌專櫃</a>
-                            </li>
-                            <li>
-                                <a href="">最新文章</a>
-                            </li>
-                            <li>
-                                <a href="">律師專欄</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="">法律常識</a>
-                            </li>
-                            <li>
-                                <a href="">熱門話題</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="">即時諮詢</a>
-                            </li>
-                            <li>
-                                <a href="">預約諮詢</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="footer-icon">
-                    <ul>
-                        <li>
-                            <a href="">推特</a>
-                        </li>
-                        <li>
-                            <a href="">臉書</a>
-                        </li>
-                        <li>
-                            <a href="">哀居</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-        <div class="fix-tool">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lawyer-card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="/css/header.css" type="text/css" />
+    <link rel="stylesheet" href="/css/footer.css" type="text/css" />
+    <link rel="stylesheet" href="/css/fixTool.css" type="text/css" />
+    <link rel="stylesheet" href="/css/main.css" type="text/css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav-md">
+        <div class="nav-link logo">
+          <div class="logo-img">
+            <img src="/images/logo/white.png" width="70px" alt="" />
+            <img src="/images/icon/logo-arrow.png" width="17px" alt="" />
+          </div>
+          <div class="logo-list">
             <ul>
-                <!-- 如果是律師端在打開 -->
-                <!-- <li>
+              <li>
+                <a href="#">關於律卡</a>
+              </li>
+              <li>
+                <a href="#">服務流程</a>
+              </li>
+              <li>
+                <a href="#">常見問題</a>
+              </li>
+              <li>
+                <a href="#">隱私政策</a>
+              </li>
+              <li>
+                <a href="#">使用條款</a>
+              </li>
+              <li>
+                <a href="#">聯絡我們</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a class="nav-link-md active" aria-current="page" href="#">律卡部落</a>
+        <a class="nav-link-md" href="#">律師卡片</a>
+        <a class="nav-link-md" href="#">書狀服務</a>
+      </nav>
+
+      <div class="notify-List">
+        <div class="serch-bar">
+          <input type="text" placeholder="..." />
+          <span
+            ><img
+              src="/images/icon/search-icon.png"
+              alt=""
+              width="16px"
+              height="16px"
+          /></span>
+        </div>
+        <span class="icon-container icon-notify">
+          <img src="/images/icon/notify-ball-hover.png" alt="" />
+          <img src="/images/icon/notify-ball.png" alt="" />
+        </span>
+        <span class="icon-container icon-personal">
+          <img src="/images/icon/personal-hover.png" alt="" />
+          <img src="/images/icon/personal.png" alt="" />
+        </span>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#">律卡部落</a></li>
+          <li><a href="#">服務流程</a></li>
+          <li><a href="#">常見問題</a></li>
+          <li><a href="#">隱私政策</a></li>
+          <li><a href="#">使用條款</a></li>
+          <li><a href="#">聯絡我們</a></li>
+        </ul>
+      </nav>
+    </header>
+    <%- body %>
+    <footer>
+      <div class="container">
+        <div class="footer-nav">
+          <ul class="footer-nav-child-1">
+            <li>
+              <a href="">關於律卡</a>
+            </li>
+            <li>
+              <a href="">隱私政策</a>
+            </li>
+            <li>
+              <a href="">使用條款</a>
+            </li>
+          </ul>
+          <div class="footer-nav-child-2">
+            <ul>
+              <li>
+                <a href="">品牌專櫃</a>
+              </li>
+              <li>
+                <a href="">最新文章</a>
+              </li>
+              <li>
+                <a href="">律師專欄</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="">法律常識</a>
+              </li>
+              <li>
+                <a href="">熱門話題</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="">即時諮詢</a>
+              </li>
+              <li>
+                <a href="">預約諮詢</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-icon">
+          <ul>
+            <li>
+              <a href=""
+                ><img
+                  src="/images/footer/footer_Twitter.png"
+                  alt=""
+                  width="100%"
+              /></a>
+            </li>
+            <li>
+              <a href=""
+                ><img src="/images/footer/footer_FB.png" alt="" width="100%"
+              /></a>
+            </li>
+            <li>
+              <a href=""
+                ><img src="/images/footer/footer_IG.png" alt="" width="100%"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div class="fix-tool">
+      <ul>
+        <!-- 如果是律師端在打開 -->
+        <!-- <li>
           <img src="/images/fix-tool/calender-hover.png" alt="" />
           <img src="/images/fix-tool/calender.png" alt="" />
         </li> -->
-                <input id="mic-group-switch" type="checkbox" name="" id="" />
-                <li class="mic-group">
-                    <ul>
-                        <label for="mic-group-switch">
-                            <li>
-                                <img src="/images/fix-tool/mic-hover.png" alt="" />
-                                <img src="/images/fix-tool/mic.png" alt="" />
-                            </li>
-                        </label>
-                        <li>
-                            <img src="/images/fix-tool/service-hover.png" alt="" />
-                            <img src="/images/fix-tool/service.png" alt="" />
-                        </li>
-                        <li>
-                            <img src="/images/fix-tool/top-hover.png" alt="" />
-                            <img src="/images/fix-tool/top.png" alt="" />
-                        </li>
-                    </ul>
-                </li>
+        <input id="mic-group-switch" type="checkbox" name="" id="" />
+        <li class="mic-group">
+          <ul>
+            <label for="mic-group-switch">
+              <li>
+                <img src="/images/fix-tool/mic-hover.png" alt="" />
+                <img src="/images/fix-tool/mic.png" alt="" />
+              </li>
+            </label>
+            <li>
+              <img src="/images/fix-tool/play.png" alt="" />
+              <img src="/images/fix-tool/play.png" alt="" />
+            </li>
+            <li>
+              <img src="/images/fix-tool/next.png" alt="" />
+              <img src="/images/fix-tool/next.png" alt="" />
+            </li>
+            <li>
+              <img src="/images/fix-tool/previous.png" alt="" />
+              <img src="/images/fix-tool/previous.png" alt="" />
+            </li>
+          </ul>
+        </li>
 
-                <li>
-                    <img src="/images/fix-tool/service-hover.png" alt="" />
-                    <img src="/images/fix-tool/service.png" alt="" />
-                </li>
-                <li>
-                    <img src="/images/fix-tool/top-hover.png" alt="" />
-                    <img src="/images/fix-tool/top.png" alt="" />
-                </li>
-            </ul>
-        </div>
-    </body>
+        <li>
+          <img src="/images/fix-tool/service-hover.png" alt="" />
+          <img src="/images/fix-tool/service.png" alt="" />
+        </li>
+        <li>
+          <img src="/images/fix-tool/top-hover.png" alt="" />
+          <img src="/images/fix-tool/top.png" alt="" />
+        </li>
+      </ul>
+    </div>
+  </body>
 </html>

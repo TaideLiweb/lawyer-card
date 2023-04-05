@@ -160,6 +160,7 @@
     left: 0;
     top: 51px;
     background-color: #eee;
+    z-index: 5;
 }
 
 .header .nav ul {

@@ -54,7 +54,7 @@ footer .footer-icon {
 }
 
 footer .footer-icon ul {
-    justify-content: flex-end;
+    justify-content: start;
     gap: 20px;
 }
 
@@ -77,6 +77,11 @@ footer .footer-icon li {
 @media (min-width: 768px) {
     footer .footer-nav {
         width: 60%;
+    }
+
+    footer .footer-icon ul {
+        justify-content: end;
+        gap: 20px;
     }
 
     footer .footer-icon li {
