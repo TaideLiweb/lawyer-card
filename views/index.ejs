@@ -1,18 +1,66 @@
-<% layout('layout') %>
+<% layout('layout') %> <% if(!lawyerSide) { %>
 <div class="main-banner">
-  <img
-    src="/images/image-from-rawpixel-id-2627328-.jpg"
-    width="100%"
-    alt=""
-    srcset=""
-  />
+  <img src="/images/image-from-rawpixel-id-2627328-.jpg" width="100%" />
 </div>
+<% } %> <% if(lawyerSide) { %>
+<div class="main-banner lawyer-main-banner">
+  <div class="main-banner-left">
+    <div class="main-banner-left-area">
+      <p>
+        開啟上線服務後，民眾端用戶即可搜尋到個人律師卡片，便可即時視訊/語音/文字諮詢法律服務業務。<br /><br />
+        連線開啟將立即倒數服務時數，如各一方用戶斷線將停止計時，重新連線後再起計時。
+      </p>
+      <div class="online-switch bg-gray">
+        <span class="offline">線下休息</span>
+        <span class="online">上線服務</span>
+        <div class="online-switch-active"></div>
+      </div>
+    </div>
+  </div>
+  <div class="main-banner-right">
+    <div class="current-info-area">
+      <div class="current-info-item">
+        <span class="current-info-item-subtitle">預約諮詢</span>
+        <div class="current-info-item-descript">
+          <span class="number">2</span>
+          <span>件</span>
+        </div>
+      </div>
+      <div class="current-info-item">
+        <span class="current-info-item-subtitle">諮詢件數</span>
+        <div class="current-info-item-descript">
+          <span class="number">5</span>
+          <span>件</span>
+        </div>
+      </div>
+      <div class="current-info-item">
+        <span class="current-info-item-subtitle">諮詢金額</span>
+        <div class="current-info-item-descript">
+          <span>$</span>
+          <span class="number">120,000</span>
+          <span>元</span>
+        </div>
+      </div>
+      <div class="current-info-item">
+        <span class="current-info-item-subtitle">送出律卡</span>
+        <div class="current-info-item-descript">
+          <span class="number">5</span>
+          <span>張</span>
+        </div>
+      </div>
+    </div>
+    <img src="/images/images-lawyer.png" width="100%" />
+  </div>
+</div>
+<% } %>
 <section class="section bg-gray">
+  <% if(!lawyerSide) { %>
   <div class="section-top-tab">
     <div class="section-top-tab-item active">律卡部落</div>
     <div class="section-top-tab-item">律師卡片</div>
     <div class="section-top-tab-item">書狀服務</div>
   </div>
+  <% } %>
   <div class="container">
     <div class="section-title">
       <h2 class="bg-gray color-primary">律師專欄</h2>

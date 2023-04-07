@@ -79,7 +79,7 @@
 }
 
 .serch-bar {
-    width: 160px;
+    width: 150px;
     height: 30px;
     padding: 0px 10px;
     background-color: #fff;
@@ -96,13 +96,14 @@
 
 .notify-List {
     display: flex;
+    gap: 10px;
     align-items: center;
 }
 
-.notify-List>div,
+/* .notify-List>div,
 .notify-List>span {
     margin-right: 15px;
-}
+} */
 
 .notify-List>:last-child {
     margin-right: 0;
@@ -148,6 +149,14 @@
 
     .header .nav {
         display: none;
+    }
+
+    .header .serch-bar {
+        width: 160px;
+    }
+
+    .header .notify-List {
+        gap: 15px;
     }
 }
 

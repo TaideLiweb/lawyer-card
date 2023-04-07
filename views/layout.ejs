@@ -47,9 +47,11 @@
             </ul>
           </div>
         </div>
-        <a class="nav-link-md active" aria-current="page" href="#">律卡部落</a>
+        <a class="nav-link-md active" href="#">律卡部落</a>
+        <% if(!lawyerSide) { %>
         <a class="nav-link-md" href="#">律師卡片</a>
         <a class="nav-link-md" href="#">書狀服務</a>
+        <% } %>
       </nav>
 
       <div class="notify-List">
@@ -63,6 +65,12 @@
               height="16px"
           /></span>
         </div>
+        <% if(lawyerSide) { %>
+        <span class="icon-container icon-filter">
+          <img src="/images/icon/notify-ball-hover.png" alt="" />
+          <img src="/images/icon/filter.png" alt="" />
+        </span>
+        <% } %>
         <span class="icon-container icon-notify">
           <img src="/images/icon/notify-ball-hover.png" alt="" />
           <img src="/images/icon/notify-ball.png" alt="" />
@@ -156,10 +164,12 @@
     <div class="fix-tool">
       <ul>
         <!-- 如果是律師端在打開 -->
-        <!-- <li>
+        <% if(lawyerSide) { %>
+        <li>
           <img src="/images/fix-tool/calender-hover.png" alt="" />
           <img src="/images/fix-tool/calender.png" alt="" />
-        </li> -->
+        </li>
+        <% } %>
         <input id="mic-group-switch" type="checkbox" name="" id="" />
         <li class="mic-group">
           <ul>

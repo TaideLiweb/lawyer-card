@@ -1,6 +1,15 @@
 const express = require('express');
 let engine = require('ejs-locals');
 
+// 先在這定義 router 之後搬移出去
+const router = express.Router();
+
+router.get('/', (req, res) => {
+  res.render('index', {
+    lawyerSide: true,
+  });
+});
+
 const app = express();
 
 app.engine('ejs', engine); // 設定ejs為樣版引擎
@@ -15,12 +24,12 @@ app.use(express.static('public'));
 
 // 首頁
 app.get('/', function (req, res) {
-  res.render('index');
+  res.render('index', {
+    lawyerSide: false,
+  });
 });
-// 首頁
-app.get('/user', function (req, res) {
-  res.render('user');
-});
+// 律師端首頁
+app.use('/lawyer', router);
 
 // 測試頁
 app.get('/test', (req, res) => {
