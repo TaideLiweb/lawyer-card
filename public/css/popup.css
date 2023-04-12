@@ -1,0 +1,670 @@
+.popup input[type="text"],
+.popup select,
+.popup textarea {
+    width: 100%;
+    padding: 10px;
+    color: var(--popup-font-color);
+    background: #EBEBEB;
+    border: 0.5px solid #DBDBDB;
+    border-radius: 10px;
+    outline: none;
+}
+
+.popup input[type="text"],
+.popup select {
+    height: 37px;
+}
+
+.popup select {
+    padding-right: 35px;
+    /*移除箭頭樣式*/
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    /*改變右邊箭頭樣式*/
+    background: url("../images/popup/select-arrow.png") no-repeat right center #EBEBEB;
+    background-size: 15px;
+    background-position-x: 94%;
+}
+
+/*IE隱藏箭頭樣式*/
+.pretty-select::-ms-expand {
+    display: none;
+}
+
+.popup input[type="text"]:focus,
+.popup textarea:focus {
+    background: #fff;
+}
+
+.popup-bg {
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup .popup-container {
+    position: relative;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex; */
+}
+
+.popup .popup-previous {
+    width: 42px;
+    height: 30px;
+    position: absolute;
+    top: -29px;
+    left: 0%;
+    display: none;
+    cursor: pointer;
+}
+
+.popup .popup-tab {
+    height: 30px;
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: -30px;
+    right: 0%;
+}
+
+.popup .popup-tab .popup-tab-item {
+    width: 100px;
+    letter-spacing: 2px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: var(--primary-color);
+    border-radius: 10px 10px 0px 0px;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.popup .popup-tab .popup-tab-item:hover,
+.popup .popup-tab .popup-tab-item.active {
+    color: var(--primary-color);
+    background-color: #fff;
+}
+
+
+
+
+.popup .popup-content {
+    width: 370px;
+    padding: 50px 25px 50px;
+    background-color: #fff;
+    border-radius: 0px 0px 10px 10px;
+    display: none;
+}
+
+.pre-consult.timely-consult {
+    display: block;
+}
+
+
+.popup-content .select-type {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+
+}
+
+.popup-content.reserve-consult .select-type {
+    display: block;
+}
+
+.popup-content.reserve-consult .select-type div {
+    display: flex;
+    gap: 15px;
+}
+
+.popup-content .select-type p {
+    text-align: center;
+    color: var(--popup-font-color);
+    letter-spacing: 3px;
+}
+
+.popup-content .select-type select {
+    flex-grow: 1;
+}
+
+.popup-content .radio-type {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.popup-content .radio-type label {
+    color: var(--popup-font-color);
+    letter-spacing: 2px;
+    display: flex;
+    font-size: 16px;
+}
+
+.popup-content .radio-type input[type="radio"] {
+    display: none;
+    /* 把原本的input藏起來 */
+}
+
+.popup-content .radio-type span {
+    /* 自定義樣式的 radio 邊框 */
+    height: 16px;
+    width: 16px;
+    margin-right: 5px;
+    border: 1px solid #A9A59F;
+    border-radius: 50%;
+    display: inline-block;
+
+}
+
+.popup-content .radio-type span::after {
+    /* 中間點點 */
+    content: "";
+    display: block;
+    margin: 3px;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.radio-type input[type="radio"]:checked+span::after {
+    /* 選中radio時 才顯示中間點點 */
+    opacity: 1;
+}
+
+.popup-content .consult-time {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--popup-font-color);
+    margin-bottom: 30px;
+}
+
+.popup-content .consult-time input[type="text"] {
+    width: 36px;
+    height: 36px;
+}
+
+.popup-content .consult-tip {
+    color: var(--popup-font-color);
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.consult-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.consult-btn button {
+    height: 30px;
+    padding: 5px 30px;
+    border-radius: 25px;
+    background: #4ABBE7;
+    color: #fff;
+    letter-spacing: 5px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border: 0;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.consult-btn button:hover {
+    background: #33a2cd;
+}
+
+.popup-content .form-group span {
+    display: block;
+    color: var(--popup-font-color);
+    margin-bottom: 8px;
+}
+
+.popup-content .popup-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.popup-content .popup-form .popup-form-half {
+    width: calc(50% - 10px);
+}
+
+.popup-content .popup-form .popup-form-fill {
+    width: 100%;
+}
+
+.popup-content .popup-form .detail-list {
+    color: var(--popup-font-color);
+}
+
+.popup-content .popup-form .detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.popup-content .popup-form .detail-item span {
+    letter-spacing: 2px;
+}
+
+.popup-content .popup-form .detail-item:last-child {
+    margin-bottom: 0;
+}
+
+.popup-content .popup-form .detail-item:last-child span {
+    flex-shrink: 0;
+}
+
+.popup-content .popup-form .detail-item:last-child input {
+    height: 20px;
+    margin-left: 10px;
+}
+
+.popup-content .popup-form .total {
+    position: relative;
+    text-align: right;
+    letter-spacing: 2px;
+    color: var(--popup-font-color);
+}
+
+.popup-content .popup-form .total>div {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.popup-content .popup-form .popup-form-tip {
+    color: var(--popup-font-color);
+    font-size: 12px;
+}
+
+.popup-content .popup-form .popup-form-tip p {
+    margin: 5px 0 0px 0;
+}
+
+.popup-content .popup-time {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: var(--popup-font-color);
+    text-align: center;
+    font-size: 12px;
+}
+
+.popup-content .popup-time>div {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    background: #DBDBDB;
+}
+
+.popup-content .popup-time .add-time {
+    position: relative;
+    cursor: pointer;
+}
+
+.popup-content .popup-time .popup-time-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.popup-content .popup-time .add-time::before,
+.popup-content .popup-time .add-time::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: var(--popup-font-color);
+}
+
+.popup-content .popup-time .add-time::before {
+    width: 60%;
+    height: 1px;
+    transform: translate(-50%, 0);
+}
+
+.popup-content .popup-time .add-time::after {
+    width: 1px;
+    height: 60%;
+    transform: translate(0, -50%);
+}
+
+.popup-form .radio-type {
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 0px
+}
+
+.popup-form .consult-btn {
+    justify-content: end;
+    align-self: flex-end;
+}
+
+.popup-form .consult-btn button {
+    padding: 5px 20px;
+}
+
+.choice-lawyer {
+    flex-wrap: wrap
+}
+
+.lawyer-swiper {
+    color: var(--popup-font-color);
+    margin-bottom: 20px;
+}
+
+.lawyer-swiper .swiper-slide {
+    display: flex;
+    gap: 20px;
+    letter-spacing: 2px;
+
+}
+
+.lawyer-swiper .swiper-slide>div {
+    width: calc(50% - 10px);
+}
+
+.lawyer-swiper .lawyer-intro {
+    text-align: center;
+}
+
+.lawyer-swiper .lawyer-img {
+    position: relative;
+}
+
+.lawyer-swiper .lawyer-collect {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.lawyer-swiper .lawyer-name {
+    margin: 20px 0 30px;
+    font-size: 20px;
+}
+
+.lawyer-swiper .lawyer-descript {
+    text-align: left;
+}
+
+.lawyer-swiper .lawyer-evaluate span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.lawyer-swiper .lawyer-ability-item {
+    padding: 5px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    background: #EBEBEB;
+    border: 0.5px solid #DBDBDB;
+    border-radius: 10px;
+}
+
+.lawyer-swiper .lawyer-ability-item span:last-child {
+    margin: 0 auto;
+}
+
+
+.lawyer-swiper .badge-array {
+    display: flex;
+    align-items: center;
+    gap: 3px
+}
+
+.lawyer-swiper .consult-btn button {
+    padding: 5px 12px;
+}
+
+.lawyer-swiper .lawyer-ability img {
+
+    display: block;
+}
+
+.searching-lawyer,
+.pair-success,
+.payment-success {
+    text-align: center;
+}
+
+.searching-lawyer p,
+.pair-success p,
+.payment-success p {
+    margin-top: 0px;
+    line-height: 24px;
+    color: #fff;
+}
+
+.video-meeting {
+    width: 100%;
+    height: 100%;
+    padding: 0px 15px;
+
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.video-meeting .video-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.video-meeting .video-timer {
+    text-align: center;
+    font-size: 26px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.video-meeting .video-view {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+}
+
+.video-meeting .video-view>div {
+    flex-grow: 1;
+    border-radius: 10px;
+    border: 1px solid #DBDBDB;
+    overflow: hidden;
+}
+
+.video-meeting .video-view video {
+    width: 100%;
+    display: block;
+}
+
+.video-meeting .video-control {
+    position: relative;
+    margin-top: 40px;
+}
+
+.video-meeting .video-control .video-main-control {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.video-meeting .video-control .video-setting {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.message-board {
+    width: calc(100% - 30px);
+    height: 61%;
+    position: absolute;
+    top: 17%;
+    display: none;
+}
+
+.message-board .message-container {
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.message-board .message-content {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.message-board .message-content .client-message {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.message-board .message-content .client-message p {
+    height: fit-content;
+    margin: 0 0 0 10px;
+    padding: 10px;
+    color: #fff;
+    background: var(--secondary-color);
+    border-radius: 10px 10px 10px 0px;
+}
+
+.message-board .message-content .lawyer-message {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+}
+
+.message-board .message-content .lawyer-message p {
+    margin: 0;
+    padding: 10px;
+    display: inline-block;
+    color: #fff;
+    background: var(--primary-color);
+    border-radius: 10px 10px 0px 10px;
+}
+
+.message-board .message-content .message-time {
+    font-size: 12px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.message-board .message-enter {
+    padding: 0 5px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.message-board .message-enter textarea {
+    flex-grow: 1;
+    padding: 10px;
+    background-color: transparent;
+    border: 0;
+    resize: none;
+}
+
+.message-board .message-enter img {
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .popup .popup-content {
+        width: 530px;
+        padding: 50px 100px 50px;
+        background-color: #fff;
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    .popup .popup-content.choice-lawyer {
+        width: 720px;
+        padding: 50px 20px;
+        display: none;
+        gap: 20px;
+    }
+
+    .popup .popup-content.choice-lawyer>.popup-form {
+        width: calc(45% - 10px);
+    }
+
+    .popup .popup-content.choice-lawyer>.lawyer-swiper {
+        margin-bottom: 0;
+        width: calc(55% - 10px);
+    }
+
+    .lawyer-swiper .consult-btn button {
+        padding: 5px 20px;
+    }
+
+    .video-meeting .video-timer {
+        font-size: 34px;
+    }
+
+    .video-meeting {
+        padding: 0 40px;
+    }
+
+    .message-board {
+        width: calc(100% - 80px);
+        height: 81%;
+        top: 8%;
+    }
+}
+
+@media (min-width: 992px) {
+    .popup .popup-content {
+        padding: 50px 100px 50px;
+    }
+
+    .popup .popup-content.choice-lawyer {
+        width: 900px;
+        padding: 50px 30px;
+        gap: 40px;
+    }
+
+    .video-meeting .video-container {
+        height: 100%;
+        flex-wrap: nowrap;
+    }
+
+    .video-meeting .video-view {
+        flex-wrap: nowrap;
+    }
+
+    .message-board {
+        width: 30%;
+        height: initial;
+        top: unset;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .message-board .message-container {
+        height: 90%;
+    }
+}

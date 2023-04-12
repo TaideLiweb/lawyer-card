@@ -1,6 +1,28 @@
 <% layout('layout') %> <% if(!lawyerSide) { %>
 <div class="main-banner">
-  <img src="/images/image-from-rawpixel-id-2627328-.jpg" width="100%" />
+  <div class="popup">
+    <div class="popup-container">
+      <!-- 上一步按鈕 -->
+      <div class="popup-previous">
+        <img src="/images/popup/previous.png" alt="" width="100%" />
+      </div>
+      <!-- tab 按鈕 -->
+      <div class="popup-tab service-method">
+        <div class="popup-tab-item active" data-service-method="timely-consult">
+          即時諮詢
+        </div>
+        <div class="popup-tab-item" data-service-method="reserve-consult">
+          預約諮詢
+        </div>
+      </div>
+      <!-- <div class="popup-tab choice-lawye">
+        <div class="popup-tab-item">挑選律師</div>
+        <div class="popup-tab-item active">填選資料</div>
+      </div> -->
+      <%- include timely-consult.ejs %> <%- include reserve-consult.ejs %><%-
+      include lawyer-popup.ejs %>
+    </div>
+  </div>
 </div>
 <% } %> <% if(lawyerSide) { %>
 <div class="main-banner lawyer-main-banner">

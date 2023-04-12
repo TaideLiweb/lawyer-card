@@ -1,5 +1,5 @@
 const express = require('express');
-let engine = require('ejs-locals');
+const engine = require('ejs-locals');
 
 // 先在這定義 router 之後搬移出去
 const router = express.Router();
@@ -7,6 +7,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
   res.render('index', {
     lawyerSide: true,
+    conCall: false,
   });
 });
 
@@ -26,14 +27,18 @@ app.use(express.static('public'));
 app.get('/', function (req, res) {
   res.render('index', {
     lawyerSide: false,
+    conCall: false,
   });
 });
 // 律師端首頁
 app.use('/lawyer', router);
 
 // 測試頁
-app.get('/test', (req, res) => {
-  res.json({ ok: true });
+app.get('/con-call', (req, res) => {
+  res.render('con-call', {
+    lawyerSide: false,
+    conCall: true,
+  });
 });
 
 const PORT = 3000;

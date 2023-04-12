@@ -47,7 +47,22 @@ body {
 }
 
 .main-banner {
+    position: relative;
     width: 100%;
+    min-height: 600px;
+    padding: 55px 0;
+    background-image: url('../images/image-from-rawpixel-id-2627328-.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-banner-full {
+    padding: 0;
+    height: calc(100vh - 50px);
 }
 
 .main-banner>img {

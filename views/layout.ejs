@@ -6,14 +6,27 @@
     <title>lawyer-card</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- google font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@500&display=swap"
       rel="stylesheet"
     />
+    <!-- swiper 輪播 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <!-- 時間選擇器 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+
     <link rel="stylesheet" href="/css/normalize.css" type="text/css" />
     <link rel="stylesheet" href="/css/header.css" type="text/css" />
     <link rel="stylesheet" href="/css/footer.css" type="text/css" />
     <link rel="stylesheet" href="/css/fixTool.css" type="text/css" />
+    <link rel="stylesheet" href="/css/popup.css" type="text/css" />
     <link rel="stylesheet" href="/css/main.css" type="text/css" />
   </head>
   <body>
@@ -91,7 +104,7 @@
         </ul>
       </nav>
     </header>
-    <%- body %>
+    <%- body %> <% if(!conCall) { %>
     <footer>
       <div class="container">
         <div class="footer-nav">
@@ -161,6 +174,7 @@
         </div>
       </div>
     </footer>
+    <% } %>
     <div class="fix-tool">
       <ul>
         <!-- 如果是律師端在打開 -->
@@ -204,6 +218,19 @@
         </li>
       </ul>
     </div>
+    <!-- swiper 輪播 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- 時間選擇器 -->
+    <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
+    <!-- 時間選擇器 中文包 -->
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/zh.js"></script>
+    <script src="/js/header.js"></script>
+    <% if(!conCall) { %>
     <script src="/js/index.js"></script>
+    <% } %> <% if(lawyerSide) { %>
+    <script src="/js/index-lawyer.js"></script>
+    <% } %> <% if(conCall) { %>
+    <script src="/js/con-call.js"></script>
+    <% } %>
   </body>
 </html>
