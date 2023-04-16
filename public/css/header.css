@@ -23,21 +23,31 @@
     display: flex;
     align-items: center;
     justify-content: end;
+    cursor: pointer;
 }
 
 .header .logo>.logo-img>:last-child {
     margin-left: 10px;
 }
 
-.header .logo-list {
+.header .logo-list,
+.header .user-list {
     width: 100%;
     position: absolute;
     left: 0;
     top: 51px;
+    z-index: 2;
     display: none;
 }
 
-.header .logo-list ul {
+.header .user-list {
+    width: 130px;
+    left: unset;
+    right: 0;
+}
+
+.header .logo-list ul,
+.header .user-list ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -45,7 +55,13 @@
     background-color: #fff;
 }
 
-.header .logo-list ul li a {
+.header .user-list ul {
+    border-radius: 0 0 0 10px;
+
+}
+
+.header .logo-list ul li a,
+.header .user-list ul li a {
     color: var(--primary-color);
     display: block;
     padding: 8px 0;
@@ -54,9 +70,88 @@
     border-bottom: 1px solid #d8d8d8;
 }
 
-.header .logo-list ul li:last-child a {
+.header .logo-list ul li:last-child a,
+.header .user-list ul li:last-child a {
     border-bottom: 0px;
 }
+
+.header .case-filter {
+    width: 390px;
+    padding: 15px;
+    position: absolute;
+    left: unset;
+    right: 0px;
+    top: 51px;
+    z-index: 2;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    font-size: 12px;
+    display: none;
+}
+
+.case-filter .case-filter-row {
+    display: flex;
+    margin: 0 -15px;
+    padding: 10px 15px;
+    border-bottom: 1px solid #DBDBDB;
+
+}
+
+.case-filter .case-filter-row:last-child {
+    border-bottom: 0px;
+}
+
+.case-filter .case-filter-item {
+    width: 33.33%;
+    display: block;
+    text-align: center;
+
+}
+
+.case-filter-item img {
+    margin-bottom: 5px;
+}
+
+.checkbox {
+    color: var(--popup-font-color);
+    letter-spacing: 2px;
+    display: flex;
+}
+
+.checkbox input[type="checkbox"] {
+    display: none;
+    /* 把原本的input藏起來 */
+}
+
+.checkbox span {
+    /* 自定義樣式的 checkbox 邊框 */
+    height: 16px;
+    width: 16px;
+    margin-right: 5px;
+    border: 1px solid #A9A59F;
+    border-radius: 50%;
+    display: inline-block;
+
+}
+
+.checkbox span::after {
+    /* 中間點點 */
+    content: "";
+    display: block;
+    margin: 3px;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.checkbox input[type="checkbox"]:checked+span::after {
+    /* 選中checkbox時 才顯示中間點點 */
+    opacity: 1;
+}
+
 
 .header .nav-md {
     display: flex;
@@ -128,6 +223,13 @@
     opacity: 0;
 }
 
+.header .nav {
+    display: none;
+}
+
+.icon-personal {
+    cursor: pointer;
+}
 
 /* 電腦版 RWD start*/
 @media (min-width: 768px) {
@@ -139,16 +241,9 @@
         width: 150px;
     }
 
-    .header .logo-list {
-        display: block;
-    }
 
     .header .nav-md .nav-link-md {
         display: block;
-    }
-
-    .header .nav {
-        display: none;
     }
 
     .header .serch-bar {
@@ -157,6 +252,12 @@
 
     .header .notify-List {
         gap: 15px;
+    }
+
+    .header .case-filter {
+        width: 465px;
+        right: 130px;
+        font-size: 16px;
     }
 }
 
@@ -187,13 +288,3 @@
 }
 
 /* 手機選單 end*/
-
-
-/* Todo 選單出現互動待處理 */
-.header .logo-list {
-    display: none;
-}
-
-.header .nav {
-    display: none;
-}

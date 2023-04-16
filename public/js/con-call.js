@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-  let videoMeeting = document.querySelector('.video-meeting');
-  let videoChat = document.querySelector('.video-chat');
-  let messageBoard = document.querySelector('.message-board');
-  let closePhone = document.querySelector('.close-phone');
+  const videoMeeting = document.querySelector('.video-meeting');
+  const videoChat = document.querySelector('.video-chat');
+  const messageBoard = document.querySelector('.message-board');
+  const closePhone = document.querySelector('.close-phone');
+  const ratingStars = document.querySelectorAll('.rating-stars>img');
+  const consultCompletedPopup = document.querySelector('.consult-completed');
 
   let messageBoardSwitch = true;
   videoChat.addEventListener('click', () => {
@@ -16,5 +18,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   closePhone.addEventListener('click', () => {
     videoMeeting.style.display = 'none';
+    consultCompletedPopup.style.display = 'block';
+  });
+
+  ratingStars.forEach((element, index) => {
+    element.addEventListener('click', () => {
+      for (let i = 0; i < ratingStars.length; i++) {
+        ratingStars[i].src = '/images/popup/vector.png';
+      }
+      for (let i = 0; i < index + 1; i++) {
+        ratingStars[i].src = '/images/popup/vector-fill.png';
+      }
+    });
   });
 });

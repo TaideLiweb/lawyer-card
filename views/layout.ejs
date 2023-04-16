@@ -103,6 +103,114 @@
           <li><a href="#">聯絡我們</a></li>
         </ul>
       </nav>
+      <div class="case-filter">
+        <div class="case-filter-row">
+          <label class="case-filter-item checkbox">
+            <img src="/images/case-filter/婚姻.子女.png" width="60px" alt="" />
+            <div>
+              <input class="auto" type="checkbox" name="select-lawyer" />
+              <span></span>
+              婚姻/子女
+            </div>
+          </label>
+          <label class="case-filter-item checkbox">
+            <img src="/images/case-filter/遺產繼承.png" width="60px" alt="" />
+            <div>
+              <input class="auto" type="checkbox" name="select-lawyer" />
+              <span></span>
+              遺產繼承
+            </div>
+          </label>
+          <label class="case-filter-item checkbox">
+            <img
+              src="/images/case-filter/車禍.交通違規.png"
+              width="60px"
+              alt=""
+            />
+            <div>
+              <input class="auto" type="checkbox" name="select-lawyer" />
+              <span></span>
+              車禍/交通違規
+            </div>
+          </label>
+        </div>
+        <div class="case-filter-row">
+          <label class="case-filter-item checkbox">
+            <img src="/images/case-filter/刑事案件.png" width="60px" alt="" />
+            <div>
+              <input class="auto" type="checkbox" name="select-lawyer" />
+              <span></span>
+              刑事案件
+            </div>
+          </label>
+          <label class="case-filter-item checkbox">
+            <img
+              src="/images/case-filter/債權債務處理.png"
+              width="60px"
+              alt=""
+            />
+            <div>
+              <input class="auto" type="checkbox" name="select-lawyer" />
+              <span></span>
+              債權債務處理
+            </div>
+          </label>
+          <label class="case-filter-item checkbox">
+            <img src="/images/case-filter/消費糾紛.png" width="60px" alt="" />
+            <div>
+              <input class="auto" type="checkbox" name="select-lawyer" />
+              <span></span>
+              消費糾紛
+            </div>
+          </label>
+        </div>
+        <div class="case-filter-row">
+          <label class="case-filter-item checkbox">
+            <img src="/images/case-filter/網路糾紛.png" width="60px" alt="" />
+            <div>
+              <input class="auto" type="checkbox" name="select-lawyer" />
+              <span></span>
+              網路糾紛
+            </div>
+          </label>
+          <label class="case-filter-item checkbox">
+            <img
+              src="/images/case-filter/租賃.不動產.png"
+              width="60px"
+              alt=""
+            />
+            <div>
+              <input class="auto" type="checkbox" name="select-lawyer" />
+              <span></span>
+              租賃/不動產
+            </div>
+          </label>
+          <label class="case-filter-item checkbox">
+            <img src="/images/case-filter/勞資糾紛.png" width="60px" alt="" />
+            <div>
+              <input class="auto" type="checkbox" name="select-lawyer" />
+              <span></span>
+              勞資糾紛
+            </div>
+          </label>
+        </div>
+      </div>
+      <div class="user-list">
+        <ul>
+          <li>
+            <a href="#">我的律卡</a>
+          </li>
+          <li>
+            <a href="#">我的文章</a>
+          </li>
+          <li>
+            <a href="#">諮詢紀錄</a>
+          </li>
+          <li>
+            <a href="#">登入/登出</a>
+          </li>
+        </ul>
+      </div>
     </header>
     <%- body %> <% if(!conCall) { %>
     <footer>
@@ -225,7 +333,7 @@
     <!-- 時間選擇器 中文包 -->
     <script src="https://npmcdn.com/flatpickr/dist/l10n/zh.js"></script>
     <script src="/js/header.js"></script>
-    <% if(!conCall) { %>
+    <% if(clientSide) { %>
     <script src="/js/index.js"></script>
     <% } %> <% if(lawyerSide) { %>
     <script src="/js/index-lawyer.js"></script>

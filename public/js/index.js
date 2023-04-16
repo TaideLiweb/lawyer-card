@@ -69,6 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
       );
       count = count + 1;
     },
+    onDayCreate: function (dObj, dStr, fp, dayElem) {
+      // Utilize dayElem.dateObj, which is the corresponding Date
+
+      // dummy logic
+      dayElem.innerHTML += "<span class='event'>5600</span>";
+    },
   });
 
   // 切換popup
@@ -82,6 +88,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const serviceMethodTabItem = document.querySelectorAll(
     '.service-method .popup-tab-item'
   );
+  const TableTabItem = document.querySelectorAll(
+    '.progress-notifiy .popup-tab-item'
+  );
+  const progressNotifiyTable = document.querySelectorAll(
+    '.progress-notifiy .rwd-table'
+  );
 
   const preConsultPopup = document.querySelectorAll('.pre-consult');
   const choiceLawyerPopup = document.querySelector(
@@ -90,23 +102,38 @@ document.addEventListener('DOMContentLoaded', () => {
   const noChoiceLawyerPopup = document.querySelector(
     '.popup-content.no-choice-lawyer'
   );
+  const inviteNotifyPopup = document.querySelector(
+    '.popup-content.invite-notify'
+  );
   const matchLawyerBtn = document.querySelectorAll('.match-lawyer-btn');
-  // 即時諮詢 tab
-  serviceMethodTabItem.forEach((element) => {
-    element.addEventListener('click', (e) => {
-      // 初始化每個 tab 、 content 狀態
-      for (let i = 0; i < serviceMethodTabItem.length; i++) {
-        serviceMethodTabItem[i].classList.remove('active');
-        preConsultPopup[i].style.display = 'none';
-      }
-      // 點選的 DOM 加上 active
-      e.currentTarget.classList.add('active');
-      // 用 data-service-method 取得要顯示的 content
-      document.querySelector(
-        `.${e.currentTarget.dataset.serviceMethod}`
-      ).style.display = 'block';
+  const inviteNotifyStatus = document.querySelector(
+    '.invite-notify .status>button'
+  );
+  const inviteNotifyBackIndex = document.querySelector(
+    '.invite-notify .back-index>button'
+  );
+
+  function tabHandle(tab, container) {
+    tab.forEach((element) => {
+      element.addEventListener('click', (e) => {
+        // 初始化每個 tab 、 content 狀態
+        for (let i = 0; i < tab.length; i++) {
+          tab[i].classList.remove('active');
+          container[i].style.display = 'none';
+        }
+        // 點選的 DOM 加上 active
+        e.currentTarget.classList.add('active');
+        // 用 data-service-method 取得要顯示的 content
+        document.querySelector(
+          `.${e.currentTarget.dataset.serviceMethod}`
+        ).style.display = 'block';
+      });
     });
-  });
+  }
+  // 即時諮詢 tab
+  tabHandle(serviceMethodTabItem, preConsultPopup);
+  // 進度通知表單 tab
+  tabHandle(TableTabItem, progressNotifiyTable);
 
   // 隱藏所有 popup-content
   function hiddenPopup() {
@@ -124,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
       popupPrevious.style.display = 'block';
       previousStep = 'reserve-consult';
       // 預約諮詢給選時間
-      document.querySelector('.popup-time').style.display = 'none';
+      document.querySelector('.popup-time').style.display = 'flex';
 
       choiceLawyerPopup.style.display = 'flex';
     });
@@ -154,27 +181,48 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
   // 配對律師按鈕
-  console.log(matchLawyerBtn);
   matchLawyerBtn.forEach((element) => {
     element.addEventListener('click', () => {
       if (previousStep === 'timely-consult') {
         window.location.href = '/con-call';
       }
+      if (previousStep === 'reserve-consult') {
+        hiddenPopup();
+        previousStep = 'reserve-choice-lawyer';
+        inviteNotifyPopup.style.display = 'block';
+      }
     });
   });
-
+  // 邀請通知按鈕-回到首頁
+  inviteNotifyBackIndex.addEventListener('click', () => {
+    hiddenPopup();
+    document.querySelector(`.timely-consult`).style.display = 'block';
+    serviceMethodTab.style.display = 'flex';
+  });
+  // 邀請通知按鈕-查看狀況
+  inviteNotifyStatus.addEventListener('click', () => {
+    hiddenPopup();
+    document.querySelector(`.progress-notifiy`).style.display = 'block';
+  });
   // 上一步按鈕 function
   function previousHandle() {
     hiddenPopup();
-    popupPrevious.style.display = 'none';
+
     switch (previousStep) {
       case 'reserve-consult':
+        popupPrevious.style.display = 'none';
         document.querySelector(`.${previousStep}`).style.display = 'block';
         serviceMethodTab.style.display = 'flex';
         break;
       case 'timely-consult':
+        popupPrevious.style.display = 'none';
         document.querySelector(`.${previousStep}`).style.display = 'block';
         serviceMethodTab.style.display = 'flex';
+        break;
+      case 'reserve-choice-lawyer':
+        document.querySelector(`.choice-lawyer`).style.display = 'flex';
+
+        previousStep = 'reserve-consult';
         break;
       default:
         break;

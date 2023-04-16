@@ -7,6 +7,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
   res.render('index', {
     lawyerSide: true,
+    clientSide: false,
     conCall: false,
   });
 });
@@ -27,6 +28,7 @@ app.use(express.static('public'));
 app.get('/', function (req, res) {
   res.render('index', {
     lawyerSide: false,
+    clientSide: true,
     conCall: false,
   });
 });
@@ -37,6 +39,7 @@ app.use('/lawyer', router);
 app.get('/con-call', (req, res) => {
   res.render('con-call', {
     lawyerSide: false,
+    clientSide: false,
     conCall: true,
   });
 });

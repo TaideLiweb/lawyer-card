@@ -19,13 +19,14 @@
         <div class="popup-tab-item">挑選律師</div>
         <div class="popup-tab-item active">填選資料</div>
       </div> -->
-      <%- include timely-consult.ejs %> <%- include reserve-consult.ejs %><%-
-      include lawyer-popup.ejs %>
+      <%- include timely-consult.ejs %> <%- include reserve-consult.ejs %> <%-
+      include lawyer-popup.ejs %> <%- include invite-notify.ejs %> <%- include
+      progress-notifiy.ejs %>
     </div>
   </div>
 </div>
 <% } %> <% if(lawyerSide) { %>
-<div class="main-banner lawyer-main-banner">
+<div class="lawyer-main-banner">
   <div class="main-banner-left">
     <div class="main-banner-left-area">
       <p>
@@ -134,3 +135,4 @@
     </div>
   </div>
 </section>
+<% if(lawyerSide) { %> <%- include case-consult-popup.ejs %> <% } %>
