@@ -5,6 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const closePhone = document.querySelector('.close-phone');
   const ratingStars = document.querySelectorAll('.rating-stars>img');
   const consultCompletedPopup = document.querySelector('.consult-completed');
+  const consultCompletedBtn = document.querySelector(
+    '.consult-completed .consult-btn'
+  );
+  const jumpPage = document.querySelectorAll('.jump-page');
+  const pairSuccess = document.querySelector('.pair-success');
+  const paymentBtn = document.querySelector('.pair-success .consult-btn');
+  const paymentSuccess = document.querySelector('.payment-success');
 
   let messageBoardSwitch = true;
   videoChat.addEventListener('click', () => {
@@ -30,5 +37,27 @@ document.addEventListener('DOMContentLoaded', () => {
         ratingStars[i].src = '/images/popup/vector-fill.png';
       }
     });
+  });
+
+  function jumpPageHidden() {
+    jumpPage.forEach((element) => {
+      element.style.display = 'none';
+    });
+  }
+  setTimeout(() => {
+    jumpPageHidden();
+    pairSuccess.style.display = 'block';
+  }, 3000);
+
+  paymentBtn.addEventListener('click', () => {
+    jumpPageHidden();
+    paymentSuccess.style.display = 'block';
+    setTimeout(() => {
+      paymentSuccess.style.display = 'none';
+      videoMeeting.style.display = 'flex';
+    }, 3000);
+  });
+  consultCompletedBtn.addEventListener('click', () => {
+    window.location.href = '/';
   });
 });

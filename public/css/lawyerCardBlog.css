@@ -1,0 +1,225 @@
+.lawyerCardBlogTab {
+    display: flex;
+    gap: 15px;
+}
+
+.lawyerCardBlogTab-item {
+    position: relative;
+    width: calc(16.66666% - 12.5px);
+    padding: 30px 0 15px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.lawyerCardBlogTab-item::after {
+    content: "";
+    height: 7px;
+    width: 100%;
+    border-radius: 7px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+}
+
+.lawyerCardBlogTab-item.active::after {
+    background-color: var(--primary-color);
+}
+
+.section.lawyerCardBlog-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #fff;
+    margin-top: -2px;
+}
+
+.section.lawyerCardBlog-section .section-title {
+    margin-bottom: 40px;
+}
+
+.section.lawyerCardBlog-section .section-title h2 {
+    font-weight: bold;
+}
+
+.lawyer-area-1 .big-area {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+}
+
+.lawyer-area-1 .big-area>:nth-child(2) .card-img {
+    display: flex;
+    gap: 0px 20px;
+}
+
+.lawyer-area-1 .big-area>:nth-child(2) .card-img img {
+    width: calc(50% - 10px);
+}
+
+.lawyer-area-1 .small-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.lawyer-area-1 .small-area .card {
+    width: 100%;
+}
+
+.lawyer-area-1 .small-area .card .card-paragraph,
+.lawyer-area-1 .big-area .card .card-paragraph {
+    padding: 20px 0;
+    margin: 0px;
+}
+
+.lawyer-area-1 .small-area .card .card-paragraph p {
+
+    font-size: 16px;
+}
+
+@media (min-width: 768px) {
+    .card-area.lawyer-area-1 {
+        flex-wrap: nowrap;
+    }
+
+    .lawyer-area-1 .big-area {
+        width: calc(70% - 20px);
+    }
+
+    .lawyer-area-1 .small-area {
+        width: calc(30% - 20px)
+    }
+
+    .lawyer-area-1 .big-area .card {
+        width: 100%;
+    }
+
+}
+
+.card-area.lawyer-area-2 {
+    flex-wrap: wrap;
+
+}
+
+.lawyer-area-2>.card:first-child {
+    width: 100%;
+}
+
+.card-area.lawyer-area-2 .card .card-paragraph {
+    padding: 20px 0;
+    margin: 0px;
+}
+
+.card-area.lawyer-area-3 {
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.lawyer-area-3>.card:first-child {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+}
+
+.lawyer-area-3>.card:first-child>.small-area {
+    width: calc(40% - 20px);
+}
+
+.lawyer-area-3>.card:first-child>.big-area {
+    width: calc(60% - 20px)
+}
+
+.card-area.lawyer-area-3 .card:first-child .card-paragraph {
+    padding: 0 0 20px 0;
+    margin: 0px;
+}
+
+.lawyer-area-3 h3 {
+    margin: 0 0 20px 0;
+}
+
+.lawyer-area-3 h3 span {
+    padding: 10px 10px 5px 10px;
+    letter-spacing: 3px;
+    display: inline-block;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+    background-color: var(--primary-color);
+}
+
+.card-area.lawyer-area-4 {
+    flex-wrap: wrap;
+
+}
+
+.lawyer-area-4>.card:first-child {
+    width: 100%;
+}
+
+.card-area.lawyer-area-4 .card .card-paragraph {
+    padding: 30px 0;
+    margin: 0px;
+}
+
+.card-area.lawyer-area-4 .card-paragraph-flex {
+    display: flex;
+    gap: 10px;
+}
+
+.card-area.lawyer-area-4 .card-paragraph-flex h4 {
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.card-area.lawyer-area-4 .card-paragraph-flex>img {
+    width: 40%;
+}
+
+
+.card-area.lawyer-area-5 {
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.card-area.lawyer-area-5>.card:first-child {
+    width: 100%;
+}
+
+.card-area.lawyer-area-5>.card:nth-child(2) {
+    width: calc(50% - 16.666666px);
+}
+
+.card-area.lawyer-area-5>.card:nth-child(3),
+.card-area.lawyer-area-5>.card:nth-child(4) {
+    width: calc(25% - 16.666666px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-area.lawyer-area-5>.card:first-child~.card .card-img {
+    height: 300px;
+    overflow: hidden;
+}
+
+.card-area.lawyer-area-5 .card .card-paragraph {
+    padding: 20px 0;
+    margin: 0px;
+}
+
+.card-area.lawyer-area-5 h4 {
+    margin: 0 0 10px 0;
+}
+
+@media (min-width: 768px) {
+    .section.lawyerCardBlog-section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+}

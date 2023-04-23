@@ -7,6 +7,60 @@ body {
     font-family: 'Montserrat', sans-serif, 'PingFang-TC';
 }
 
+/* margin */
+
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+.mr-0 {
+    margin-right: 0 !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.ml-0 {
+    margin-left: 0 !important;
+}
+
+@media (min-width: 768px) {
+    .mt-md-0 {
+        margin-top: 0 !important;
+    }
+
+    .mr-md-0 {
+        margin-right: 0 !important;
+    }
+
+    .mb-md-0 {
+        margin-bottom: 0 !important;
+    }
+
+    .ml-md-0 {
+        margin-left: 0 !important;
+    }
+}
+
+/* margin */
+
+.pt-0 {
+    padding-top: 0 !important;
+}
+
+.pr-0 {
+    padding-right: 0 !important;
+}
+
+.pb-0 {
+    padding-bottom: 0 !important;
+}
+
+.pl-0 {
+    padding-left: 0 !important;
+}
+
 /* 背景顏色 */
 .bg-primary {
     background-color: var(--primary-color);
@@ -18,6 +72,10 @@ body {
 
 .bg-gray {
     background-color: var(--bg-gray);
+}
+
+.bg-white {
+    background-color: #fff;
 }
 
 /* 文字顏色 */
@@ -33,16 +91,19 @@ body {
     color: var(--bg-gray);
 }
 
-/* 邊框顏色 */
+/* 邊框 */
 .brd-color-primary {
+    border-bottom: 2px solid;
     border-color: var(--primary-color) !important;
 }
 
 .brd-colo-secondary {
+    border-bottom: 2px solid;
     border-color: var(--secondary-color) !important;
 }
 
 .brd-color-gray {
+    border-bottom: 2px solid;
     border-color: var(--bg-gray) !important;
 }
 
@@ -50,7 +111,7 @@ body {
     position: relative;
     width: 100%;
     min-height: 600px;
-    padding: 55px 0;
+    padding: 50px 0;
     background-image: url('../images/image-from-rawpixel-id-2627328-.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -335,7 +396,6 @@ body {
 .section .card .card-paragraph {
     padding: 40px 0;
     margin: 0 10px;
-    border-bottom: 2px solid;
     position: relative;
 }
 
@@ -349,7 +409,7 @@ body {
 
 .section .card .card-paragraph p {
     margin: 0;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 
@@ -444,6 +504,10 @@ body {
 }
 
 @media (min-width: 768px) {
+    .main-banner {
+        min-height: calc(100vh - 50px);
+    }
+
     .lawyer-main-banner {
         flex-direction: row;
     }
@@ -479,6 +543,11 @@ body {
 }
 
 @media (min-width: 992px) {
+
+    .main-banner {
+        padding: 0;
+    }
+
     .lawyer-main-banner>.main-banner-right {
         width: 60%;
     }

@@ -1,0 +1,63 @@
+/* 調整日曆大小 */
+.flatpickr-calendar {
+    width: 380px;
+    font-size: 14px;
+}
+
+.flatpickr-days {
+    width: 380px;
+
+}
+
+.dayContainer {
+    width: 380px;
+    height: 355px;
+    gap: 10px;
+    min-width: 380px;
+    max-width: 380px;
+}
+
+/* 調整日期大小 */
+.flatpickr-day {
+    font-size: 14px;
+    max-width: 50px;
+    width: 50px;
+    height: 50px;
+    line-height: 30px;
+    border: 0px;
+}
+
+/* todo 主題顏色 */
+
+
+.flatpickr-day:hover {
+    background: var(--primary-color) !important;
+    color: #fff;
+}
+
+.flatpickr-day.today {
+    border: 1px solid var(--primary-color);
+}
+
+.flatpickr-day.selected {
+    background: var(--primary-color) !important;
+}
+
+.flatpickr-day.flatpickr-disabled {
+    background: #fff !important;
+}
+
+/* flatpickr 日曆上的數字 */
+.event {
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    left: 5px;
+    bottom: 23px;
+    font-size: 12px !important;
+    display: block;
+}
+
+.event.busy {
+    background: #f64747;
+}

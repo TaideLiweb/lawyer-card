@@ -9,7 +9,7 @@
       <input type="text" />
     </label>
     <label class="form-group popup-form-fill" for="form-textarea"
-      ><span>對造人(選填)</span>
+      ><span>事件描述 (選填)</span>
       <textarea id="form-textarea" rows="6"></textarea>
     </label>
     <div class="detail-list popup-form-half">
@@ -43,12 +43,12 @@
     <div class="popup-form-half">
       <div class="radio-type">
         <label class="radio">
-          <input type="radio" name="agree" />
+          <input type="radio" />
           <span></span>
           我同意律卡
         </label>
         <label class="radio">
-          <input type="radio" name="agree" />
+          <input type="radio" />
           <span></span>
           我同意訂單
         </label>
@@ -60,6 +60,16 @@
   </div>
 </div>
 <div class="popup-content choice-lawyer">
+  <div class="serch-bar">
+    <input type="text" placeholder="搜尋律師" />
+    <span
+      ><img
+        src="/images/icon/search-icon.png"
+        alt=""
+        width="16px"
+        height="16px"
+    /></span>
+  </div>
   <div class="swiper lawyer-swiper">
     <div class="swiper-wrapper">
       <% for(var i = 0; 3 > i; i++){ %>
@@ -111,42 +121,63 @@
               />
             </div>
           </div>
-          <p class="lawyer-descript">
-            法律是社會秩序的基石，它規範了人們的行為，維護了社會的公正和穩定。
-          </p>
+          <div class="lawyer-descript">
+            <div class="progress-group">
+              <span>5</span>
+              <progress value="90" max="100"></progress>
+            </div>
+            <div class="progress-group">
+              <span>4</span>
+              <progress value="60" max="100"></progress>
+            </div>
+            <div class="progress-group">
+              <span>3</span>
+              <progress value="30" max="100"></progress>
+            </div>
+            <div class="progress-group">
+              <span>2</span>
+              <progress value="40" max="100"></progress>
+            </div>
+            <div class="progress-group">
+              <span>1</span>
+              <progress value="15" max="100"></progress>
+            </div>
+          </div>
         </div>
         <div class="lawyer-ability">
-          <div class="lawyer-ability-item">
-            <span>律師徽章</span
-            ><span class="badge-array">
-              <img
-                src="/images/lawyer-swiper/badge.png"
-                width="18px"
-                height="18px"
-                alt="" />
-              <img
-                src="/images/lawyer-swiper/badge.png"
-                width="18px"
-                height="18px"
-                alt="" />
-              <img
-                src="/images/lawyer-swiper/badge.png"
-                width="18px"
-                height="18px"
-                alt=""
-            /></span>
-          </div>
-          <div class="lawyer-ability-item">
-            <span>律師資歷</span><span>10年</span>
-          </div>
-          <div class="lawyer-ability-item">
-            <span>民眾評價</span><span>5.0</span>
-          </div>
-          <div class="lawyer-ability-item">
-            <span>民眾收藏</span><span>234</span>
-          </div>
-          <div class="lawyer-ability-item">
-            <span>諮詢數量</span><span>567</span>
+          <div>
+            <div class="lawyer-ability-item">
+              <span>律師徽章</span
+              ><span class="badge-array">
+                <img
+                  src="/images/lawyer-swiper/badge.png"
+                  width="18px"
+                  height="18px"
+                  alt="" />
+                <img
+                  src="/images/lawyer-swiper/badge.png"
+                  width="18px"
+                  height="18px"
+                  alt="" />
+                <img
+                  src="/images/lawyer-swiper/badge.png"
+                  width="18px"
+                  height="18px"
+                  alt=""
+              /></span>
+            </div>
+            <div class="lawyer-ability-item">
+              <span>律師資歷</span><span>10年</span>
+            </div>
+            <div class="lawyer-ability-item">
+              <span>民眾評價</span><span>5.0</span>
+            </div>
+            <div class="lawyer-ability-item">
+              <span>民眾收藏</span><span>234</span>
+            </div>
+            <div class="lawyer-ability-item">
+              <span>諮詢數量</span><span>567</span>
+            </div>
           </div>
           <div class="consult-btn">
             <button>律師個人卡片</button>
@@ -156,8 +187,6 @@
       <% } %>
     </div>
     <div class="swiper-pagination"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
   </div>
   <div class="popup-form">
     <label class="form-group popup-form-half"
@@ -169,8 +198,8 @@
       <input type="text" />
     </label>
     <label class="form-group popup-form-fill" for="form-textarea"
-      ><span>對造人(選填)</span>
-      <textarea id="form-textarea" rows="6"></textarea>
+      ><span>事件描述 (選填)</span>
+      <textarea id="form-textarea" rows="4"></textarea>
     </label>
     <div class="detail-list popup-form-half">
       <div class="detail-item">
@@ -206,12 +235,12 @@
     <div class="popup-form-half">
       <div class="radio-type">
         <label class="radio">
-          <input type="radio" name="agree" />
+          <input type="radio" />
           <span></span>
           我同意律卡
         </label>
         <label class="radio">
-          <input type="radio" name="agree" />
+          <input type="radio" />
           <span></span>
           我同意訂單
         </label>

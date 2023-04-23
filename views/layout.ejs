@@ -21,11 +21,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
     />
+    <link rel="stylesheet" href="/css/flatpickr.css" type="text/css" />
 
     <link rel="stylesheet" href="/css/normalize.css" type="text/css" />
     <link rel="stylesheet" href="/css/header.css" type="text/css" />
     <link rel="stylesheet" href="/css/footer.css" type="text/css" />
     <link rel="stylesheet" href="/css/fixTool.css" type="text/css" />
+    <link rel="stylesheet" href="/css/lawyerCardBlog.css" type="text/css" />
     <link rel="stylesheet" href="/css/popup.css" type="text/css" />
     <link rel="stylesheet" href="/css/main.css" type="text/css" />
   </head>
@@ -60,7 +62,9 @@
             </ul>
           </div>
         </div>
-        <a class="nav-link-md active" href="#">律卡部落</a>
+        <a class="nav-link-md active" href="#"
+          >律卡部落<img src="/images/icon/logo-arrow.png" width="17px" alt=""
+        /></a>
         <% if(!lawyerSide) { %>
         <a class="nav-link-md" href="#">律師卡片</a>
         <a class="nav-link-md" href="#">書狀服務</a>
@@ -69,7 +73,11 @@
 
       <div class="notify-List">
         <div class="serch-bar">
+          <% if(!clientSide) { %>
           <input type="text" placeholder="..." />
+          <% } %> <% if(clientSide) { %>
+          <input type="text" placeholder="搜尋律師/書狀/文章" />
+          <% } %>
           <span
             ><img
               src="/images/icon/search-icon.png"

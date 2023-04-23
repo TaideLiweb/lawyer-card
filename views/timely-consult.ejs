@@ -1,11 +1,14 @@
 <div class="popup-content pre-consult timely-consult">
   <div class="select-type">
-    <select name="" id="">
-      <option>所屬縣市</option>
-    </select>
-    <select name="" id="">
-      <option>案件類型</option>
-    </select>
+    <div>
+      <select name="" id="">
+        <option>所屬縣市</option>
+      </select>
+      <select name="" id="">
+        <option>案件類型</option>
+      </select>
+    </div>
+    <p>上述二擇一。</p>
   </div>
   <div class="radio-type">
     <label class="radio">
@@ -22,13 +25,18 @@
   <div class="consult-time">
     諮詢時數
     <div class="consult-hour">
-      <input type="text" placeholder="0" />
-      <input type="text" placeholder="0" />
+      <select>
+        <% for(var i = 0; 24 > i; i++){ %>
+        <option><%- i %></option>
+        <% } %>
+      </select>
     </div>
     時
     <div class="consult-min">
-      <input type="text" placeholder="3" />
-      <input type="text" placeholder="0" />
+      <select>
+        <option>0</option>
+        <option>30</option>
+      </select>
     </div>
     分
   </div>

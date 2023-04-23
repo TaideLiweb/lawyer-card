@@ -165,6 +165,10 @@
     transition: all 0.3s;
 }
 
+.header .nav-md .nav-link-md>img {
+    margin-left: 5px;
+}
+
 .header .nav-md .nav-link-md:last-child {
     margin-right: 0px;
 }
@@ -174,7 +178,7 @@
 }
 
 .serch-bar {
-    width: 150px;
+    width: 120px;
     height: 30px;
     padding: 0px 10px;
     background-color: #fff;

@@ -1,12 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   // 輪播套件初始化
   const swiper = new Swiper('.swiper', {
+    spaceBetween: 50,
     pagination: {
       el: '.swiper-pagination',
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      clickable: true,
     },
   });
 
@@ -19,6 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
     dateFormat: 'Y-m-d H:i',
     locale: 'zh',
     minDate: 'today',
+    disableMobile: 'true',
+    minuteIncrement: 30, // 每 30 分鐘為一個選項
+    // hourIncrement: 1,
+    numInput: false,
     onClose: function (selectedDates, dateStr, instance) {
       let addTime = document.querySelector(
         '.popup-content .popup-time .add-time'
@@ -71,9 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     onDayCreate: function (dObj, dStr, fp, dayElem) {
       // Utilize dayElem.dateObj, which is the corresponding Date
-
+      console.log(dayElem);
       // dummy logic
-      dayElem.innerHTML += "<span class='event'>5600</span>";
+      dayElem.innerHTML += "<span class='event'>$5600</span>";
     },
   });
 
@@ -141,7 +143,9 @@ document.addEventListener('DOMContentLoaded', () => {
       element.style.display = 'none';
     });
   }
-
+  function removePreviousClass() {
+    popupPrevious.classList.remove('choice-lawyer');
+  }
   // 預約諮詢的下一步
   document
     .querySelector('.pre-consult.reserve-consult .consult-btn>button')
@@ -152,7 +156,11 @@ document.addEventListener('DOMContentLoaded', () => {
       previousStep = 'reserve-consult';
       // 預約諮詢給選時間
       document.querySelector('.popup-time').style.display = 'flex';
-
+      // 上一步加上 choice-lawyer
+      popupPrevious.classList.add('choice-lawyer');
+      document
+        .querySelector('.choice-lawyer textarea')
+        .setAttribute('rows', '4');
       choiceLawyerPopup.style.display = 'flex';
     });
 
@@ -171,6 +179,12 @@ document.addEventListener('DOMContentLoaded', () => {
       ) {
         choiceLawyerPopup.style.display = 'flex';
         // 即時諮詢不給選時間
+        // 上一步加上 choice-lawyer-timely
+        popupPrevious.classList.add('choice-lawyer');
+        document
+          .querySelector('.choice-lawyer textarea')
+          .setAttribute('rows', '8');
+
         document.querySelector('.popup-time').style.display = 'none';
       }
       // 選擇自動媒合出現填寫資料 popup
@@ -183,6 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 配對律師按鈕
   matchLawyerBtn.forEach((element) => {
     element.addEventListener('click', () => {
+      removePreviousClass();
       if (previousStep === 'timely-consult') {
         window.location.href = '/con-call';
       }
@@ -202,10 +217,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // 邀請通知按鈕-查看狀況
   inviteNotifyStatus.addEventListener('click', () => {
     hiddenPopup();
+    previousStep = 'reserve-consult';
     document.querySelector(`.progress-notifiy`).style.display = 'block';
   });
   // 上一步按鈕 function
   function previousHandle() {
+    removePreviousClass();
     hiddenPopup();
 
     switch (previousStep) {
@@ -221,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
       case 'reserve-choice-lawyer':
         document.querySelector(`.choice-lawyer`).style.display = 'flex';
-
+        popupPrevious.classList.add('choice-lawyer');
         previousStep = 'reserve-consult';
         break;
       default:

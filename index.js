@@ -2,11 +2,20 @@ const express = require('express');
 const engine = require('ejs-locals');
 
 // 先在這定義 router 之後搬移出去
-const router = express.Router();
+const lawyer = express.Router();
 
-router.get('/', (req, res) => {
+lawyer.get('/', (req, res) => {
   res.render('index', {
     lawyerSide: true,
+    clientSide: false,
+    conCall: false,
+  });
+});
+const lawyerCardBlog = express.Router();
+
+lawyerCardBlog.get('/', (req, res) => {
+  res.render('lawyerCardBlog/index', {
+    lawyerSide: false,
     clientSide: false,
     conCall: false,
   });
@@ -33,9 +42,9 @@ app.get('/', function (req, res) {
   });
 });
 // 律師端首頁
-app.use('/lawyer', router);
+app.use('/lawyer', lawyer);
 
-// 測試頁
+// 視訊頁
 app.get('/con-call', (req, res) => {
   res.render('con-call', {
     lawyerSide: false,
@@ -43,6 +52,8 @@ app.get('/con-call', (req, res) => {
     conCall: true,
   });
 });
+// 律師端首頁
+app.use('/lawyerCardBlog', lawyerCardBlog);
 
 const PORT = 3000;
 app.listen(PORT, () => console.log(`server is now listening on port ${PORT}`));
