@@ -40,7 +40,7 @@ footer .footer-nav-child-2 ul {
 
 footer .footer-nav-child-2 {
     display: flex;
-    gap: 40px;
+    gap: 25px;
 }
 
 
@@ -70,6 +70,10 @@ footer .footer-icon li {
 @media (min-width: 576px) {
     footer .container {
         padding: 0;
+    }
+
+    footer .footer-nav-child-2 {
+        gap: 40px;
     }
 }
 

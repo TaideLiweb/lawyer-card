@@ -78,13 +78,13 @@
 }
 
 .popup .popup-tab .popup-tab-item {
-    width: 100px;
+    padding: 5px 10px 5px 18px;
     letter-spacing: 2px;
-    line-height: 30px;
-    text-align: center;
     color: #fff;
-    background-color: var(--primary-color);
-    border-radius: 10px 10px 0px 0px;
+    background-image: url(../images/button/button-left-primary.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
     transition: all .3s;
     cursor: pointer;
 }
@@ -92,14 +92,15 @@
 .popup .popup-tab .popup-tab-item:hover,
 .popup .popup-tab .popup-tab-item.active {
     color: var(--primary-color);
-    background-color: #fff;
+    background-image: url(../images/button/button-left-white.png);
+
 }
 
 
 
 
 .popup .popup-content {
-    width: 370px;
+    width: 350px;
     padding: 50px 25px 50px;
     background-color: #fff;
     border-radius: 0px 0px 10px 10px;
@@ -207,10 +208,12 @@
 .popup-content .consult-time select {
     width: 60px;
     height: 36px;
-    padding: 0;
+    padding: 0 18px;
+    /* 為了修正 iphone 無法置中*/
     text-align: center;
     background-image: none;
 }
+
 
 .popup-content .consult-time select::-webkit-scrollbar {
     /*For WebKit Browsers*/
