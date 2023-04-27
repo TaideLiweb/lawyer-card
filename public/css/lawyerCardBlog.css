@@ -29,7 +29,7 @@
 }
 
 .lawyerCardBlogTab-item::after {
-    content: "";
+    content: '';
     height: 7px;
     width: 100%;
     border-radius: 7px;
@@ -66,12 +66,12 @@
     flex-shrink: 0;
 }
 
-.lawyer-area-1 .big-area>:nth-child(2) .card-img {
+.lawyer-area-1 .big-area > :nth-child(2) .card-img {
     display: flex;
     gap: 0px 20px;
 }
 
-.lawyer-area-1 .big-area>:nth-child(2) .card-img img {
+.lawyer-area-1 .big-area > :nth-child(2) .card-img img {
     width: calc(50% - 10px);
 }
 
@@ -92,7 +92,6 @@
 }
 
 .lawyer-area-1 .small-area .card .card-paragraph p {
-
     font-size: 16px;
 }
 
@@ -106,21 +105,15 @@
     }
 
     .lawyer-area-1 .small-area {
-        width: calc(30% - 20px)
+        width: calc(30% - 20px);
     }
 
     .lawyer-area-1 .big-area .card {
         width: 100%;
     }
-
 }
 
-.card-area.lawyer-area-2 {
-    flex-wrap: wrap;
-
-}
-
-.lawyer-area-2>.card:first-child {
+.lawyer-area-2 > .card:first-child {
     width: 100%;
 }
 
@@ -128,24 +121,42 @@
     padding: 20px 0;
 }
 
+.lawyer-area-2 .card:first-child ~ .card-half {
+    width: 100%;
+}
+
+@media (min-width: 576px) {
+    .lawyer-area-2 .card:first-child ~ .card-half {
+        width: calc(50% - 10px);
+    }
+}
+@media (min-width: 768px) {
+    .lawyer-area-2 .card:first-child ~ .card-half {
+        width: calc(50% - 20px);
+    }
+}
+@media (min-width: 992px) {
+    .lawyer-area-2 .card:first-child ~ .card-half {
+        width: calc(50% - 30px);
+    }
+}
+
 .card-area.lawyer-area-3 {
     flex-wrap: wrap;
     gap: 50px;
 }
 
-.lawyer-area-3>.card:first-child {
+.lawyer-area-3 > .card:first-child {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
 }
 
-.lawyer-area-3>.card:first-child>.small-area,
-.lawyer-area-3>.card:first-child>.big-area {
+.lawyer-area-3 > .card:first-child > .small-area,
+.lawyer-area-3 > .card:first-child > .big-area {
     width: 100%;
 }
-
-
 
 .card-area.lawyer-area-3 .card:first-child .card-paragraph {
     padding: 0 0 20px 0;
@@ -165,25 +176,24 @@
 }
 
 @media (min-width: 768px) {
-    .lawyer-area-3>.card:first-child {
+    .lawyer-area-3 > .card:first-child {
         flex-wrap: nowrap;
     }
 
-    .lawyer-area-3>.card:first-child>.small-area {
+    .lawyer-area-3 > .card:first-child > .small-area {
         width: calc(40% - 20px);
     }
 
-    .lawyer-area-3>.card:first-child>.big-area {
-        width: calc(60% - 20px)
+    .lawyer-area-3 > .card:first-child > .big-area {
+        width: calc(60% - 20px);
     }
 }
 
 .card-area.lawyer-area-4 {
     flex-wrap: wrap;
-
 }
 
-.lawyer-area-4>.card:first-child {
+.lawyer-area-4 > .card:first-child {
     width: 100%;
 }
 
@@ -202,7 +212,7 @@
     font-size: 20px;
 }
 
-.card-area.lawyer-area-4 .card-paragraph-flex>img {
+.card-area.lawyer-area-4 .card-paragraph-flex > img {
     width: 100%;
 }
 
@@ -211,7 +221,7 @@
         flex-wrap: nowrap;
     }
 
-    .card-area.lawyer-area-4 .card-paragraph-flex>img {
+    .card-area.lawyer-area-4 .card-paragraph-flex > img {
         width: 40%;
     }
 }
@@ -221,7 +231,7 @@
     gap: 25px;
 }
 
-.card-area.lawyer-area-5>.card:first-child {
+.card-area.lawyer-area-5 > .card:first-child {
     width: 100%;
 }
 
@@ -229,14 +239,13 @@
     width: calc(50% - 12.5px);
 } */
 
-.card-area.lawyer-area-5>.card-group {
+.card-area.lawyer-area-5 > .card-group {
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
-
 }
 
-.card-area.lawyer-area-5>.card-group>.card {
+.card-area.lawyer-area-5 > .card-group > .card {
     width: calc(50% - 12.5px);
     display: flex;
     flex-direction: column;
@@ -246,16 +255,14 @@
 /* .card-area.lawyer-area-5>.card:first-child~.card .card-img,
 .card-area.lawyer-area-5>.card-group>.card .card-img {} */
 
-.card-area.lawyer-area-5>.card-fill-height {
+.card-area.lawyer-area-5 > .card-fill-height {
     display: flex;
     flex-direction: column;
 }
 
-.card-area.lawyer-area-5>.card-fill-height .card-paragraph {
+.card-area.lawyer-area-5 > .card-fill-height .card-paragraph {
     flex-grow: 1;
 }
-
-
 
 .card-area.lawyer-area-5 .card .card-paragraph {
     padding: 20px 0;
@@ -267,26 +274,62 @@
 }
 
 @media (min-width: 768px) {
-    .card-area.lawyer-area-5>.card:first-child~div {
+    .card-area.lawyer-area-5 > .card:first-child ~ div {
         width: calc(50% - 12.5px);
     }
 
-    .card-area.lawyer-area-5>.card:first-child~.card .card-img,
-    .card-area.lawyer-area-5>.card-group>.card .card-img {
+    .card-area.lawyer-area-5 > .card:first-child ~ .card .card-img,
+    .card-area.lawyer-area-5 > .card-group > .card .card-img {
         height: 300px;
         overflow: hidden;
     }
 
-    .card-area.lawyer-area-5>.card-fill-height .card-img {
+    .card-area.lawyer-area-5 > .card-fill-height .card-img {
         height: 403px !important;
     }
 }
 
-
+.new-post-wrapper {
+    display: flex;
+    align-items: start;
+    gap: 50px;
+}
+.new-post-wrapper .right-bar {
+    position: relative;
+    padding: 20px;
+    background-color: #ebebeb;
+    border-radius: 0px 10px 10px 10px;
+}
+.new-post-wrapper .right-bar-title {
+    margin: 0;
+    padding: 10px;
+    position: absolute;
+    top: -41px;
+    left: 0px;
+    background-image: url(../images/button/button-right-white.png);
+    background-size: contain;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+.new-post-wrapper .right-bar:last-child {
+    width: 25%;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+.new-post-wrapper .right-bar:last-child > .card {
+    width: 100%;
+}
+.new-post-wrapper .right-bar:last-child .card-img {
+    height: 200px;
+    overflow: hidden;
+}
+.new-post-wrapper .right-bar .card .card-paragraph {
+    padding: 15px 0;
+}
 @media (min-width: 768px) {
     .section.lawyerCardBlog-section {
         padding-top: 30px;
         padding-bottom: 30px;
     }
-
 }

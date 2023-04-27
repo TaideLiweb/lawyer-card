@@ -1,0 +1,69 @@
+<% layout('../layout') %>
+<section class="bg-gray">
+    <div class="container">
+        <div class="lawyerCardBlogTab">
+            <div class="lawyerCardBlogTab-wrap">
+                <div class="lawyerCardBlogTab-item">
+                    <a href="/lawyerCardBlog">首頁</a>
+                </div>
+                <div class="lawyerCardBlogTab-item"><a href="/lawyerCardBlog/brand-board">品牌專欄</a></div>
+                <div class="lawyerCardBlogTab-item active"><a href="/lawyerCardBlog/new-post">最新文章</a></div>
+                <div class="lawyerCardBlogTab-item">
+                    <a href="/lawyerCardBlog/lawer-board">律師專欄</a>
+                </div>
+                <div class="lawyerCardBlogTab-item">
+                    <a href="/lawyerCardBlog/law-knowledge">法律常識</a>
+                </div>
+                <div class="lawyerCardBlogTab-item">
+                    <a href="/lawyerCardBlog/hot-topic">熱門話題</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section lawyerCardBlog-section">
+    <div class="container">
+        <div class="section-title">
+            <h2 class="color-primary">最新文章</h2>
+        </div>
+        <div class="new-post-wrapper">
+            <div class="card-area lawyer-area lawyer-area-2">
+                <% for(var i = 0; 7 > i; i++){ %>
+                <div class="card card-half mb-md-0">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/id/299/410/200" alt="" />
+                        <div class="card-title">
+                            <h3>專欄標題</h3>
+                        </div>
+                    </div>
+                    <div class="card-paragraph brd-color-primary">
+                        <p>
+                            訴訟是指當事⼈因權益糾紛⽽向法院提出申請，進⾏爭議解決程序的過程。這是
+                            ⼀個非常重要的程序，因為它能夠解決許多不同類型的糾紛和爭議，並保護當事 ⼈的權益。
+                        </p>
+                        <span class="card-date color-primary bg-white">2023.4.2</span>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+            <div class="card-area lawyer-area right-bar">
+                <h3 class="right-bar-title">HOT!熱門排</h3>
+                <% for(var i = 0; 4 > i; i++){ %>
+                <div class="card mb-md-0">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/id/299/400/400" width="100%" alt="" />
+                        <div class="card-title">
+                            <h4>專欄標題</h4>
+                        </div>
+                    </div>
+                    <div class="card-paragraph brd-color-primary">
+                        <p>這是⼀個非常重要的程序，因為它能夠解決許多不同類型的糾紛和爭議，並保護當事 ⼈的權益。</p>
+                        <span class="card-date color-primary bg-white">2023.4.2</span>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</section>
