@@ -116,6 +116,10 @@
     display: block;
 }
 
+.popup-content.reserve-consult .select-type p {
+    margin-bottom: 64px;
+}
+
 
 .popup-content .select-type {
     display: flex;
