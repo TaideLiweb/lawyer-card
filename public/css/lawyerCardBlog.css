@@ -66,6 +66,10 @@
     flex-shrink: 0;
 }
 
+.lawyer-area-1 .big-area .card {
+    width: 100%;
+}
+
 .lawyer-area-1 .big-area> :nth-child(2) .card-img {
     display: flex;
     gap: 0px 20px;
@@ -108,9 +112,6 @@
         width: calc(30% - 20px);
     }
 
-    .lawyer-area-1 .big-area .card {
-        width: 100%;
-    }
 }
 
 .lawyer-area-2>.card:first-child {
@@ -145,8 +146,9 @@
 
 .card-area.lawyer-area-3 {
     flex-wrap: wrap;
-    gap: 50px;
+
 }
+
 
 .lawyer-area-3>.card:first-child {
     width: 100%;
@@ -258,6 +260,7 @@
 .card-area.lawyer-area-5>.card-group>.card .card-img {} */
 
 .card-area.lawyer-area-5>.card-fill-height {
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -279,6 +282,20 @@
     .card-area.lawyer-area-5>.card:first-child~div {
         width: calc(50% - 12.5px);
     }
+
+    .card-area.lawyer-area-5>.card:first-child~.card .card-img,
+    .card-area.lawyer-area-5>.card-group>.card .card-img {
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .card-area.lawyer-area-5>.card-fill-height .card-img {
+        height: 203px !important;
+    }
+
+}
+
+@media (min-width: 992px) {
 
     .card-area.lawyer-area-5>.card:first-child~.card .card-img,
     .card-area.lawyer-area-5>.card-group>.card .card-img {

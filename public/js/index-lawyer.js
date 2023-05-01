@@ -13,35 +13,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
   // 上線開關的點擊事件
-  document
-    .querySelector('.online-switch .online')
-    .addEventListener('click', () => {
-      document.querySelector(
-        '.online-switch .online-switch-active'
-      ).style.left = '50%';
-    });
-  document
-    .querySelector('.online-switch .offline')
-    .addEventListener('click', () => {
-      document.querySelector(
-        '.online-switch .online-switch-active'
-      ).style.left = '0%';
-    });
-
-  document
-    .querySelector('.case-consult-popup .popup-close')
-    .addEventListener('click', () => {
-      document.querySelector('.case-consult-popup').style.display = 'none';
-    });
-  document
-    .querySelector('.case-consult-popup .consult-btn')
-    .addEventListener('click', () => {
-      if (!document.querySelector('.case-consult-popup .benefit').checked) {
-        document.querySelector('.case-consult-popup .new-case').style.display =
-          'none';
+  if (document.querySelector('.online-switch') !== null) {
+    document
+      .querySelector('.online-switch .online')
+      .addEventListener('click', () => {
         document.querySelector(
-          '.case-consult-popup .reject-case'
-        ).style.display = 'block';
-      }
-    });
+          '.online-switch .online-switch-active'
+        ).style.left = '50%';
+      });
+
+    document
+      .querySelector('.online-switch .offline')
+      .addEventListener('click', () => {
+        document.querySelector(
+          '.online-switch .online-switch-active'
+        ).style.left = '0%';
+      });
+  }
+  if (document.querySelector('.case-consult-popup') !== null) {
+    document
+      .querySelector('.case-consult-popup .popup-close')
+      .addEventListener('click', () => {
+        document.querySelector('.case-consult-popup').style.display = 'none';
+      });
+
+    document
+      .querySelector('.case-consult-popup .consult-btn')
+      .addEventListener('click', () => {
+        if (!document.querySelector('.case-consult-popup .benefit').checked) {
+          document.querySelector(
+            '.case-consult-popup .new-case'
+          ).style.display = 'none';
+          document.querySelector(
+            '.case-consult-popup .reject-case'
+          ).style.display = 'block';
+        }
+      });
+  }
 });

@@ -15,10 +15,6 @@
           預約諮詢
         </div>
       </div>
-      <!-- <div class="popup-tab choice-lawye">
-        <div class="popup-tab-item">挑選律師</div>
-        <div class="popup-tab-item active">填選資料</div>
-      </div> -->
       <%- include timely-consult.ejs %> <%- include reserve-consult.ejs %> <%-
       include lawyer-popup.ejs %> <%- include invite-notify.ejs %> <%- include
       progress-notifiy.ejs %>
@@ -76,7 +72,7 @@
   </div>
 </div>
 <% } %>
-<section class="section bg-gray">
+<section class="section">
   <% if(!lawyerSide) { %>
   <div class="section-top-tab">
     <div class="section-top-tab-item active">律卡部落</div>
@@ -86,9 +82,133 @@
   <% } %>
   <div class="container">
     <div class="section-title">
-      <h2 class="bg-gray color-primary">律師專欄</h2>
+      <h2 class="color-primary">律卡部落</h2>
     </div>
-    <div class="card-area lawyer-area">
+    <div class="card-area lawyer-area lawyer-area-6">
+      <div class="card mb-md-0">
+        <div class="card-img">
+          <img src="https://picsum.photos/id/299/410/200" alt="" />
+          <div class="card-title">
+            <h3>專欄標題</h3>
+          </div>
+        </div>
+        <div class="card-paragraph brd-color-primary">
+          <p>
+            訴訟是指當事⼈因權益糾紛⽽向法院提出申請，進⾏爭議解決程序的過程。這是
+            ⼀個非常重要的程序，因為它能夠解決許多不同類型的糾紛和爭議，並保護當事
+            ⼈的權益。
+            訴訟是指當事⼈因權益糾紛⽽向法院提出申請，進⾏爭議解決程序的過程。這是
+            ⼀個非常重要的程序，因為它能夠解決許多不同類型的糾紛和爭議，並保護當事
+            ⼈的權益。
+          </p>
+          <span class="card-date color-primary bg-white">2023.4.2</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section bg-gray">
+  <div class="container">
+    <div class="section-title">
+      <h2 class="color-primary">最新文章</h2>
+    </div>
+    <div class="card-area lawyer-area lawyer-area-6">
+      <% for(var i = 0; 5 > i; i++){ %>
+      <div class="card mb-md-0">
+        <div class="card-img">
+          <img src="https://picsum.photos/id/299/410/200" alt="" />
+          <div class="card-title">
+            <h3>專欄標題</h3>
+          </div>
+        </div>
+        <div class="card-paragraph brd-color-primary">
+          <p>
+            訴訟是指當事⼈因權益糾紛⽽向法院提出申請，進⾏爭議解決程序的過程。這是
+            ⼀個非常重要的程序，因為它能夠解決許多不同類型的糾紛和爭議，並保護當事
+            ⼈的權益。
+          </p>
+          <span class="card-date color-primary bg-gray">2023.4.2</span>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <h2 class="color-primary">品牌專欄</h2>
+    </div>
+    <div class="card-area lawyer-area lawyer-area-1">
+      <div class="big-area brd-color-primary">
+        <div class="card mb-0">
+          <div class="card-img">
+            <img src="https://picsum.photos/id/180/410/270" alt="" />
+            <div class="card-title">
+              <h3>專欄標題</h3>
+            </div>
+          </div>
+          <div class="card-paragraph">
+            <p>
+              訴訟是指當事⼈因權益糾紛⽽向法院提出申請，進⾏爭議解決程序的過程。這是
+              ⼀個非常重要的程序，因為它能夠解決許多不同類型的糾紛和爭議，並保護當事
+              ⼈的權益。
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="small-area">
+        <div class="card">
+          <div class="card-img">
+            <img src="https://picsum.photos/id/369/410/270" alt="" />
+            <div class="card-title">
+              <h3>專欄標題</h3>
+            </div>
+          </div>
+          <div class="card-paragraph brd-color-primary">
+            <p>
+              創立於20XX年，隨著時代及科技迅 速變遷，國際間交易往來的......
+              (more)
+            </p>
+            <span class="card-date color-primary bg-white">2023.4.2</span>
+          </div>
+        </div>
+        <div class="card mb-0">
+          <div class="card-img">
+            <img src="https://picsum.photos/id/369/410/270" alt="" />
+            <div class="card-title">
+              <h3>專欄標題</h3>
+            </div>
+          </div>
+          <div class="card-paragraph brd-color-primary">
+            <p>
+              創立於20XX年，隨著時代及科技迅 速變遷，國際間交易往來的......
+              (more)
+            </p>
+            <span class="card-date color-primary bg-white">2023.4.2</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section bg-gray">
+  <div class="container">
+    <div class="section-title title-tab color-primary">
+      <h2 class="bg-gray">法律常識</h2>
+      <div class="law-new-tab">
+        <div
+          class="law-new-tab-item active"
+          data-service-method="law-knowledge"
+        >
+          法律常識
+        </div>
+        <div class="law-new-tab-item" data-service-method="hot-topic">
+          熱門話題
+        </div>
+      </div>
+    </div>
+    <div class="card-area lawyer-area law-knowledge-content law-knowledge">
       <% for(var i = 0; 6 > i; i++){ %>
       <div class="card">
         <div class="card-img">
@@ -106,29 +226,20 @@
       </div>
       <% } %>
     </div>
-  </div>
-</section>
-<section class="section bg-primary">
-  <div class="container">
-    <div class="section-title title-tab color-gray">
-      <h2 class="bg-primary">法律時事</h2>
-      <div class="law-new-tab">
-        <div class="law-new-tab-item">律師專欄</div>
-        <div class="law-new-tab-item">法律常識</div>
-        <div class="law-new-tab-item active">熱門話題</div>
-      </div>
-    </div>
-    <div class="card-area law-new-area">
+    <div class="card-area lawyer-area law-knowledge-content hot-topic">
       <% for(var i = 0; 6 > i; i++){ %>
       <div class="card">
-        <div class="card-title color-gray">
-          <h3>案件標題</h3>
+        <div class="card-img">
+          <img src="https://picsum.photos/id/1/410/270" alt="" />
+          <div class="card-title">
+            <h3>專欄標題</h3>
+          </div>
         </div>
-        <div class="card-paragraph color-gray brd-color-gray">
+        <div class="card-paragraph brd-color-primary">
           <p>
-            瑞士《週日報》（SonntagsZeitung）今（2）報導指出，瑞銀併購瑞信前，各自有7萬2000多名和5萬多名員工，然而在瑞士政府避免全球金融崩盤而大力促成下，於3月19日匆促安排由瑞銀收購瑞信
+            1瑞士《週日報》（SonntagsZeitung）今（2）報導指出，瑞銀併購瑞信前，各自有7萬2000多名和5萬多名員工，然而在瑞士政府避免全球金融崩盤而大力促成下，於3月19日匆促安排由瑞銀收購瑞信
           </p>
-          <span class="card-date bg-primary color-gray">2023.4.2</span>
+          <span class="card-date bg-gray color-primary">2023.4.2</span>
         </div>
       </div>
       <% } %>

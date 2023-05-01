@@ -1,0 +1,90 @@
+.lawyer-card-img {
+    position: relative;
+}
+
+.lawyer-card-img img {
+    overflow: hidden;
+    border-radius: 48% 48% 10px 10px;
+}
+
+.lawyer-card-collect {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.lawyer-card-name {
+    margin-top: 10px;
+    color: #858585;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lawyer-card-evaluate {
+    margin-top: 10px;
+}
+
+.lawyer-card-evaluate {
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+}
+
+.lawyer-card-descript {
+    margin-top: 10px;
+}
+
+.lawyer-card-descript .progress-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lawyer-card-descript span {
+    min-width: 10px;
+}
+
+.lawyer-card-descript progress {
+    width: 100%;
+    border: 0;
+    height: 8px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.lawyer-card-descript progress::-webkit-progress-value {
+    border-radius: 20px;
+    background-color: var(--primary-color);
+}
+
+.lawyer-card-descript progress::-webkit-progress-bar {
+    background-color: #eee;
+}
+
+.lawyer-card-ability {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.lawyer-card-ability .lawyer-ability-item {
+    padding: 10px 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    color: #858585;
+    background: #EBEBEB;
+    border: 0.5px solid #DBDBDB;
+    border-radius: 10px;
+
+}
+
+.lawyer-card-ability .lawyer-ability-item span:last-child {
+    margin: 0 auto;
+}
+
+.lawyer-card-ability .badge-array {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}

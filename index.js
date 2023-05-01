@@ -42,7 +42,7 @@ app.get('/con-call', (req, res) => {
   });
 });
 
-// 律卡部落
+// 律卡部落 start
 
 const lawyerCardBlog = express.Router();
 
@@ -97,5 +97,26 @@ lawyerCardBlog.get('/post', (req, res) => {
 });
 app.use('/lawyerCardBlog', lawyerCardBlog);
 
+// 律卡部落 end
+
+// 個人頁面 start
+const personPage = express.Router();
+
+personPage.get('/', (req, res) => {
+  res.render('personPage/index', {
+    lawyerSide: true,
+    clientSide: false,
+    conCall: false,
+  });
+});
+personPage.get('/preview', (req, res) => {
+  res.render('personPage/preview', {
+    lawyerSide: true,
+    clientSide: false,
+    conCall: false,
+  });
+});
+app.use('/personPage', personPage);
+// 個人頁面 end
 const PORT = 3000;
 app.listen(PORT, () => console.log(`server is now listening on port ${PORT}`));

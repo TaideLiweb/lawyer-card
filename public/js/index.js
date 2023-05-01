@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   // 輪播套件初始化
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper('.lawyer-swiper', {
     spaceBetween: 50,
     pagination: {
       el: '.swiper-pagination',
@@ -97,6 +97,12 @@ document.addEventListener('DOMContentLoaded', () => {
     '.progress-notifiy .rwd-table'
   );
 
+  const lawNewTabItem = document.querySelectorAll(
+    '.law-new-tab .law-new-tab-item'
+  );
+  const lawKnowledgeContent = document.querySelectorAll(
+    '.law-knowledge-content'
+  );
   const preConsultPopup = document.querySelectorAll('.pre-consult');
   const choiceLawyerPopup = document.querySelector(
     '.popup-content.choice-lawyer'
@@ -115,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '.invite-notify .back-index>button'
   );
 
-  function tabHandle(tab, container) {
+  function tabHandle(tab, container, displayType) {
     tab.forEach((element) => {
       element.addEventListener('click', (e) => {
         // 初始化每個 tab 、 content 狀態
@@ -128,14 +134,16 @@ document.addEventListener('DOMContentLoaded', () => {
         // 用 data-service-method 取得要顯示的 content
         document.querySelector(
           `.${e.currentTarget.dataset.serviceMethod}`
-        ).style.display = 'block';
+        ).style.display = displayType;
       });
     });
   }
   // 即時諮詢 tab
-  tabHandle(serviceMethodTabItem, preConsultPopup);
+  tabHandle(serviceMethodTabItem, preConsultPopup, 'block');
   // 進度通知表單 tab
-  tabHandle(TableTabItem, progressNotifiyTable);
+  tabHandle(TableTabItem, progressNotifiyTable, 'block');
+  // 法律常識 tab
+  tabHandle(lawNewTabItem, lawKnowledgeContent, 'flex');
 
   // 隱藏所有 popup-content
   function hiddenPopup() {
