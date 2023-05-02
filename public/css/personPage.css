@@ -1,3 +1,29 @@
+.online-status {
+    margin-top: 15px;
+    display: flex;
+    justify-content: end;
+}
+
+.online-status .radio {
+    padding: 10px 30px;
+    border-radius: 25px;
+    color: #fff;
+    background: var(--primary-color);
+    letter-spacing: 4px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.online-status .radio span {
+    margin-right: 15px;
+}
+
+.online-status .radio span::after {
+    background-color: var(--secondary-color);
+}
+
 .personPageTab {
     overflow-x: auto;
 }
@@ -19,7 +45,7 @@
 
 @media (min-width: 768px) {
     .personPageTab-item {
-        min-width: calc(16.66666% - 12.5px);
+        min-width: calc(25% - 11.25px);
     }
 }
 
@@ -45,8 +71,8 @@
 }
 
 .section.personPage-section {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     background: #fff;
     margin-top: -2px;
 }
@@ -94,8 +120,8 @@
     letter-spacing: 3.6px;
 }
 
-.personPage-descript > p,
-.personPage-descript > .online-time-content {
+.personPage-descript>p,
+.personPage-descript>.online-time-content {
     margin: 16px 0;
     padding: 25px;
     background: #f5f5f5;
@@ -105,7 +131,7 @@
     color: #858585;
 }
 
-.personPage-descript > .consult-btn {
+.personPage-descript>.consult-btn {
     justify-content: end;
 }
 
@@ -211,17 +237,19 @@
 .personPage-content .personPage-half {
     width: 100%;
 }
+
 @media (min-width: 768px) {
     .personPage-content .personPage-half {
         width: calc(50% - 15px);
     }
 }
+
 .personPage-content .lawyer-info {
     display: flex;
     gap: 20px;
 }
 
-.personPage-content .lawyer-info > div {
+.personPage-content .lawyer-info>div {
     width: calc(50% - 10px);
 }
 
@@ -260,23 +288,24 @@
     padding: 20px 40px;
 }
 
-.schedule-body > div {
+.schedule-body>div {
     margin-bottom: 10px;
 }
 
-.schedule-body > :first-child {
+.schedule-body> :first-child {
     text-align: center;
 }
 
-.schedule-body > :first-child ~ div {
+.schedule-body> :first-child~div {
     display: flex;
 }
 
-.schedule-body > :first-child ~ div > span:last-child {
+.schedule-body> :first-child~div>span:last-child {
     flex-grow: 1;
     text-align: center;
     color: var(--primary-color);
 }
+
 @media (min-width: 992px) {
     .schedule-body {
         padding: 35px 40px;
@@ -289,18 +318,21 @@
     background-color: #fff;
     color: #858585;
 }
+
 .comment-person {
     margin-bottom: 10px;
     display: flex;
     gap: 10px;
     align-items: end;
 }
+
 .comment-img {
     width: 70px;
     height: 70px;
     border-radius: 50%;
     overflow: hidden;
 }
+
 .comment-name {
     padding-bottom: 10px;
 }
@@ -308,9 +340,12 @@
 .lawyer-post-swiper .card {
     margin-bottom: 0 !important;
 }
-.person-post {
+
+.person-post,
+.consult-record {
     border-radius: 5px 0px 5px 5px;
 }
+
 .person-post-tab,
 .consult-record-tab {
     height: 30px;
@@ -318,6 +353,7 @@
     gap: 10px;
     justify-content: end;
 }
+
 .person-post-tab-item,
 .consult-record-tab-item {
     padding: 5px 10px 5px 18px;
@@ -330,6 +366,7 @@
     transition: all 0.3s;
     cursor: pointer;
 }
+
 .person-post-tab-item.active,
 .consult-record-tab-item.active {
     color: var(--primary-color);
@@ -340,6 +377,70 @@
 .timely-consult,
 .reserve-consult {
     display: none;
+}
+
+.consult-record .table-title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+.consult-record .table-title h2 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.consult-record .table-title select {
+    padding-right: 25px;
+    margin-right: 5px;
+    border: 0px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    color: var(--primary-color);
+    background: url(../images/icon/secondary-arrow.png) no-repeat right center #ffffff;
+    background-size: 15px;
+    background-position-x: 94%;
+}
+
+
+
+
+.personPage-content.change-password {
+    max-width: 470px;
+    padding: 70px 70px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .personPage-content.change-password {
+        padding: 70px 120px;
+
+    }
+}
+
+.change-password label>span {
+    display: block;
+    text-align: center;
+    color: var(--popup-font-color);
+    margin-bottom: 15px;
+}
+
+.change-password label>input {
+    width: 100%;
+    padding: 5px 15px;
+    color: var(--popup-font-color);
+    background: #ebebeb;
+    border: 0.5px solid #dbdbdb;
+    border-radius: 50px;
+    outline: none;
+}
+
+.change-password label>input:focus {
+    background: #fff;
 }
 
 .swiper-2 {
@@ -355,9 +456,11 @@
     left: 50%;
     transform: translate(-50%, 0);
 }
+
 .swiper-2 .swiper-prev {
     margin-right: 10px;
 }
+
 .swiper-2 .swiper-next {
     margin-left: 10px;
 }
@@ -367,6 +470,7 @@
     width: 30px;
     cursor: pointer;
 }
+
 .swiper-2 .swiper-pagination {
     width: initial;
     position: static;
@@ -374,17 +478,21 @@
     text-align: center;
     gap: 5px;
 }
+
 @media (min-width: 768px) {
     .swiper-2 .swiper-prev {
         margin-right: 20px;
     }
+
     .swiper-2 .swiper-next {
         margin-left: 20px;
     }
+
     .swiper-2 .swiper-pagination {
         gap: 20px;
     }
 }
+
 .swiper-2 .swiper-pagination-bullet {
     width: 14px;
     height: 14px;
@@ -402,10 +510,11 @@
     background-color: var(--primary-color);
     border-radius: 10px;
 }
+
 @media (min-width: 768px) {
     .section.personPage-section {
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: 120px;
+        padding-bottom: 120px;
     }
 
     .personPage-content {

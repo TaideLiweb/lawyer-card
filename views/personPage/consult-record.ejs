@@ -1,67 +1,130 @@
 <% layout('../layout') %>
-<section class="section personPage-section bg-gray">
-    <div class="container">
-        <div class="consult-record-tab">
-            <div class="consult-record-tab-item active" data-tab-target="complaint">書狀服務</div>
-            <div class="consult-record-tab-item" data-tab-target="timely-consult">即時諮詢</div>
-            <div class="consult-record-tab-item" data-tab-target="reserve-consult">預約諮詢</div>
-        </div>
-        <div class="personPage-content consult-record complaint">
-            書狀服務
-            <table class="rwd-table">
-                <tr>
-                    <th>時間</th>
-                    <th>案件人</th>
-                    <th>諮詢時數</th>
-                    <th>諮詢費用</th>
-                    <th>狀態</th>
-                </tr>
-                <tr>
-                    <td data-th="時間">Fed 11 2023 8:5 pm</td>
-                    <td data-th="案件人">陳律師</td>
-                    <td data-th="諮詢時數">1H</td>
-                    <td data-th="諮詢費用">4500</td>
-                    <td data-th="狀態">已結案入帳</td>
-                </tr>
-            </table>
-        </div>
-        <div class="personPage-content consult-record timely-consult">
-            即時諮詢
-            <table class="rwd-table">
-                <tr>
-                    <th>時間</th>
-                    <th>案件人</th>
-                    <th>諮詢時數</th>
-                    <th>諮詢費用</th>
-                    <th>狀態</th>
-                </tr>
-                <tr>
-                    <td data-th="時間">Fed 11 2023 8:5 pm</td>
-                    <td data-th="案件人">陳律師</td>
-                    <td data-th="諮詢時數">1H</td>
-                    <td data-th="諮詢費用">4500</td>
-                    <td data-th="狀態">已結案入帳</td>
-                </tr>
-            </table>
-        </div>
-        <div class="personPage-content consult-record reserve-consult">
-            預約諮詢
-            <table class="rwd-table">
-                <tr>
-                    <th>時間</th>
-                    <th>案件人</th>
-                    <th>諮詢時數</th>
-                    <th>諮詢費用</th>
-                    <th>狀態</th>
-                </tr>
-                <tr>
-                    <td data-th="時間">Fed 11 2023 8:5 pm</td>
-                    <td data-th="案件人">陳律師</td>
-                    <td data-th="諮詢時數">1H</td>
-                    <td data-th="諮詢費用">4500</td>
-                    <td data-th="狀態">已結案入帳</td>
-                </tr>
-            </table>
-        </div>
+<section>
+  <div class="container">
+    <div class="online-status">
+      <label class="radio">
+        <input class="auto" checked="" type="radio" name="online-status" />
+        <span></span>
+        在線上駐點中
+      </label>
     </div>
+    <div class="personPageTab">
+      <div class="personPageTab-wrap">
+        <div class="personPageTab-item">
+          <a href="/personPage/">我的律卡</a>
+        </div>
+        <div class="personPageTab-item">
+          <a href="/personPage/my-post">我的文章</a>
+        </div>
+        <div class="personPageTab-item active">
+          <a href="/personPage/consult-record">諮詢紀錄</a>
+        </div>
+        <div class="personPageTab-item">
+          <a href="/personPage/change-password">修改密碼</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section personPage-section bg-gray">
+  <div class="container">
+    <div class="consult-record-tab">
+      <div class="consult-record-tab-item active" data-tab-target="complaint">
+        書狀服務
+      </div>
+      <div class="consult-record-tab-item" data-tab-target="timely-consult">
+        即時諮詢
+      </div>
+      <div class="consult-record-tab-item" data-tab-target="reserve-consult">
+        預約諮詢
+      </div>
+    </div>
+    <div class="personPage-content consult-record complaint">
+      <div class="table-title">
+        <h2>書狀服務</h2>
+        <div>
+          <select name="" id="">
+            <option value="">年</option>
+          </select>
+          <select name="" id="">
+            <option value="">月</option>
+          </select>
+        </div>
+      </div>
+      <table class="rwd-table">
+        <tr>
+          <th>時間</th>
+          <th>案件人</th>
+          <th>諮詢時數</th>
+          <th>諮詢費用</th>
+          <th>狀態</th>
+        </tr>
+        <tr>
+          <td data-th="時間">Fed 11 2023 8:5 pm</td>
+          <td data-th="案件人">陳律師</td>
+          <td data-th="諮詢時數">1H</td>
+          <td data-th="諮詢費用">4500</td>
+          <td data-th="狀態">已結案入帳</td>
+        </tr>
+      </table>
+    </div>
+    <div class="personPage-content consult-record timely-consult">
+      <div class="table-title">
+        <h2>即時諮詢</h2>
+        <div>
+          <select name="" id="">
+            <option value="">年</option>
+          </select>
+          <select name="" id="">
+            <option value="">月</option>
+          </select>
+        </div>
+      </div>
+      <table class="rwd-table">
+        <tr>
+          <th>時間</th>
+          <th>案件人</th>
+          <th>諮詢時數</th>
+          <th>諮詢費用</th>
+          <th>狀態</th>
+        </tr>
+        <tr>
+          <td data-th="時間">Fed 11 2023 8:5 pm</td>
+          <td data-th="案件人">陳律師</td>
+          <td data-th="諮詢時數">1H</td>
+          <td data-th="諮詢費用">4500</td>
+          <td data-th="狀態">已結案入帳</td>
+        </tr>
+      </table>
+    </div>
+    <div class="personPage-content consult-record reserve-consult">
+      <div class="table-title">
+        <h2>預約諮詢</h2>
+        <div>
+          <select name="" id="">
+            <option value="">年</option>
+          </select>
+          <select name="" id="">
+            <option value="">月</option>
+          </select>
+        </div>
+      </div>
+      <table class="rwd-table">
+        <tr>
+          <th>時間</th>
+          <th>案件人</th>
+          <th>諮詢時數</th>
+          <th>諮詢費用</th>
+          <th>狀態</th>
+        </tr>
+        <tr>
+          <td data-th="時間">Fed 11 2023 8:5 pm</td>
+          <td data-th="案件人">陳律師</td>
+          <td data-th="諮詢時數">1H</td>
+          <td data-th="諮詢費用">4500</td>
+          <td data-th="狀態">已結案入帳</td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </section>
