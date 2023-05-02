@@ -1,249 +1,227 @@
 <% layout('layout') %> <% if(!lawyerSide) { %>
 <div class="main-banner">
-  <div class="popup">
-    <div class="popup-container">
-      <!-- 上一步按鈕 -->
-      <div class="popup-previous">
-        <img src="/images/popup/previous.png" alt="" width="100%" />
-      </div>
-      <!-- tab 按鈕 -->
-      <div class="popup-tab service-method">
-        <div class="popup-tab-item active" data-service-method="timely-consult">
-          即時諮詢
+    <div class="popup">
+        <div class="popup-container">
+            <!-- 上一步按鈕 -->
+            <div class="popup-previous">
+                <img src="/images/popup/previous.png" alt="" width="100%" />
+            </div>
+            <!-- tab 按鈕 -->
+            <div class="popup-tab service-method">
+                <div class="popup-tab-item active" data-tab-target="timely-consult">即時諮詢</div>
+                <div class="popup-tab-item" data-tab-target="reserve-consult">預約諮詢</div>
+            </div>
+            <%- include timely-consult.ejs %> <%- include reserve-consult.ejs %> <%- include lawyer-popup.ejs %> <%-
+            include invite-notify.ejs %> <%- include progress-notifiy.ejs %>
         </div>
-        <div class="popup-tab-item" data-service-method="reserve-consult">
-          預約諮詢
-        </div>
-      </div>
-      <%- include timely-consult.ejs %> <%- include reserve-consult.ejs %> <%-
-      include lawyer-popup.ejs %> <%- include invite-notify.ejs %> <%- include
-      progress-notifiy.ejs %>
     </div>
-  </div>
 </div>
 <% } %> <% if(lawyerSide) { %>
 <div class="lawyer-main-banner">
-  <div class="main-banner-left">
-    <div class="main-banner-left-area">
-      <p>
-        開啟上線服務後，民眾端用戶即可搜尋到個人律師卡片，便可即時視訊/語音/文字諮詢法律服務業務。<br /><br />
-        連線開啟將立即倒數服務時數，如各一方用戶斷線將停止計時，重新連線後再起計時。
-      </p>
-      <div class="online-switch bg-gray">
-        <span class="offline">線下休息</span>
-        <span class="online">上線服務</span>
-        <div class="online-switch-active"></div>
-      </div>
+    <div class="main-banner-left">
+        <div class="main-banner-left-area">
+            <p>
+                開啟上線服務後，民眾端用戶即可搜尋到個人律師卡片，便可即時視訊/語音/文字諮詢法律服務業務。<br /><br />
+                連線開啟將立即倒數服務時數，如各一方用戶斷線將停止計時，重新連線後再起計時。
+            </p>
+            <div class="online-switch bg-gray">
+                <span class="offline">線下休息</span>
+                <span class="online">上線服務</span>
+                <div class="online-switch-active"></div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="main-banner-right">
-    <div class="current-info-area">
-      <div class="current-info-item">
-        <span class="current-info-item-subtitle">預約諮詢</span>
-        <div class="current-info-item-descript">
-          <span class="number">2</span>
-          <span>件</span>
+    <div class="main-banner-right">
+        <div class="current-info-area">
+            <div class="current-info-item">
+                <span class="current-info-item-subtitle">預約諮詢</span>
+                <div class="current-info-item-descript">
+                    <span class="number">2</span>
+                    <span>件</span>
+                </div>
+            </div>
+            <div class="current-info-item">
+                <span class="current-info-item-subtitle">諮詢件數</span>
+                <div class="current-info-item-descript">
+                    <span class="number">5</span>
+                    <span>件</span>
+                </div>
+            </div>
+            <div class="current-info-item">
+                <span class="current-info-item-subtitle">諮詢金額</span>
+                <div class="current-info-item-descript">
+                    <span>$</span>
+                    <span class="number">120,000</span>
+                    <span>元</span>
+                </div>
+            </div>
+            <div class="current-info-item">
+                <span class="current-info-item-subtitle">送出律卡</span>
+                <div class="current-info-item-descript">
+                    <span class="number">5</span>
+                    <span>張</span>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="current-info-item">
-        <span class="current-info-item-subtitle">諮詢件數</span>
-        <div class="current-info-item-descript">
-          <span class="number">5</span>
-          <span>件</span>
-        </div>
-      </div>
-      <div class="current-info-item">
-        <span class="current-info-item-subtitle">諮詢金額</span>
-        <div class="current-info-item-descript">
-          <span>$</span>
-          <span class="number">120,000</span>
-          <span>元</span>
-        </div>
-      </div>
-      <div class="current-info-item">
-        <span class="current-info-item-subtitle">送出律卡</span>
-        <div class="current-info-item-descript">
-          <span class="number">5</span>
-          <span>張</span>
-        </div>
-      </div>
+        <img src="/images/images-lawyer.png" width="100%" />
     </div>
-    <img src="/images/images-lawyer.png" width="100%" />
-  </div>
 </div>
 <% } %>
 <section class="section">
-  <% if(!lawyerSide) { %>
-  <div class="section-top-tab">
-    <div class="section-top-tab-item active">律卡部落</div>
-    <div class="section-top-tab-item">律師卡片</div>
-    <div class="section-top-tab-item">書狀服務</div>
-  </div>
-  <% } %>
-  <div class="container">
-    <div class="section-title">
-      <h2 class="color-primary">律卡部落</h2>
+    <% if(!lawyerSide) { %>
+    <div class="section-top-tab">
+        <div class="section-top-tab-item active">律卡部落</div>
+        <div class="section-top-tab-item">律師卡片</div>
+        <div class="section-top-tab-item">書狀服務</div>
     </div>
-    <div class="card-area lawyer-area lawyer-area-6">
-      <div class="card mb-md-0">
-        <div class="card-img">
-          <img src="https://picsum.photos/id/299/410/200" alt="" />
-          <div class="card-title">
-            <h3>專欄標題</h3>
-          </div>
+    <% } %>
+    <div class="container">
+        <div class="section-title">
+            <h2 class="color-primary">律卡部落</h2>
         </div>
-        <div class="card-paragraph brd-color-primary">
-          <p>
-            訴訟是指當事⼈因權益糾紛⽽向法院提出申請，進⾏爭議解決程序的過程。這是
-            ⼀個非常重要的程序，因為它能夠解決許多不同類型的糾紛和爭議，並保護當事
-            ⼈的權益。
-            訴訟是指當事⼈因權益糾紛⽽向法院提出申請，進⾏爭議解決程序的過程。這是
-            ⼀個非常重要的程序，因為它能夠解決許多不同類型的糾紛和爭議，並保護當事
-            ⼈的權益。
-          </p>
-          <span class="card-date color-primary bg-white">2023.4.2</span>
+        <div class="card-area lawyer-area lawyer-area-6">
+            <div class="card mb-md-0">
+                <div class="card-img">
+                    <img src="https://picsum.photos/id/299/410/200" alt="" />
+                    <div class="card-title">
+                        <h3>專欄標題</h3>
+                    </div>
+                </div>
+                <div class="card-paragraph brd-color-primary">
+                    <p>
+                        訴訟是指當事⼈因權益糾紛⽽向法院提出申請，進⾏爭議解決程序的過程。這是
+                        ⼀個非常重要的程序，因為它能夠解決許多不同類型的糾紛和爭議，並保護當事 ⼈的權益。
+                        訴訟是指當事⼈因權益糾紛⽽向法院提出申請，進⾏爭議解決程序的過程。這是
+                        ⼀個非常重要的程序，因為它能夠解決許多不同類型的糾紛和爭議，並保護當事 ⼈的權益。
+                    </p>
+                    <span class="card-date color-primary bg-white">2023.4.2</span>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
 <section class="section bg-gray">
-  <div class="container">
-    <div class="section-title">
-      <h2 class="color-primary">最新文章</h2>
-    </div>
-    <div class="card-area lawyer-area lawyer-area-6">
-      <% for(var i = 0; 5 > i; i++){ %>
-      <div class="card mb-md-0">
-        <div class="card-img">
-          <img src="https://picsum.photos/id/299/410/200" alt="" />
-          <div class="card-title">
-            <h3>專欄標題</h3>
-          </div>
+    <div class="container">
+        <div class="section-title">
+            <h2 class="color-primary">最新文章</h2>
         </div>
-        <div class="card-paragraph brd-color-primary">
-          <p>
-            訴訟是指當事⼈因權益糾紛⽽向法院提出申請，進⾏爭議解決程序的過程。這是
-            ⼀個非常重要的程序，因為它能夠解決許多不同類型的糾紛和爭議，並保護當事
-            ⼈的權益。
-          </p>
-          <span class="card-date color-primary bg-gray">2023.4.2</span>
+        <div class="card-area lawyer-area lawyer-area-6">
+            <% for(var i = 0; 5 > i; i++){ %>
+            <div class="card mb-md-0">
+                <div class="card-img">
+                    <img src="https://picsum.photos/id/299/410/200" alt="" />
+                    <div class="card-title">
+                        <h3>專欄標題</h3>
+                    </div>
+                </div>
+                <div class="card-paragraph brd-color-primary">
+                    <p>
+                        訴訟是指當事⼈因權益糾紛⽽向法院提出申請，進⾏爭議解決程序的過程。這是
+                        ⼀個非常重要的程序，因為它能夠解決許多不同類型的糾紛和爭議，並保護當事 ⼈的權益。
+                    </p>
+                    <span class="card-date color-primary bg-gray">2023.4.2</span>
+                </div>
+            </div>
+            <% } %>
         </div>
-      </div>
-      <% } %>
     </div>
-  </div>
 </section>
 <section class="section">
-  <div class="container">
-    <div class="section-title">
-      <h2 class="color-primary">品牌專欄</h2>
+    <div class="container">
+        <div class="section-title">
+            <h2 class="color-primary">品牌專欄</h2>
+        </div>
+        <div class="card-area lawyer-area lawyer-area-1">
+            <div class="big-area brd-color-primary">
+                <div class="card mb-0">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/id/180/410/270" alt="" />
+                        <div class="card-title">
+                            <h3>專欄標題</h3>
+                        </div>
+                    </div>
+                    <div class="card-paragraph">
+                        <p>
+                            訴訟是指當事⼈因權益糾紛⽽向法院提出申請，進⾏爭議解決程序的過程。這是
+                            ⼀個非常重要的程序，因為它能夠解決許多不同類型的糾紛和爭議，並保護當事 ⼈的權益。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="small-area">
+                <div class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/id/369/410/270" alt="" />
+                        <div class="card-title">
+                            <h3>專欄標題</h3>
+                        </div>
+                    </div>
+                    <div class="card-paragraph brd-color-primary">
+                        <p>創立於20XX年，隨著時代及科技迅 速變遷，國際間交易往來的...... (more)</p>
+                        <span class="card-date color-primary bg-white">2023.4.2</span>
+                    </div>
+                </div>
+                <div class="card mb-0">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/id/369/410/270" alt="" />
+                        <div class="card-title">
+                            <h3>專欄標題</h3>
+                        </div>
+                    </div>
+                    <div class="card-paragraph brd-color-primary">
+                        <p>創立於20XX年，隨著時代及科技迅 速變遷，國際間交易往來的...... (more)</p>
+                        <span class="card-date color-primary bg-white">2023.4.2</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="card-area lawyer-area lawyer-area-1">
-      <div class="big-area brd-color-primary">
-        <div class="card mb-0">
-          <div class="card-img">
-            <img src="https://picsum.photos/id/180/410/270" alt="" />
-            <div class="card-title">
-              <h3>專欄標題</h3>
-            </div>
-          </div>
-          <div class="card-paragraph">
-            <p>
-              訴訟是指當事⼈因權益糾紛⽽向法院提出申請，進⾏爭議解決程序的過程。這是
-              ⼀個非常重要的程序，因為它能夠解決許多不同類型的糾紛和爭議，並保護當事
-              ⼈的權益。
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="small-area">
-        <div class="card">
-          <div class="card-img">
-            <img src="https://picsum.photos/id/369/410/270" alt="" />
-            <div class="card-title">
-              <h3>專欄標題</h3>
-            </div>
-          </div>
-          <div class="card-paragraph brd-color-primary">
-            <p>
-              創立於20XX年，隨著時代及科技迅 速變遷，國際間交易往來的......
-              (more)
-            </p>
-            <span class="card-date color-primary bg-white">2023.4.2</span>
-          </div>
-        </div>
-        <div class="card mb-0">
-          <div class="card-img">
-            <img src="https://picsum.photos/id/369/410/270" alt="" />
-            <div class="card-title">
-              <h3>專欄標題</h3>
-            </div>
-          </div>
-          <div class="card-paragraph brd-color-primary">
-            <p>
-              創立於20XX年，隨著時代及科技迅 速變遷，國際間交易往來的......
-              (more)
-            </p>
-            <span class="card-date color-primary bg-white">2023.4.2</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 <section class="section bg-gray">
-  <div class="container">
-    <div class="section-title title-tab color-primary">
-      <h2 class="bg-gray">法律常識</h2>
-      <div class="law-new-tab">
-        <div
-          class="law-new-tab-item active"
-          data-service-method="law-knowledge"
-        >
-          法律常識
+    <div class="container">
+        <div class="section-title title-tab color-primary">
+            <h2 class="bg-gray">法律常識</h2>
+            <div class="law-knowledge-tab">
+                <div class="law-knowledge-tab-item active" data-tab-target="law-knowledge">法律常識</div>
+                <div class="law-knowledge-tab-item" data-tab-target="hot-topic">熱門話題</div>
+            </div>
         </div>
-        <div class="law-new-tab-item" data-service-method="hot-topic">
-          熱門話題
+        <div class="card-area lawyer-area law-knowledge-content law-knowledge">
+            <% for(var i = 0; 6 > i; i++){ %>
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://picsum.photos/id/1/410/270" alt="" />
+                    <div class="card-title">
+                        <h3>專欄標題</h3>
+                    </div>
+                </div>
+                <div class="card-paragraph brd-color-primary">
+                    <p>
+                        瑞士《週日報》（SonntagsZeitung）今（2）報導指出，瑞銀併購瑞信前，各自有7萬2000多名和5萬多名員工，然而在瑞士政府避免全球金融崩盤而大力促成下，於3月19日匆促安排由瑞銀收購瑞信
+                    </p>
+                    <span class="card-date bg-gray color-primary">2023.4.2</span>
+                </div>
+            </div>
+            <% } %>
         </div>
-      </div>
+        <div class="card-area lawyer-area law-knowledge-content hot-topic">
+            <% for(var i = 0; 6 > i; i++){ %>
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://picsum.photos/id/1/410/270" alt="" />
+                    <div class="card-title">
+                        <h3>專欄標題</h3>
+                    </div>
+                </div>
+                <div class="card-paragraph brd-color-primary">
+                    <p>
+                        1瑞士《週日報》（SonntagsZeitung）今（2）報導指出，瑞銀併購瑞信前，各自有7萬2000多名和5萬多名員工，然而在瑞士政府避免全球金融崩盤而大力促成下，於3月19日匆促安排由瑞銀收購瑞信
+                    </p>
+                    <span class="card-date bg-gray color-primary">2023.4.2</span>
+                </div>
+            </div>
+            <% } %>
+        </div>
     </div>
-    <div class="card-area lawyer-area law-knowledge-content law-knowledge">
-      <% for(var i = 0; 6 > i; i++){ %>
-      <div class="card">
-        <div class="card-img">
-          <img src="https://picsum.photos/id/1/410/270" alt="" />
-          <div class="card-title">
-            <h3>專欄標題</h3>
-          </div>
-        </div>
-        <div class="card-paragraph brd-color-primary">
-          <p>
-            瑞士《週日報》（SonntagsZeitung）今（2）報導指出，瑞銀併購瑞信前，各自有7萬2000多名和5萬多名員工，然而在瑞士政府避免全球金融崩盤而大力促成下，於3月19日匆促安排由瑞銀收購瑞信
-          </p>
-          <span class="card-date bg-gray color-primary">2023.4.2</span>
-        </div>
-      </div>
-      <% } %>
-    </div>
-    <div class="card-area lawyer-area law-knowledge-content hot-topic">
-      <% for(var i = 0; 6 > i; i++){ %>
-      <div class="card">
-        <div class="card-img">
-          <img src="https://picsum.photos/id/1/410/270" alt="" />
-          <div class="card-title">
-            <h3>專欄標題</h3>
-          </div>
-        </div>
-        <div class="card-paragraph brd-color-primary">
-          <p>
-            1瑞士《週日報》（SonntagsZeitung）今（2）報導指出，瑞銀併購瑞信前，各自有7萬2000多名和5萬多名員工，然而在瑞士政府避免全球金融崩盤而大力促成下，於3月19日匆促安排由瑞銀收購瑞信
-          </p>
-          <span class="card-date bg-gray color-primary">2023.4.2</span>
-        </div>
-      </div>
-      <% } %>
-    </div>
-  </div>
 </section>
 <% if(lawyerSide) { %> <%- include case-consult-popup.ejs %> <% } %>

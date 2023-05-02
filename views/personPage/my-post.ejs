@@ -1,0 +1,81 @@
+<% layout('../layout') %>
+<section class="section personPage-section bg-gray">
+    <div class="container">
+        <div class="person-post-tab">
+            <div class="person-post-tab-item active" data-tab-target="my-post">我的文章</div>
+            <div class="person-post-tab-item" data-tab-target="post-collect">文章收藏</div>
+        </div>
+        <div class="personPage-content person-post my-post">
+            <div class="swiper swiper-2 my-post-swiper">
+                <div class="swiper-wrapper">
+                    <% for(var i = 0; 5 > i; i++){ %>
+                    <div class="swiper-slide">
+                        <div class="card-area lawyer-area lawyer-area-2">
+                            <div class="card mb-md-0">
+                                <div class="card-img">
+                                    <img src="https://picsum.photos/id/299/410/250" alt="" />
+                                    <div class="card-title">
+                                        <h3>專欄標題</h3>
+                                    </div>
+                                </div>
+                                <div class="card-paragraph brd-color-primary">
+                                    <p>
+                                        訴訟是指當事⼈因權益糾紛⽽向法院提出申請，進⾏爭議解決程序的過程。這是
+                                        ⼀個非常重要的程序
+                                    </p>
+                                    <span class="card-date color-primary bg-white">2023.4.2</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+                <div class="swiper-control">
+                    <div class="swiper-prev">
+                        <img src="/images/lawyer-swiper/left-arrow.png" width="100%" alt="" />
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-next">
+                        <img src="/images/lawyer-swiper/right-arrow.png" width="100%" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="personPage-content person-post post-collect">
+            <div class="swiper swiper-2 post-collect-swiper">
+                <div class="swiper-wrapper">
+                    <% for(var i = 0; 5 > i; i++){ %>
+                    <div class="swiper-slide">
+                        <div class="card-area lawyer-area lawyer-area-2">
+                            <div class="card mb-md-0">
+                                <div class="card-img">
+                                    <img src="https://picsum.photos/id/299/410/250" alt="" />
+                                    <div class="card-title">
+                                        <h3>專欄標題</h3>
+                                    </div>
+                                </div>
+                                <div class="card-paragraph brd-color-primary">
+                                    <p>
+                                        1訴訟是指當事⼈因權益糾紛⽽向法院提出申請，進⾏爭議解決程序的過程。這是
+                                        ⼀個非常重要的程序
+                                    </p>
+                                    <span class="card-date color-primary bg-white">2023.4.2</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+                <div class="swiper-control">
+                    <div class="swiper-prev">
+                        <img src="/images/lawyer-swiper/left-arrow.png" width="100%" alt="" />
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-next">
+                        <img src="/images/lawyer-swiper/right-arrow.png" width="100%" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

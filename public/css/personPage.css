@@ -67,17 +67,16 @@
 }
 
 .personPage-content .big-area {
-    width: 100%
+    width: 100%;
 }
 
 @media (min-width: 992px) {
-
     .personPage-content .small-area {
         width: 30%;
     }
 
     .personPage-content .big-area {
-        width: 70%
+        width: 70%;
     }
 }
 
@@ -95,18 +94,18 @@
     letter-spacing: 3.6px;
 }
 
-.personPage-descript>p,
-.personPage-descript>.online-time-content {
+.personPage-descript > p,
+.personPage-descript > .online-time-content {
     margin: 16px 0;
     padding: 25px;
-    background: #F5F5F5;
+    background: #f5f5f5;
     border-radius: 10px;
     letter-spacing: 1.16px;
     line-height: 1.5;
     color: #858585;
 }
 
-.personPage-descript>.consult-btn {
+.personPage-descript > .consult-btn {
     justify-content: end;
 }
 
@@ -116,7 +115,7 @@
 
 .personPage-descript.cost-setting input {
     width: 100px;
-    border: 0.5px solid #DBDBDB;
+    border: 0.5px solid #dbdbdb;
     border-radius: 5px;
     margin-right: 10px;
     text-align: center;
@@ -171,7 +170,7 @@
 
 .personPage-descript.online-time-setting input {
     width: 60px;
-    border: 0.5px solid #DBDBDB;
+    border: 0.5px solid #dbdbdb;
     border-radius: 5px;
     margin: 0 10px;
     text-align: center;
@@ -186,7 +185,7 @@
 .personPage-descript-2 {
     width: 100%;
     padding: 30px;
-    background: #EBEBEB;
+    background: #ebebeb;
     color: #858585;
     letter-spacing: 1.16667px;
     font-size: 14px;
@@ -210,16 +209,19 @@
 }
 
 .personPage-content .personPage-half {
-    width: calc(50% - 15px);
+    width: 100%;
 }
-
-
+@media (min-width: 768px) {
+    .personPage-content .personPage-half {
+        width: calc(50% - 15px);
+    }
+}
 .personPage-content .lawyer-info {
     display: flex;
     gap: 20px;
 }
 
-.personPage-content .lawyer-info>div {
+.personPage-content .lawyer-info > div {
     width: calc(50% - 10px);
 }
 
@@ -258,37 +260,148 @@
     padding: 20px 40px;
 }
 
-.schedule-body>div {
+.schedule-body > div {
     margin-bottom: 10px;
 }
 
-.schedule-body>:first-child {
+.schedule-body > :first-child {
     text-align: center;
 }
 
-.schedule-body>:first-child~div {
+.schedule-body > :first-child ~ div {
     display: flex;
 }
 
-.schedule-body>:first-child~div>span:last-child {
+.schedule-body > :first-child ~ div > span:last-child {
     flex-grow: 1;
     text-align: center;
     color: var(--primary-color);
 }
-
-.comment-swiper {
-    padding: 0 0 50px 0;
+@media (min-width: 992px) {
+    .schedule-body {
+        padding: 35px 40px;
+    }
 }
 
 .comment-slide {
+    border-radius: 10px;
     padding: 20px;
     background-color: #fff;
+    color: #858585;
+}
+.comment-person {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: end;
+}
+.comment-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.comment-name {
+    padding-bottom: 10px;
 }
 
-.comment-swiper .swiper-pagination {
+.lawyer-post-swiper .card {
+    margin-bottom: 0 !important;
+}
+.person-post {
+    border-radius: 5px 0px 5px 5px;
+}
+.person-post-tab,
+.consult-record-tab {
+    height: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+}
+.person-post-tab-item,
+.consult-record-tab-item {
+    padding: 5px 10px 5px 18px;
+    letter-spacing: 2px;
+    color: #fff;
+    background-image: url(../images/button/button-left-primary.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.person-post-tab-item.active,
+.consult-record-tab-item.active {
+    color: var(--primary-color);
+    background-image: url(../images/button/button-left-white.png);
+}
+
+.post-collect,
+.timely-consult,
+.reserve-consult {
+    display: none;
+}
+
+.swiper-2 {
+    padding: 0 0 70px 0;
+}
+
+.swiper-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
     bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.swiper-2 .swiper-prev {
+    margin-right: 10px;
+}
+.swiper-2 .swiper-next {
+    margin-left: 10px;
 }
 
+.swiper-2 .swiper-prev img,
+.swiper-2 .swiper-next img {
+    width: 30px;
+    cursor: pointer;
+}
+.swiper-2 .swiper-pagination {
+    width: initial;
+    position: static;
+    display: flex;
+    text-align: center;
+    gap: 5px;
+}
+@media (min-width: 768px) {
+    .swiper-2 .swiper-prev {
+        margin-right: 20px;
+    }
+    .swiper-2 .swiper-next {
+        margin-left: 20px;
+    }
+    .swiper-2 .swiper-pagination {
+        gap: 20px;
+    }
+}
+.swiper-2 .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--primary-color);
+    background-color: #fff;
+    opacity: 1;
+}
+
+.swiper-2 .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin: 2.2px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
 @media (min-width: 768px) {
     .section.personPage-section {
         padding-top: 30px;
