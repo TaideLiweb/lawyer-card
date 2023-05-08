@@ -119,16 +119,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   // 我的文章 tab
   const personPostTabItem = document.querySelectorAll('.person-post-tab-item');
-  const personPost = document.querySelectorAll('.person-post');
   if (personPostTabItem !== null) {
-    tabHandle(personPostTabItem, personPost, 'block');
+    tabHandle('.person-post-tab-item', '.person-post', 'block');
   }
   // 諮詢紀錄 tab
   const pconsultRecordTabItem = document.querySelectorAll(
     '.consult-record-tab-item'
   );
-  const consultRecord = document.querySelectorAll('.consult-record');
   if (pconsultRecordTabItem !== null) {
-    tabHandle(pconsultRecordTabItem, consultRecord, 'flex');
+    tabHandle('.consult-record-tab-item', '.consult-record', 'flex');
   }
 });

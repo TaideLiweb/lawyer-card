@@ -1,0 +1,454 @@
+<% layout('../layout') %>
+<div class="main-section lawyer-card d-block">
+  <div class="lawyer-card-select bg-gray">
+    <select name="" id="">
+      <option value="">選擇區域</option>
+      <option>台北市</option>
+      <option>新北市</option>
+      <option>桃園市</option>
+      <option>台中市</option>
+      <option>台南市</option>
+      <option>高雄市</option>
+      <option>新竹縣</option>
+      <option>苗栗縣</option>
+      <option>彰化縣</option>
+      <option>屏東縣</option>
+      <option>宜蘭縣</option>
+      <option>花蓮縣</option>
+      <option>台東縣</option>
+      <option>澎湖縣</option>
+      <option>金門縣</option>
+      <option>連江縣</option>
+      <option>基隆市</option>
+      <option>新竹市</option>
+      <option>嘉義市</option>
+    </select>
+    <select name="" id="">
+      <option value="">案件類型</option>
+      <option>婚姻\子女</option>
+      <option>遺產繼承</option>
+      <option>交通糾紛</option>
+      <option>網路糾紛</option>
+      <option>債權債務</option>
+      <option>消費糾紛</option>
+      <option>刑事案件</option>
+      <option>房屋糾紛</option>
+      <option>勞資糾紛</option>
+    </select>
+  </div>
+  <section class="section bg-gray-2">
+    <div class="container">
+      <div class="swiper lawyer-card-swiper swiper-2">
+        <div class="swiper-wrapper">
+          <% for(var i = 0; 14 > i; i++){ %>
+          <div class="swiper-slide">
+            <div class="lawyer-card-intro">
+              <div class="lawyer-card-img">
+                <img
+                  src="/images/lawyer-swiper/lawyer-1.png"
+                  width="100%"
+                  alt=""
+                />
+              </div>
+              <div class="lawyer-card-name">
+                <span>陳律師</span>
+                <span>5.0</span>
+              </div>
+              <div class="lawyer-card-evaluate">
+                <img
+                  src="/images/lawyer-swiper/star.png"
+                  width="18px"
+                  height="18px"
+                  alt=""
+                />
+                <img
+                  src="/images/lawyer-swiper/star.png"
+                  width="18px"
+                  height="18px"
+                  alt=""
+                />
+                <img
+                  src="/images/lawyer-swiper/star.png"
+                  width="18px"
+                  height="18px"
+                  alt=""
+                />
+                <img
+                  src="/images/lawyer-swiper/star.png"
+                  width="18px"
+                  height="18px"
+                  alt=""
+                />
+                <img
+                  src="/images/lawyer-swiper/star.png"
+                  width="18px"
+                  height="18px"
+                  alt=""
+                />
+              </div>
+              <div class="lawyer-card-descript">
+                <div class="progress-group">
+                  <span>5</span>
+                  <progress value="90" max="100"></progress>
+                </div>
+                <div class="progress-group">
+                  <span>4</span>
+                  <progress value="60" max="100"></progress>
+                </div>
+                <div class="progress-group">
+                  <span>3</span>
+                  <progress value="30" max="100"></progress>
+                </div>
+                <div class="progress-group">
+                  <span>2</span>
+                  <progress value="40" max="100"></progress>
+                </div>
+                <div class="progress-group">
+                  <span>1</span>
+                  <progress value="15" max="100"></progress>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% } %>
+        </div>
+        <div class="swiper-control">
+          <div class="swiper-prev">
+            <img
+              src="/images/lawyer-swiper/left-arrow.png"
+              width="100%"
+              alt=""
+            />
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-next">
+            <img
+              src="/images/lawyer-swiper/right-arrow.png"
+              width="100%"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section bg-primary">
+    <div class="container">
+      <div class="section-title">
+        <h2 class="color-white">熱門律師</h2>
+      </div>
+      <div class="lawyer-card-area popular-lawyer">
+        <% for(var i = 0; 5 > i; i++){ %>
+
+        <div class="lawyer-card-intro">
+          <div class="lawyer-card-img">
+            <img src="/images/lawyer-swiper/lawyer-1.png" width="100%" alt="" />
+          </div>
+          <div class="lawyer-card-name">
+            <span>陳律師</span>
+            <span>5.0</span>
+          </div>
+          <div class="lawyer-card-evaluate">
+            <img
+              src="/images/lawyer-swiper/star.png"
+              width="18px"
+              height="18px"
+              alt=""
+            />
+            <img
+              src="/images/lawyer-swiper/star.png"
+              width="18px"
+              height="18px"
+              alt=""
+            />
+            <img
+              src="/images/lawyer-swiper/star.png"
+              width="18px"
+              height="18px"
+              alt=""
+            />
+            <img
+              src="/images/lawyer-swiper/star.png"
+              width="18px"
+              height="18px"
+              alt=""
+            />
+            <img
+              src="/images/lawyer-swiper/star.png"
+              width="18px"
+              height="18px"
+              alt=""
+            />
+          </div>
+          <div class="lawyer-card-descript">
+            <div class="progress-group">
+              <span>5</span>
+              <progress value="90" max="100"></progress>
+            </div>
+            <div class="progress-group">
+              <span>4</span>
+              <progress value="60" max="100"></progress>
+            </div>
+            <div class="progress-group">
+              <span>3</span>
+              <progress value="30" max="100"></progress>
+            </div>
+            <div class="progress-group">
+              <span>2</span>
+              <progress value="40" max="100"></progress>
+            </div>
+            <div class="progress-group">
+              <span>1</span>
+              <progress value="15" max="100"></progress>
+            </div>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </section>
+  <section class="section bg-gray-2">
+    <div class="container">
+      <div
+        class="section-title section-title-no-before title-tab color-primary"
+      >
+        <div class="lawyer-rank-tab">
+          <div
+            class="lawyer-rank-tab-item active"
+            data-tab-target="lawyer-rank-1"
+          >
+            民事排行
+          </div>
+          <div class="lawyer-rank-tab-item" data-tab-target="lawyer-rank-2">
+            刑事排行
+          </div>
+          <div class="lawyer-rank-tab-item" data-tab-target="lawyer-rank-3">
+            價錢排行
+          </div>
+        </div>
+      </div>
+      <div class="lawyer-rank-content lawyer-rank-1">
+        <div class="lawyer-card-area">
+          <% for(var i = 0; 5 > i; i++){ %>
+
+          <div class="lawyer-card-intro">
+            <div class="lawyer-card-img">
+              <img
+                src="/images/lawyer-swiper/lawyer-1.png"
+                width="100%"
+                alt=""
+              />
+            </div>
+            <div class="lawyer-card-name">
+              <span>1陳律師</span>
+              <span>5.0</span>
+            </div>
+            <div class="lawyer-card-evaluate">
+              <img
+                src="/images/lawyer-swiper/star.png"
+                width="18px"
+                height="18px"
+                alt=""
+              />
+              <img
+                src="/images/lawyer-swiper/star.png"
+                width="18px"
+                height="18px"
+                alt=""
+              />
+              <img
+                src="/images/lawyer-swiper/star.png"
+                width="18px"
+                height="18px"
+                alt=""
+              />
+              <img
+                src="/images/lawyer-swiper/star.png"
+                width="18px"
+                height="18px"
+                alt=""
+              />
+              <img
+                src="/images/lawyer-swiper/star.png"
+                width="18px"
+                height="18px"
+                alt=""
+              />
+            </div>
+            <div class="lawyer-card-descript">
+              <div class="progress-group">
+                <span>5</span>
+                <progress value="90" max="100"></progress>
+              </div>
+              <div class="progress-group">
+                <span>4</span>
+                <progress value="60" max="100"></progress>
+              </div>
+              <div class="progress-group">
+                <span>3</span>
+                <progress value="30" max="100"></progress>
+              </div>
+              <div class="progress-group">
+                <span>2</span>
+                <progress value="40" max="100"></progress>
+              </div>
+              <div class="progress-group">
+                <span>1</span>
+                <progress value="15" max="100"></progress>
+              </div>
+            </div>
+          </div>
+          <% } %>
+        </div>
+      </div>
+      <div class="lawyer-rank-content lawyer-rank-2">
+        <div class="lawyer-card-area">
+          <% for(var i = 0; 5 > i; i++){ %>
+
+          <div class="lawyer-card-intro">
+            <div class="lawyer-card-img">
+              <img
+                src="/images/lawyer-swiper/lawyer-1.png"
+                width="100%"
+                alt=""
+              />
+            </div>
+            <div class="lawyer-card-name">
+              <span>2陳律師</span>
+              <span>5.0</span>
+            </div>
+            <div class="lawyer-card-evaluate">
+              <img
+                src="/images/lawyer-swiper/star.png"
+                width="18px"
+                height="18px"
+                alt=""
+              />
+              <img
+                src="/images/lawyer-swiper/star.png"
+                width="18px"
+                height="18px"
+                alt=""
+              />
+              <img
+                src="/images/lawyer-swiper/star.png"
+                width="18px"
+                height="18px"
+                alt=""
+              />
+              <img
+                src="/images/lawyer-swiper/star.png"
+                width="18px"
+                height="18px"
+                alt=""
+              />
+              <img
+                src="/images/lawyer-swiper/star.png"
+                width="18px"
+                height="18px"
+                alt=""
+              />
+            </div>
+            <div class="lawyer-card-descript">
+              <div class="progress-group">
+                <span>5</span>
+                <progress value="90" max="100"></progress>
+              </div>
+              <div class="progress-group">
+                <span>4</span>
+                <progress value="60" max="100"></progress>
+              </div>
+              <div class="progress-group">
+                <span>3</span>
+                <progress value="30" max="100"></progress>
+              </div>
+              <div class="progress-group">
+                <span>2</span>
+                <progress value="40" max="100"></progress>
+              </div>
+              <div class="progress-group">
+                <span>1</span>
+                <progress value="15" max="100"></progress>
+              </div>
+            </div>
+          </div>
+          <% } %>
+        </div>
+      </div>
+      <div class="lawyer-rank-content lawyer-rank-3">
+        <div class="lawyer-card-area">
+          <% for(var i = 0; 5 > i; i++){ %>
+
+          <div class="lawyer-card-intro">
+            <div class="lawyer-card-img">
+              <img
+                src="/images/lawyer-swiper/lawyer-1.png"
+                width="100%"
+                alt=""
+              />
+            </div>
+            <div class="lawyer-card-name">
+              <span>3陳律師</span>
+              <span>5.0</span>
+            </div>
+            <div class="lawyer-card-evaluate">
+              <img
+                src="/images/lawyer-swiper/star.png"
+                width="18px"
+                height="18px"
+                alt=""
+              />
+              <img
+                src="/images/lawyer-swiper/star.png"
+                width="18px"
+                height="18px"
+                alt=""
+              />
+              <img
+                src="/images/lawyer-swiper/star.png"
+                width="18px"
+                height="18px"
+                alt=""
+              />
+              <img
+                src="/images/lawyer-swiper/star.png"
+                width="18px"
+                height="18px"
+                alt=""
+              />
+              <img
+                src="/images/lawyer-swiper/star.png"
+                width="18px"
+                height="18px"
+                alt=""
+              />
+            </div>
+            <div class="lawyer-card-descript">
+              <div class="progress-group">
+                <span>5</span>
+                <progress value="90" max="100"></progress>
+              </div>
+              <div class="progress-group">
+                <span>4</span>
+                <progress value="60" max="100"></progress>
+              </div>
+              <div class="progress-group">
+                <span>3</span>
+                <progress value="30" max="100"></progress>
+              </div>
+              <div class="progress-group">
+                <span>2</span>
+                <progress value="40" max="100"></progress>
+              </div>
+              <div class="progress-group">
+                <span>1</span>
+                <progress value="15" max="100"></progress>
+              </div>
+            </div>
+          </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

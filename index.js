@@ -81,8 +81,8 @@ lawyerCardBlog.get('/law-knowledge', (req, res) => {
     conCall: false,
   });
 });
-lawyerCardBlog.get('/hot-topic', (req, res) => {
-  res.render('lawyerCardBlog/hot-topic', {
+lawyerCardBlog.get('/popular-topic ', (req, res) => {
+  res.render('lawyerCardBlog/popular-topic ', {
     lawyerSide: false,
     clientSide: false,
     conCall: false,
@@ -139,5 +139,25 @@ personPage.get('/change-password', (req, res) => {
 });
 app.use('/personPage', personPage);
 // 個人頁面 end
+
+// 律師卡片 start
+const lawyerCard = express.Router();
+
+lawyerCard.get('/', (req, res) => {
+  res.render('lawyerCard/index', {
+    lawyerSide: false,
+    clientSide: true,
+    conCall: false,
+  });
+});
+lawyerCard.get('/lawyerCardInfo', (req, res) => {
+  res.render('lawyerCard/lawyerCardInfo', {
+    lawyerSide: false,
+    clientSide: true,
+    conCall: false,
+  });
+});
+app.use('/lawyerCard', lawyerCard);
+// 律師卡片 end
 const PORT = 3000;
 app.listen(PORT, () => console.log(`server is now listening on port ${PORT}`));

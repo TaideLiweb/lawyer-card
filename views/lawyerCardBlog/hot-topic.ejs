@@ -1,90 +1,96 @@
 <% layout('../layout') %>
 <section class="bg-gray">
-    <div class="container">
-        <div class="lawyerCardBlogTab">
-            <div class="lawyerCardBlogTab-wrap">
-                <div class="lawyerCardBlogTab-item">
-                    <a href="/lawyerCardBlog">首頁</a>
-                </div>
-                <div class="lawyerCardBlogTab-item">
-                    <a href="/lawyerCardBlog/brand-board">品牌專欄</a>
-                </div>
-                <div class="lawyerCardBlogTab-item"><a href="/lawyerCardBlog/new-post">最新文章</a></div>
-                <div class="lawyerCardBlogTab-item">
-                    <a href="/lawyerCardBlog/lawer-board">律師專欄</a>
-                </div>
-                <div class="lawyerCardBlogTab-item">
-                    <a href="/lawyerCardBlog/law-knowledge">法律常識</a>
-                </div>
-                <div class="lawyerCardBlogTab-item active">
-                    <a href="/lawyerCardBlog/hot-topic">熱門話題</a>
-                </div>
-            </div>
+  <div class="container">
+    <div class="lawyerCardBlogTab">
+      <div class="lawyerCardBlogTab-wrap">
+        <div class="lawyerCardBlogTab-item">
+          <a href="/lawyerCardBlog">首頁</a>
         </div>
+        <div class="lawyerCardBlogTab-item">
+          <a href="/lawyerCardBlog/brand-board">品牌專欄</a>
+        </div>
+        <div class="lawyerCardBlogTab-item">
+          <a href="/lawyerCardBlog/new-post">最新文章</a>
+        </div>
+        <div class="lawyerCardBlogTab-item">
+          <a href="/lawyerCardBlog/lawer-board">律師專欄</a>
+        </div>
+        <div class="lawyerCardBlogTab-item">
+          <a href="/lawyerCardBlog/law-knowledge">法律常識</a>
+        </div>
+        <div class="lawyerCardBlogTab-item active">
+          <a href="/lawyerCardBlog/popular-topic ">熱門話題</a>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 <section class="section lawyerCardBlog-section">
-    <div class="container">
-        <div class="section-title">
-            <h2 class="color-primary">熱門話題</h2>
-        </div>
-        <div class="card-area lawyer-area lawyer-area-5">
-            <div class="card mb-md-0">
-                <div class="card-img">
-                    <img src="https://picsum.photos/id/441/500/200" alt="" />
-                    <div class="card-title">
-                        <h3>專欄標題</h3>
-                    </div>
-                </div>
-                <div class="card-paragraph brd-color-primary">
-                    <h4>訴訟程序通常由以下幾個步驟組成：</h4>
-                    <p>
-                        首先，當事人向法院提出申請，包括起訴狀、申訴書等等。其次，法院對申請進行受理，開始進行審理程序，包括審理、調查等等。最後，法院根據事實和法律，作出判決或裁定，結束訴訟程序。
-                        ......(more)
-                    </p>
-                    <span class="card-date color-primary bg-white">2023.4.2</span>
-                </div>
-            </div>
-
-            <div class="card card-fill-height mb-md-0">
-                <div class="card-img">
-                    <img src="https://picsum.photos/id/431/600/600" alt="" />
-                    <div class="card-title">
-                        <h3>專欄標題</h3>
-                    </div>
-                </div>
-                <div class="card-paragraph brd-color-primary">
-                    <h4>訴訟程序通常由以下幾個步驟組成：</h4>
-                    <p>
-                        ⾸先，當事⼈向法院提出申請，包括起訴狀、申訴書等等。
-                        其次，法院對申請進⾏受理，開始進⾏審理程序，包括審
-                        理、調查等等。最後，法院根據事實和法律，作出判決或裁 定，結束訴訟程序。<br /><br />
-                        訴訟程序的具體流程可能因地區、案件類型和法律體系⽽略
-                        有不同。但是，無論在哪裡，訴訟程序都需要法院、律師和
-                        當事⼈之間密切合作，以確保公正和合法的解決⽅案。<br /><br />
-                        在訴訟中，律師扮演著非常重要的⾓⾊。他們可以為當事⼈
-                        提供專業建議和法律代表，並協助客⼾編寫起訴狀和其他⽂
-                        件。律師還可以協助客⼾瞭解法律程序和其權利，並確保客 ⼾的權益得到保護
-                    </p>
-                    <span class="card-date color-primary bg-white">2023.4.2</span>
-                </div>
-            </div>
-            <div class="card-group">
-                <% for(var i = 0; 4 > i; i++){ %>
-                <div class="card mb-md-0">
-                    <div class="card-img">
-                        <img src="https://picsum.photos/id/445/299/379" alt="" />
-                        <div class="card-title">
-                            <h3>專欄標題</h3>
-                        </div>
-                    </div>
-                    <div class="card-paragraph brd-color-primary">
-                        <p>創立於20XX年，隨著時代及科技迅速變遷，國際間交易往來的......(more)</p>
-                        <span class="card-date color-primary bg-white">2023.4.2</span>
-                    </div>
-                </div>
-                <%} %>
-            </div>
-        </div>
+  <div class="container">
+    <div class="section-title">
+      <h2 class="color-primary">熱門話題</h2>
     </div>
+    <div class="card-area lawyer-area lawyer-area-5">
+      <div class="card mb-md-0">
+        <div class="card-img">
+          <img src="https://picsum.photos/id/441/500/200" alt="" />
+          <div class="card-title">
+            <h3>專欄標題</h3>
+          </div>
+        </div>
+        <div class="card-paragraph brd-color-primary">
+          <h4>訴訟程序通常由以下幾個步驟組成：</h4>
+          <p>
+            首先，當事人向法院提出申請，包括起訴狀、申訴書等等。其次，法院對申請進行受理，開始進行審理程序，包括審理、調查等等。最後，法院根據事實和法律，作出判決或裁定，結束訴訟程序。
+            ......(more)
+          </p>
+          <span class="card-date color-primary bg-white">2023.4.2</span>
+        </div>
+      </div>
+
+      <div class="card card-fill-height mb-md-0">
+        <div class="card-img">
+          <img src="https://picsum.photos/id/431/600/600" alt="" />
+          <div class="card-title">
+            <h3>專欄標題</h3>
+          </div>
+        </div>
+        <div class="card-paragraph brd-color-primary">
+          <h4>訴訟程序通常由以下幾個步驟組成：</h4>
+          <p>
+            ⾸先，當事⼈向法院提出申請，包括起訴狀、申訴書等等。
+            其次，法院對申請進⾏受理，開始進⾏審理程序，包括審
+            理、調查等等。最後，法院根據事實和法律，作出判決或裁
+            定，結束訴訟程序。<br /><br />
+            訴訟程序的具體流程可能因地區、案件類型和法律體系⽽略
+            有不同。但是，無論在哪裡，訴訟程序都需要法院、律師和
+            當事⼈之間密切合作，以確保公正和合法的解決⽅案。<br /><br />
+            在訴訟中，律師扮演著非常重要的⾓⾊。他們可以為當事⼈
+            提供專業建議和法律代表，並協助客⼾編寫起訴狀和其他⽂
+            件。律師還可以協助客⼾瞭解法律程序和其權利，並確保客
+            ⼾的權益得到保護
+          </p>
+          <span class="card-date color-primary bg-white">2023.4.2</span>
+        </div>
+      </div>
+      <div class="card-group">
+        <% for(var i = 0; 4 > i; i++){ %>
+        <div class="card mb-md-0">
+          <div class="card-img">
+            <img src="https://picsum.photos/id/445/299/379" alt="" />
+            <div class="card-title">
+              <h3>專欄標題</h3>
+            </div>
+          </div>
+          <div class="card-paragraph brd-color-primary">
+            <p>
+              創立於20XX年，隨著時代及科技迅速變遷，國際間交易往來的......(more)
+            </p>
+            <span class="card-date color-primary bg-white">2023.4.2</span>
+          </div>
+        </div>
+        <%} %>
+      </div>
+    </div>
+  </div>
 </section>
