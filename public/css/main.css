@@ -790,10 +790,6 @@ body {
     right: 0;
 }
 
-
-
-.complaint-content-intro {}
-
 .complaint-content-title {
     padding: 40px 0;
     display: flex;
@@ -861,10 +857,31 @@ body {
     justify-content: end;
 }
 
+.complaint-preview-wrapper {
+    padding: 0 15px;
+}
+
 .preview-file-btn {
     margin-top: 40px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.preview-file-btn>.primary-btn {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 576px) {
+    .preview-file-btn {
+        flex-wrap: nowrap;
+    }
+
+    .preview-file-btn>.primary-btn {
+        width: initial;
+        margin-bottom: 0px;
+    }
 }
 
 @media (min-width: 576px) {
