@@ -1,0 +1,116 @@
+<% layout('../layout') %>
+<section class="bg-gray">
+  <div class="container">
+    <% if(lawyerSide) { %>
+    <div class="online-status">
+      <label class="radio">
+        <input class="auto" checked="" type="radio" name="online-status" />
+        <span></span>
+        在線上駐點中
+      </label>
+    </div>
+    <% } %>
+    <div
+      class="aboutLawyerCardTab <%= lawyerSide ? 'aboutLawyerCardTab-6' : '' %>"
+    >
+      <div class="aboutLawyerCardTab-wrap">
+        <div class="aboutLawyerCardTab-item">
+          <a href="/aboutLawyerCard/">關於律卡</a>
+        </div>
+        <div class="aboutLawyerCardTab-item active">
+          <a href="/aboutLawyerCard/service">服務流程</a>
+        </div>
+        <div class="aboutLawyerCardTab-item">
+          <a href="/aboutLawyerCard/Q&A">常見問題</a>
+        </div>
+        <% if(lawyerSide) { %>
+        <div class="aboutLawyerCardTab-item">
+          <a href="/aboutLawyerCard/want-post">我要投稿</a>
+        </div>
+        <% } %>
+        <div class="aboutLawyerCardTab-item">
+          <a href="/aboutLawyerCard/privacy">隱私政策</a>
+        </div>
+        <div class="aboutLawyerCardTab-item">
+          <a href="/aboutLawyerCard/use">使用條款</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section aboutLawyerCard-section">
+  <div class="container">
+    <div class="section-title color-primary">
+      <h2>法律常識</h2>
+    </div>
+    <div class="card-area lawyer-area">
+      <% for(var i = 0; 3 > i; i++){ %>
+      <div class="card mb-0">
+        <div class="card-img">
+          <img src="https://picsum.photos/id/1/410/270" alt="" />
+          <div class="card-title">
+            <h3>專欄標題</h3>
+          </div>
+        </div>
+        <div class="card-paragraph brd-color-primary">
+          <p>
+            瑞士《週日報》（SonntagsZeitung）今（2）報導指出，瑞銀併購瑞信前，各自有7萬2000多名和5萬多名員工，然而在瑞士政府避免全球金融崩盤而大力促成下，於3月19日匆促安排由瑞銀收購瑞信
+          </p>
+          <span class="card-date bg-white color-primary">2023.4.2</span>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+<section class="section aboutLawyerCard-section">
+  <div class="container">
+    <div class="section-title color-primary">
+      <h2>法律常識</h2>
+    </div>
+    <div class="card-area lawyer-area">
+      <% for(var i = 0; 3 > i; i++){ %>
+      <div class="card mb-0">
+        <div class="card-img">
+          <img src="https://picsum.photos/id/1/410/270" alt="" />
+          <div class="card-title">
+            <h3>專欄標題</h3>
+          </div>
+        </div>
+        <div class="card-paragraph brd-color-primary">
+          <p>
+            瑞士《週日報》（SonntagsZeitung）今（2）報導指出，瑞銀併購瑞信前，各自有7萬2000多名和5萬多名員工，然而在瑞士政府避免全球金融崩盤而大力促成下，於3月19日匆促安排由瑞銀收購瑞信
+          </p>
+          <span class="card-date bg-white color-primary">2023.4.2</span>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+<section class="section aboutLawyerCard-section">
+  <div class="container">
+    <div class="section-title color-primary">
+      <h2>法律常識</h2>
+    </div>
+    <div class="card-area lawyer-area">
+      <% for(var i = 0; 6 > i; i++){ %>
+      <div class="card">
+        <div class="card-img">
+          <img src="https://picsum.photos/id/1/410/270" alt="" />
+          <div class="card-title">
+            <h3>專欄標題</h3>
+          </div>
+        </div>
+        <div class="card-paragraph brd-color-primary">
+          <p>
+            瑞士《週日報》（SonntagsZeitung）今（2）報導指出，瑞銀併購瑞信前，各自有7萬2000多名和5萬多名員工，然而在瑞士政府避免全球金融崩盤而大力促成下，於3月19日匆促安排由瑞銀收購瑞信
+          </p>
+          <span class="card-date bg-white color-primary">2023.4.2</span>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</section>

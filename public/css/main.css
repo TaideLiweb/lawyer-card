@@ -734,6 +734,7 @@ body {
 
     .complaint-intro>.complaint-intro-img {
         width: calc(45% - 20px);
+        order: 0;
     }
 }
 
@@ -743,6 +744,128 @@ body {
     }
 }
 
+.complaint-type-swiper-wrapper {
+    padding: 0 50px;
+    position: relative;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+
+.complaint-type-swiper .swiper-slide {
+    padding: 40px 0 30px 0;
+}
+
+.complaint-type-swiper .swiper-slide.swiper-slide-thumb-active::after {
+    content: '';
+    height: 6px;
+    width: 100%;
+    border-radius: 6px;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    background-color: var(--primary-color);
+}
+
+.complaint-type-swiper .swiper-slide img {
+    display: block;
+}
+
+.complaint-type-swiper-wrapper .swiper-prev,
+.complaint-type-swiper-wrapper .swiper-next {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    z-index: 5;
+}
+
+.complaint-type-swiper-wrapper .swiper-prev {
+    left: 0;
+}
+
+.complaint-type-swiper-wrapper .swiper-next {
+    right: 0;
+}
+
+
+
+.complaint-content-intro {}
+
+.complaint-content-title {
+    padding: 40px 0;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.complaint-content-swiper .swiper-slide {
+    padding: 0 15px;
+}
+
+.complaint-content-title h2 {
+    margin: 0;
+    font-weight: normal;
+    color: var(--primary-color);
+}
+
+.complaint-content-title select {
+    width: 120px;
+    padding: 10px 23px;
+    letter-spacing: 3px;
+    background-color: var(--secondary-color);
+    border: 0;
+    outline: none;
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.complaint-content-title option {
+    background-color: var(--bg-gray);
+    color: #858585;
+}
+
+.complaint-content-intro-img {
+    height: 300px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.complaint-content-intro .rwd-table th {
+    text-align: center;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.complaint-content-intro .rwd-table tbody tr {
+    border-bottom: 0
+}
+
+.complaint-content-intro .rwd-table th,
+.complaint-content-intro .rwd-table td:before {
+    color: #858585
+}
+
+.complaint-content-intro .rwd-table .primary-btn {
+    display: inline-block;
+}
+
+.complaint-btn.primary-btn {
+    margin-top: 40px;
+    margin-bottom: 5px;
+    justify-content: end;
+}
+
+.preview-file-btn {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
 
 @media (min-width: 576px) {
     .container {

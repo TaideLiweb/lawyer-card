@@ -1,0 +1,61 @@
+.aboutLawyerCardTab {
+    overflow-x: auto;
+}
+
+.aboutLawyerCardTab-wrap {
+    position: relative;
+    display: flex;
+    gap: 15px;
+}
+
+.aboutLawyerCardTab-item {
+    position: relative;
+    min-width: 100px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+@media (min-width: 768px) {
+    .aboutLawyerCardTab-item {
+        min-width: calc(20% - 12px);
+    }
+}
+
+
+@media (min-width: 768px) {
+    .aboutLawyerCardTab-6 .aboutLawyerCardTab-item {
+        min-width: calc(16.66666% - 12.5px);
+    }
+}
+
+.aboutLawyerCardTab-item a {
+    display: block;
+    padding: 30px 0 15px;
+}
+
+.aboutLawyerCardTab-item::after {
+    content: '';
+    height: 7px;
+    width: 100%;
+    border-radius: 7px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+}
+
+.aboutLawyerCardTab-item.active::after {
+    background-color: var(--primary-color);
+}
+
+.aboutLawyerCard-section-pt-80 {
+    margin-top: 80px;
+}
+
+.aboutLawyerCard-text {
+    letter-spacing: 1.3px;
+    font-size: 18px;
+}

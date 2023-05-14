@@ -59,6 +59,52 @@ document.addEventListener('DOMContentLoaded', () => {
       lawyerCardSwiper.slideNext();
     });
   }
+
+  if (document.querySelector('.complaint-type-swiper')) {
+    const swiperPrev = document.querySelector(
+      '.complaint-type-swiper-wrapper .swiper-prev'
+    );
+    const swiperNext = document.querySelector(
+      '.complaint-type-swiper-wrapper .swiper-next'
+    );
+    const complaintTypeSwiper = new Swiper('.complaint-type-swiper', {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      freeMode: true,
+      watchSlidesProgress: true,
+      breakpoints: {
+        // 576: {
+        //   slidesPerView: 3,
+        //   spaceBetween: 45,
+        //   grid: {
+        //     rows: 2,
+        //   },
+        // },
+        768: {
+          slidesPerView: 6,
+          spaceBetween: 30,
+        },
+        992: {
+          slidesPerView: 9,
+          spaceBetween: 30,
+        },
+      },
+    });
+    const complaintContentSwiper = new Swiper('.complaint-content-swiper', {
+      slidesPerView: 1,
+      thumbs: {
+        swiper: complaintTypeSwiper,
+      },
+    });
+
+    swiperPrev.addEventListener('click', () => {
+      complaintContentSwiper.slidePrev();
+    });
+    swiperNext.addEventListener('click', () => {
+      complaintContentSwiper.slideNext();
+    });
+  }
+
   // 時間選擇器套件初始化&功能
 
   let count = 0;
@@ -192,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (popup) {
     // 預約諮詢的下一步
     document
-      .querySelector('.pre-consult.reserve-consult .consult-btn>button')
+      .querySelector('.pre-consult.reserve-consult .primary-btn>button')
       .addEventListener('click', () => {
         serviceMethodTab.style.display = 'none';
         hiddenPopup();
@@ -210,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 即時諮詢的下一步
     document
-      .querySelector('.pre-consult.timely-consult .consult-btn>button')
+      .querySelector('.pre-consult.timely-consult .primary-btn>button')
       .addEventListener('click', () => {
         serviceMethodTab.style.display = 'none';
         hiddenPopup();

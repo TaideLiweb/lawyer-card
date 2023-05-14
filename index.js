@@ -81,8 +81,8 @@ lawyerCardBlog.get('/law-knowledge', (req, res) => {
     conCall: false,
   });
 });
-lawyerCardBlog.get('/popular-topic ', (req, res) => {
-  res.render('lawyerCardBlog/popular-topic ', {
+lawyerCardBlog.get('/popular-topic', (req, res) => {
+  res.render('lawyerCardBlog/popular-topic', {
     lawyerSide: false,
     clientSide: false,
     conCall: false,
@@ -106,6 +106,13 @@ personPage.get('/', (req, res) => {
   res.render('personPage/index', {
     lawyerSide: true,
     clientSide: false,
+    conCall: false,
+  });
+});
+personPage.get('/my-account', (req, res) => {
+  res.render('personPage/my-account', {
+    lawyerSide: false,
+    clientSide: true,
     conCall: false,
   });
 });
@@ -159,5 +166,71 @@ lawyerCard.get('/lawyerCardInfo', (req, res) => {
 });
 app.use('/lawyerCard', lawyerCard);
 // 律師卡片 end
+// 書狀服務 start
+const complaint = express.Router();
+
+complaint.get('/', (req, res) => {
+  res.render('complaint/index', {
+    lawyerSide: false,
+    clientSide: true,
+    conCall: false,
+  });
+});
+complaint.get('/complaint-preview', (req, res) => {
+  res.render('complaint/complaint-preview', {
+    lawyerSide: false,
+    clientSide: true,
+    conCall: false,
+  });
+});
+app.use('/complaint', complaint);
+// 書狀服務 end
+// 關於律卡 start
+const aboutLawyerCard = express.Router();
+
+aboutLawyerCard.get('/', (req, res) => {
+  res.render('aboutLawyerCard/index', {
+    lawyerSide: false,
+    clientSide: true,
+    conCall: false,
+  });
+});
+aboutLawyerCard.get('/service', (req, res) => {
+  res.render('aboutLawyerCard/service', {
+    lawyerSide: false,
+    clientSide: true,
+    conCall: false,
+  });
+});
+aboutLawyerCard.get('/Q&A', (req, res) => {
+  res.render('aboutLawyerCard/Q&A', {
+    lawyerSide: false,
+    clientSide: true,
+    conCall: false,
+  });
+});
+aboutLawyerCard.get('/want-post', (req, res) => {
+  res.render('aboutLawyerCard/want-post', {
+    lawyerSide: true,
+    clientSide: false,
+    conCall: false,
+  });
+});
+aboutLawyerCard.get('/privacy', (req, res) => {
+  res.render('aboutLawyerCard/privacy', {
+    lawyerSide: false,
+    clientSide: true,
+    conCall: false,
+  });
+});
+aboutLawyerCard.get('/use', (req, res) => {
+  res.render('aboutLawyerCard/use', {
+    lawyerSide: false,
+    clientSide: true,
+    conCall: false,
+  });
+});
+app.use('/aboutLawyerCard', aboutLawyerCard);
+// 書狀服務 end
 const PORT = 3000;
 app.listen(PORT, () => console.log(`server is now listening on port ${PORT}`));

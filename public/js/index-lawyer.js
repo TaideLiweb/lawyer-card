@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
     document
-      .querySelector('.case-consult-popup .consult-btn')
+      .querySelector('.case-consult-popup .primary-btn')
       .addEventListener('click', () => {
         if (!document.querySelector('.case-consult-popup .benefit').checked) {
           document.querySelector(

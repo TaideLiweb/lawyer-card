@@ -224,12 +224,12 @@
     margin-bottom: 40px;
 }
 
-.consult-btn {
+.primary-btn {
     display: flex;
     justify-content: center;
 }
 
-.consult-btn button {
+.primary-btn button {
     height: 30px;
     padding: 5px 30px;
     border-radius: 25px;
@@ -242,7 +242,7 @@
     transition: all 0.3s;
 }
 
-.consult-btn button:hover {
+.primary-btn button:hover {
     background: #33a2cd;
 }
 
@@ -374,12 +374,12 @@
     margin-bottom: 0px;
 }
 
-.popup-form .consult-btn {
+.popup-form .primary-btn {
     justify-content: end;
     align-self: flex-end;
 }
 
-.popup-form .consult-btn button {
+.popup-form .primary-btn button {
     padding: 5px 20px;
 }
 
@@ -532,7 +532,7 @@
     gap: 3px;
 }
 
-.lawyer-swiper .consult-btn button {
+.lawyer-swiper .primary-btn button {
     width: 100%;
     padding: 5px 12px;
 }
@@ -732,7 +732,7 @@
     cursor: pointer;
 }
 
-.consult-completed .consult-btn {
+.consult-completed .primary-btn {
     margin-top: 20px;
 }
 
@@ -832,7 +832,7 @@
     resize: none;
 }
 
-.consult-detail .consult-btn {
+.consult-detail .primary-btn {
     justify-content: center;
 }
 
@@ -877,7 +877,7 @@
     align-items: center;
 }
 
-.case-consult-popup .referrals-lawyer .consult-btn {
+.case-consult-popup .referrals-lawyer .primary-btn {
     width: 100%;
     margin-top: 20px;
     justify-content: center;
@@ -1068,19 +1068,19 @@
     width: calc(65% - 15px);
 }
 
-.lawyer-card-content .consult-btn {
+.lawyer-card-content .primary-btn {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 15px;
 }
 
-.lawyer-card-content .consult-btn button {
+.lawyer-card-content .primary-btn button {
     width: 100%;
     padding: 5px 10px;
 }
 
 @media (min-width: 576px) {
-    .lawyer-card-content .consult-btn button {
+    .lawyer-card-content .primary-btn button {
         width: calc(50% - 7.5px);
     }
 }
@@ -1160,7 +1160,7 @@
         margin-right: 10px;
     }
 
-    .case-consult-popup .referrals-lawyer .consult-btn {
+    .case-consult-popup .referrals-lawyer .primary-btn {
         width: initial;
         flex-grow: 1;
         margin-top: 0px;
@@ -1205,7 +1205,7 @@
         padding: 52px 50px 100px;
     }
 
-    .lawyer-swiper .consult-btn button {
+    .lawyer-swiper .primary-btn button {
         padding: 5px 20px;
     }
 

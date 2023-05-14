@@ -6,11 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const ratingStars = document.querySelectorAll('.rating-stars>img');
   const consultCompletedPopup = document.querySelector('.consult-completed');
   const consultCompletedBtn = document.querySelector(
-    '.consult-completed .consult-btn'
+    '.consult-completed .primary-btn'
   );
   const jumpPage = document.querySelectorAll('.jump-page');
   const pairSuccess = document.querySelector('.pair-success');
-  const paymentBtn = document.querySelector('.pair-success .consult-btn');
+  const paymentBtn = document.querySelector('.pair-success .primary-btn');
   const paymentSuccess = document.querySelector('.payment-success');
 
   let messageBoardSwitch = true;
