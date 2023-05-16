@@ -829,7 +829,7 @@ body {
 
 .complaint-content-intro-img {
     height: 300px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     overflow: hidden;
 }
 
@@ -840,6 +840,11 @@ body {
 
 .complaint-content-intro .rwd-table tbody tr {
     border-bottom: 0
+}
+
+.complaint-content-intro .rwd-table tbody td {
+    text-align: center;
+
 }
 
 .complaint-content-intro .rwd-table th,

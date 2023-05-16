@@ -50,4 +50,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
   }
+
+  // lawyer-calendar 律師行事曆的時間選擇器套件初始化&功能
+  flatpickr('.lawyer-calendar', {
+    dateFormat: 'Y-m-d',
+    locale: 'zh',
+    minDate: 'today',
+    disableMobile: 'true',
+    static: true,
+    position: 'right',
+    readOnly: true,
+    onDayCreate: function (dObj, dStr, fp, dayElem) {
+      // Utilize dayElem.dateObj, which is the corresponding Date
+      // dummy logic
+      if (Math.random() < 0.15)
+        dayElem.innerHTML += "<span class='event'>陳小姐</span>";
+    },
+  });
 });

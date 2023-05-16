@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 時間選擇器套件初始化&功能
+  // add-time 律師預約的時間選擇器套件初始化&功能
 
   let count = 0;
 
@@ -200,6 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const inviteNotifyBackIndex = document.querySelector(
     '.invite-notify .back-index>button'
   );
+  const iconNotify = document.querySelector('.icon-notify');
 
   // 即時諮詢 tab
   tabHandle('.service-method .popup-tab-item', '.pre-consult', 'block');
@@ -309,6 +310,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // 邀請通知按鈕-查看狀況
     inviteNotifyStatus.addEventListener('click', () => {
       hiddenPopup();
+      previousStep = 'reserve-consult';
+      document.querySelector(`.progress-notifiy`).style.display = 'block';
+    });
+    // header 小鈴鐺-查看狀況
+    iconNotify.addEventListener('click', () => {
+      hiddenPopup();
+      popupPrevious.style.display = 'block';
       previousStep = 'reserve-consult';
       document.querySelector(`.progress-notifiy`).style.display = 'block';
     });
