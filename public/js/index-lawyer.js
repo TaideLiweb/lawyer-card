@@ -1,3 +1,4 @@
+import tabHandle from './tab.js';
 document.addEventListener('DOMContentLoaded', () => {
   // header case filter
   let caseFilterSwitch = false;
@@ -64,7 +65,25 @@ document.addEventListener('DOMContentLoaded', () => {
       // Utilize dayElem.dateObj, which is the corresponding Date
       // dummy logic
       if (Math.random() < 0.15)
-        dayElem.innerHTML += "<span class='event'>陳小姐</span>";
+        dayElem.innerHTML += "<span class='event'>3</span>";
+      else if (Math.random() > 0.85)
+        dayElem.innerHTML += "<span class='event'>2</span>";
+    },
+    onChange: function () {
+      document.querySelector('.progress-notify-popup').style.display = 'block';
     },
   });
+
+  // 進度通知表單 tab
+
+  tabHandle(
+    '.progress-notify-popup .popup-tab-item',
+    '.progress-notify-popup .rwd-table',
+    'table'
+  );
+  document
+    .querySelector('.progress-notify-popup .popup-backbround')
+    .addEventListener('click', function () {
+      document.querySelector('.progress-notify-popup').style.display = 'none';
+    });
 });

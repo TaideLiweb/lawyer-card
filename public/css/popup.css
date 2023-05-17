@@ -600,17 +600,17 @@
     letter-spacing: 2px;
 }
 
-.popup .progress-notifiy {
+.popup .progress-notify {
     height: 500px;
     padding: 30px;
 }
 
-.progress-notifiy table {
+.progress-notify table {
     display: none;
 }
 
-.progress-notifiy .reserve-table {
-    display: block;
+.progress-notify .reserve-table {
+    display: table;
 }
 
 .rwd-table {
@@ -736,18 +736,26 @@
     margin-top: 20px;
 }
 
-.case-consult-popup {
+.case-consult-popup,
+.progress-notify-popup {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
     color: var(--primary-color);
     z-index: 5;
 }
 
-.case-consult-popup .popup-container {
+.case-consult-popup .popup-backbround,
+.progress-notify-popup .popup-backbround {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.case-consult-popup .popup-container,
+.progress-notify-popup .popup-container {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -881,6 +889,19 @@
     width: 100%;
     margin-top: 20px;
     justify-content: center;
+}
+
+.progress-notify-popup {
+    display: none;
+}
+
+.progress-notify-popup .popup-content {
+    height: 500px;
+    border-radius: 10px 0px 10px 10px !important;
+}
+
+.progress-notify-popup .popup-timely-table {
+    display: none;
 }
 
 .video-meeting {
@@ -1093,7 +1114,7 @@
         border-radius: 0px 0px 10px 10px;
     }
 
-    .popup .progress-notifiy {
+    .popup .progress-notify {
         width: 700px;
         padding: 30px;
     }
@@ -1214,7 +1235,7 @@
         width: 460px;
     }
 
-    .popup .progress-notifiy {
+    .popup .progress-notify {
         width: 815px;
     }
 
@@ -1222,6 +1243,10 @@
         padding: 50px 0 0;
         border-radius: 10px 0px 10px 10px;
         overflow: hidden;
+    }
+
+    .progress-notify-popup .popup-content {
+        width: 815px;
     }
 
     .video-meeting .video-container {

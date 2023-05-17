@@ -206,9 +206,9 @@ document.addEventListener('DOMContentLoaded', () => {
   tabHandle('.service-method .popup-tab-item', '.pre-consult', 'block');
   // 進度通知表單 tab
   tabHandle(
-    '.progress-notifiy .popup-tab-item',
-    '.progress-notifiy .rwd-table',
-    'block'
+    '.progress-notify .popup-tab-item',
+    '.progress-notify .rwd-table',
+    'table'
   );
   // 法律常識 tab
   tabHandle(
@@ -311,14 +311,14 @@ document.addEventListener('DOMContentLoaded', () => {
     inviteNotifyStatus.addEventListener('click', () => {
       hiddenPopup();
       previousStep = 'reserve-consult';
-      document.querySelector(`.progress-notifiy`).style.display = 'block';
+      document.querySelector(`.progress-notify`).style.display = 'block';
     });
     // header 小鈴鐺-查看狀況
     iconNotify.addEventListener('click', () => {
       hiddenPopup();
       popupPrevious.style.display = 'block';
       previousStep = 'reserve-consult';
-      document.querySelector(`.progress-notifiy`).style.display = 'block';
+      document.querySelector(`.progress-notify`).style.display = 'block';
     });
     // 上一步按鈕 function
     function previousHandle() {
