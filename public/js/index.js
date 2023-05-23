@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     const complaintContentSwiper = new Swiper('.complaint-content-swiper', {
       slidesPerView: 1,
+      allowTouchMove:false,
       thumbs: {
         swiper: complaintTypeSwiper,
       },

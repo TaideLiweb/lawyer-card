@@ -251,9 +251,11 @@
     }
 
     .header .serch-bar {
-        width: 160px;
+        width: 210px;
     }
-
+    .header .serch-bar input::placeholder {
+        font-size: 14px;
+    }
     .header .notify-List {
         gap: 15px;
     }
