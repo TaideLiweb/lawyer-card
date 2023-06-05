@@ -46,27 +46,30 @@
           <div class="logo-list">
             <ul>
               <li>
-                <a href="#">關於律卡</a>
+                <a href="/">首頁</a>
               </li>
               <li>
-                <a href="#">服務流程</a>
+                <a href="/aboutLawyerCard">關於律卡</a>
               </li>
               <li>
-                <a href="#">常見問題</a>
+                <a href="/aboutLawyerCard/service">服務流程</a>
               </li>
               <li>
-                <a href="#">隱私政策</a>
+                <a href="/aboutLawyerCard/Q&A">常見問題</a>
               </li>
               <li>
-                <a href="#">使用條款</a>
+                <a href="/aboutLawyerCard/privacy">隱私政策</a>
               </li>
               <li>
-                <a href="#">聯絡我們</a>
+                <a href="/aboutLawyerCard/use">使用條款</a>
+              </li>
+              <li>
+                <a href="/aboutLawyerCard">聯絡我們</a>
               </li>
             </ul>
           </div>
         </div>
-        <a class="nav-link-md active" href="#"
+        <a class="nav-link-md" href="/lawyerCardBlog"
           >律卡部落<img src="/images/icon/logo-arrow.png" width="17px" alt=""
         /></a>
         <% if(!lawyerSide) { %>
@@ -107,12 +110,14 @@
       </div>
       <nav class="nav">
         <ul>
-          <li><a href="#">律卡部落</a></li>
-          <li><a href="#">服務流程</a></li>
-          <li><a href="#">常見問題</a></li>
-          <li><a href="#">隱私政策</a></li>
-          <li><a href="#">使用條款</a></li>
-          <li><a href="#">聯絡我們</a></li>
+          <li><a href="/">首頁</a></li>
+          <li><a href="/lawyerCardBlog">律卡部落</a></li>
+          <li><a href="/aboutLawyerCard">關於律卡</a></li>
+          <li><a href="/aboutLawyerCard/service">服務流程</a></li>
+          <li><a href="/aboutLawyerCard/Q&A">常見問題</a></li>
+          <li><a href="/aboutLawyerCard/privacy">隱私政策</a></li>
+          <li><a href="/aboutLawyerCard/use">使用條款</a></li>
+          <li><a href="/aboutLawyerCard">聯絡我們</a></li>
         </ul>
       </nav>
       <div class="case-filter">
@@ -210,18 +215,21 @@
       <div class="user-list">
         <ul>
           <li>
-            <a href="personPage/my-account">我的律卡</a>
+            <a href="/personPage/">我的律卡</a>
           </li>
           <li>
-            <a href="personPage/my-post">我的文章</a>
+            <a href="/personPage/my-post">我的文章</a>
           </li>
           <li>
-            <a href="personPage/consult-record">諮詢紀錄</a>
+            <a href="/personPage/consult-record">諮詢紀錄</a>
           </li>
           <li>
             <a href="#">登入/登出</a>
           </li>
         </ul>
+      </div>
+      <div class="moblie-search">
+        <input type="text" />
       </div>
     </header>
     <%- body %> <% if(!conCall) { %>
@@ -230,33 +238,33 @@
         <div class="footer-nav">
           <ul class="footer-nav-child-1">
             <li>
-              <a href="aboutLawyerCard/">關於律卡</a>
+              <a href="/aboutLawyerCard/">關於律卡</a>
             </li>
             <li>
-              <a href="aboutLawyerCard/privacy.ejs">隱私政策</a>
+              <a href="/aboutLawyerCard/privacy.ejs">隱私政策</a>
             </li>
             <li>
-              <a href="aboutLawyerCard/use">使用條款</a>
+              <a href="/aboutLawyerCard/use">使用條款</a>
             </li>
           </ul>
           <div class="footer-nav-child-2">
             <ul>
               <li>
-                <a href="lawyerCardBlog/brand-board">品牌專欄</a>
+                <a href="/lawyerCardBlog/brand-board">品牌專欄</a>
               </li>
               <li>
-                <a href="lawyerCardBlog/new-post">最新文章</a>
+                <a href="/lawyerCardBlog/new-post">最新文章</a>
               </li>
               <li>
-                <a href="lawyerCardBlog/lawer-board">律師專欄</a>
+                <a href="/lawyerCardBlog/lawer-board">律師專欄</a>
               </li>
             </ul>
             <ul>
               <li>
-                <a href="lawyerCardBlog/law-knowledge">法律常識</a>
+                <a href="/lawyerCardBlog/law-knowledge">法律常識</a>
               </li>
               <li>
-                <a href="lawyerCardBlog/popular-topic">熱門話題</a>
+                <a href="/lawyerCardBlog/popular-topic">熱門話題</a>
               </li>
             </ul>
             <ul>
@@ -338,6 +346,7 @@
         </li>
       </ul>
     </div>
+    <% if(lawyerSide) { %> <%- include progress-notify-popup.ejs %> <% } %>
     <script type="module" src="/js/tab.js"></script>
     <!-- swiper 輪播 -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

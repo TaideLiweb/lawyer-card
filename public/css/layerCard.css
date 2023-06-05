@@ -1,3 +1,7 @@
+.lawyer-card-intro {
+    cursor: pointer;
+}
+
 .lawyer-card-img {
     position: relative;
 }

@@ -81,9 +81,11 @@ document.addEventListener('DOMContentLoaded', () => {
     '.progress-notify-popup .rwd-table',
     'table'
   );
-  document
-    .querySelector('.progress-notify-popup .popup-backbround')
-    .addEventListener('click', function () {
-      document.querySelector('.progress-notify-popup').style.display = 'none';
-    });
+  if (document.querySelector('.progress-notify-popup')) {
+    document
+      .querySelector('.progress-notify-popup .popup-backbround')
+      .addEventListener('click', function () {
+        document.querySelector('.progress-notify-popup').style.display = 'none';
+      });
+  }
 });

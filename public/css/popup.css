@@ -205,8 +205,8 @@
 .popup-content .consult-time select {
     width: 60px;
     height: 36px;
-    padding: 0 18px;
-    /* 為了修正 iphone 無法置中*/
+    padding: 0;
+    text-align-last: center;
     text-align: center;
     background-image: none;
 }
@@ -300,7 +300,15 @@
     color: var(--popup-font-color);
 }
 
-.popup-content .popup-form .total>div {
+.popup-content .popup-form .total .select-lawyer {
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.popup-content .popup-form .total .total-text {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -318,14 +326,15 @@
 .popup-content .popup-time {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
     color: var(--popup-font-color);
     text-align: center;
     font-size: 12px;
 }
 
-.popup-content .popup-time>div {
-    width: 60px;
+
+.popup-content .popup-time>.add-time,
+.popup-content .popup-time>.time-item>div {
+    min-width: 60px;
     height: 60px;
     border-radius: 10px;
     background: #dbdbdb;
@@ -334,6 +343,35 @@
 .popup-content .popup-time .add-time {
     position: relative;
     cursor: pointer;
+}
+
+.popup-content .popup-time>.time-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.popup-content .popup-time>.time-item>div {
+    position: relative;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.popup-time-item>div {
+    pointer-events: none;
+}
+
+.popup-time-item .remove-btn {
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    width: 16px;
+    height: 16px;
+    line-height: 14px;
+    font-size: 14px;
+    background: #dbdbdb;
+    color: var(--popup-font-color);
+    border-radius: 50%;
+    z-index: 10;
 }
 
 .popup-content .popup-time .popup-time-item {
@@ -366,7 +404,23 @@
     transform: translate(0, -50%);
 }
 
-.popup-form .radio-type {
+
+
+@media (min-width: 768px) {
+
+    .popup-content .popup-time,
+    .popup-content .popup-time>.time-item {
+        flex-wrap: nowrap
+    }
+
+    .popup-content .popup-time>.time-item>div {
+        margin-bottom: 0px;
+    }
+}
+
+
+.popup-form .checkbox-type {
+    display: flex;
     flex-wrap: wrap;
     justify-content: start;
     gap: 10px;
@@ -737,7 +791,9 @@
 }
 
 .case-consult-popup,
-.progress-notify-popup {
+.progress-notify-popup,
+.lawyer-card-popup,
+.complaint-share-popup {
     position: fixed;
     top: 0;
     left: 0;
@@ -748,7 +804,9 @@
 }
 
 .case-consult-popup .popup-backbround,
-.progress-notify-popup .popup-backbround {
+.progress-notify-popup .popup-backbround,
+.lawyer-card-popup .popup-backbround,
+.complaint-share-popup .popup-backbround {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
@@ -1052,16 +1110,7 @@
 }
 
 .lawyer-card-popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 5;
-}
-
-.lawyer-card-background {
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
 }
 
 .lawyer-card-content {
@@ -1106,6 +1155,51 @@
     }
 }
 
+.complaint-share-popup {
+    display: none;
+}
+
+.complaint-share-content {
+    min-width: 350px;
+    max-width: 500px;
+    padding: 30px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+.complaint-share-btn {
+    padding: 10px 30px;
+    margin-bottom: 20px;
+    border: 1px solid #979797;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.complaint-share-btn:hover {
+    background-color: #eee;
+}
+
+.complaint-share-btn>button {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border: 0;
+    color: #313131;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.complaint-share-btn>button>img {
+    margin-right: 10px;
+}
+
 @media (min-width: 768px) {
     .popup .popup-content {
         width: 530px;
@@ -1128,7 +1222,7 @@
     }
 
     .popup-previous.choice-lawyer {
-        top: 9px;
+        top: 11px;
         left: 0px;
     }
 
@@ -1283,5 +1377,12 @@
 @media (min-width: 1200px) {
     .popup .popup-content.choice-lawyer {
         width: 1080px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .popup-previous.choice-lawyer {
+        top: 11px;
+        left: 0px;
     }
 }

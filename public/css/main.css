@@ -7,6 +7,10 @@ body {
     font-family: 'Montserrat', sans-serif, 'PingFang-TC';
 }
 
+textarea {
+    resize: none;
+}
+
 /* margin */
 
 .mt-0 {
@@ -179,7 +183,7 @@ body {
     background: #33a2cd;
 }
 
-.primary-btn a{
+.primary-btn a {
     display: block;
     width: 100%;
 }
@@ -622,6 +626,8 @@ body {
 .lawyer-card-select select {
     width: 120px;
     padding: 10px 23px;
+    text-align-last: center;
+    text-align: center;
     letter-spacing: 3px;
     background-color: var(--secondary-color);
     border: 0;
@@ -710,6 +716,7 @@ body {
     width: 100%;
     display: flex;
     gap: 20px;
+    cursor: pointer;
 }
 
 .complaint-type-img {
@@ -803,7 +810,7 @@ body {
     top: 50%;
     transform: translate(0, -50%);
     cursor: pointer;
-    z-index: 5;
+    z-index: 3;
 }
 
 .complaint-type-swiper-wrapper .swiper-prev {
@@ -866,10 +873,6 @@ body {
     border-bottom: 0
 }
 
-.complaint-content-intro .rwd-table tbody td {
-    text-align: center;
-
-}
 
 .complaint-content-intro .rwd-table th,
 .complaint-content-intro .rwd-table td:before {
@@ -880,9 +883,21 @@ body {
     display: inline-block;
 }
 
+@media (min-width: 576px) {
+    .complaint-content-intro .rwd-table tbody td {
+        text-align: center;
+
+    }
+}
+
+
 .complaint-btn.primary-btn {
     margin-top: 40px;
     margin-bottom: 5px;
+}
+
+.complaint-btn.primary-btn a {
+    display: flex;
     justify-content: end;
 }
 
@@ -924,9 +939,9 @@ body {
     }
 
     .section .section-title::before {
-        width: 20%;
+        width: 30%;
         position: absolute;
-        left: -22%;
+        left: -32%;
     }
 
     .main-section-tab-item {

@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     const complaintContentSwiper = new Swiper('.complaint-content-swiper', {
       slidesPerView: 1,
-      allowTouchMove:false,
+      allowTouchMove: false,
       thumbs: {
         swiper: complaintTypeSwiper,
       },
@@ -109,8 +109,94 @@ document.addEventListener('DOMContentLoaded', () => {
   // add-time 律師預約的時間選擇器套件初始化&功能
 
   let count = 0;
+  let dateAry = [];
+  let editIndex = false;
+  let addTime = document.querySelector('.popup-content .popup-time .add-time');
+  function handleDateAry(selectedDates) {
+    var selectedDate = selectedDates[0];
+    let month = selectedDate.getMonth() + 1;
+    let day = selectedDate.getDate();
+    let hours = selectedDate.getHours();
+    let minutes = String(selectedDate.getMinutes());
+    let amPm = hours < 12 ? 'AM' : 'PM';
+    hours = hours % 12 || 12;
+    // 檢查是否有要編輯的index
+    if (editIndex !== false) {
+      dateAry[editIndex] = {
+        month: month,
+        day: day,
+        amPm: amPm,
+        hours: hours,
+        minutes: minutes.length === 1 ? '0' + minutes : minutes,
+        money: 5600,
+      };
+    } else {
+      dateAry[count] = {
+        month: month,
+        day: day,
+        amPm: amPm,
+        hours: hours,
+        minutes: minutes.length === 1 ? '0' + minutes : minutes,
+        money: 5600,
+      };
+    }
 
-  flatpickr('.popup-content .popup-time .add-time', {
+    console.log(dateAry);
+  }
+  function renderDateAry() {
+    // 填入已選擇時間
+    let str = '';
+    dateAry.forEach((item, index) => {
+      str += `<div class="popup-time-item" data-index=${index}>
+          <div>${item.month}/${item.day}</div>
+          <div>${item.amPm}${item.hours}:${item.minutes}</div>
+          <div>${item.money}/1h</div>
+          <span class="remove-btn" data-index=${index}>x</span>
+        </div>`;
+    });
+    document.querySelector('.time-item').innerHTML = str;
+    // 控制加日期按鈕要不要出現
+
+    if (dateAry.length > 4) {
+      addTime.style.display = 'none';
+    } else {
+      addTime.style.display = 'block';
+    }
+  }
+
+  const timeItem = document.querySelector('.time-item');
+  if (timeItem) {
+    timeItem.addEventListener(
+      'click',
+      (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (e.target.classList.contains('remove-btn')) {
+          let currentIndex = e.target.dataset.index;
+          dateAry.splice(currentIndex, 1);
+          renderDateAry();
+          count -= 1;
+          console.log(count);
+        } else if (e.target.classList.contains('popup-time-item')) {
+          let currentIndex = e.target.dataset.index;
+          // 點擊已存在日期時賦予要被編輯的 index
+          editIndex = currentIndex;
+          calendar.open();
+        }
+      },
+      false
+    );
+  }
+
+  if (timeItem) {
+    addTime.addEventListener('click', function () {
+      // 按+的時候編輯狀態改回 false
+      editIndex = false;
+      calendar.open();
+    });
+  }
+
+  let calendar = flatpickr('.popup-content .popup-time .add-time', {
     enableTime: true,
     dateFormat: 'Y-m-d H:i',
     locale: 'zh',
@@ -119,55 +205,39 @@ document.addEventListener('DOMContentLoaded', () => {
     minuteIncrement: 30, // 每 30 分鐘為一個選項
     // hourIncrement: 1,
     numInput: false,
-    onClose: function (selectedDates, dateStr, instance) {
-      let addTime = document.querySelector(
-        '.popup-content .popup-time .add-time'
-      );
-      var selectedDate = selectedDates[0];
-      let year = selectedDate.getFullYear();
-      let month = selectedDate.getMonth() + 1;
-      let day = selectedDate.getDate();
-      let time = selectedDate.getTime();
-      let hours = selectedDate.getHours();
-      let minutes = String(selectedDate.getMinutes());
-      let amPm = hours < 12 ? 'AM' : 'PM';
-      hours = hours % 12 || 12;
-      console.log('所選時間： ' + hours + ':' + minutes + ' ' + amPm);
-      console.log('所選日期： ' + year + ' 年 ' + month + ' 月 ' + day + ' 日');
+    defaultDate: 'today',
+    clickOpens: false,
+    positionElement: document.querySelector('.time-item'),
+    onReady: function (selectedDates, dateStr, instance) {
+      document.querySelector('.flatpickr-hour').setAttribute('readonly', '');
+      document.querySelector('.flatpickr-minute').setAttribute('readonly', '');
 
-      addTime.insertAdjacentHTML(
-        'beforebegin',
-        `<div class="popup-time-item item-${count}">
-          <div>${month}/${day}</div>
-          <div>${amPm}${hours}:${
-          minutes.length === 1 ? '0' + minutes : minutes
-        }</div>
-          <div>5600/1h</div>
+      document.querySelector('.flatpickr-calendar').insertAdjacentHTML(
+        'beforeend',
+        `<div class="primary-btn date-confirm">
+          <button>確定</button>
         </div>`
       );
-      let popupTimeItem = document.querySelectorAll(
-        '.popup-content .popup-time .popup-time-item'
-      );
+      // 點擊時間確認按鈕的監聽事件
+      document.querySelector('.date-confirm').addEventListener('click', () => {
+        // 渲染 DateAry
+        renderDateAry();
+        this.close();
 
-      if (popupTimeItem.length > 4) {
-        addTime.style.display = 'none';
+        // 如果有編輯的 index 就不 count+1
+        if (count === 5 || editIndex !== false) return;
+        count += 1;
+      });
+    },
+    onOpen: function (selectedDates, dateStr, instance) {
+      // 如果編輯的 index 是 false 就點開有預設值
+      if (selectedDates !== undefined && editIndex === false) {
+        console.log('onOpen');
+        handleDateAry(selectedDates);
       }
-      // todo 如何刪除元素
-      document.querySelector(`.popup-time-item.item-${count}`).addEventListener(
-        'click',
-        (e) => {
-          e.currentTarget.remove();
-          // 重新抓 DOM 數量
-          let popupTimeItem = document.querySelectorAll(
-            '.popup-content .popup-time .popup-time-item'
-          );
-          if (popupTimeItem.length < 5) {
-            addTime.style.display = 'block';
-          }
-        },
-        false
-      );
-      count = count + 1;
+    },
+    onChange: function (selectedDates, dateStr, instance) {
+      handleDateAry(selectedDates);
     },
     onDayCreate: function (dObj, dStr, fp, dayElem) {
       // Utilize dayElem.dateObj, which is the corresponding Date
@@ -305,6 +375,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 邀請通知按鈕-回到首頁
     inviteNotifyBackIndex.addEventListener('click', () => {
       hiddenPopup();
+      popupPrevious.style.display = 'none';
       document.querySelector(`.timely-consult`).style.display = 'block';
       serviceMethodTab.style.display = 'flex';
     });
@@ -349,12 +420,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     popupPrevious.addEventListener('click', previousHandle);
   }
-  // 有 lawyer-card-popup 才執行
+
+  // 有 lawyer-card-popup 才執行，有空可整合
   if (document.querySelector('.lawyer-card-popup')) {
+    let lawyerCard = document.querySelectorAll('.lawyer-card-intro');
+    // 點擊卡片出現 popup
+    for (let i = 0; i < lawyerCard.length; i++) {
+      lawyerCard[i].addEventListener('click', () => {
+        document.querySelector('.lawyer-card-popup').style.display = 'block';
+      });
+    }
+
     document
       .querySelector('.lawyer-card-background')
       .addEventListener('click', function () {
         document.querySelector('.lawyer-card-popup').style.display = 'none';
       });
+  }
+  // 有 complaint-share-popup 才執行，有空跟 lawyer-card-popup 整合
+  if (document.querySelector('.complaint-share-popup')) {
+    let lawyerCard = document.querySelectorAll('.complaint-share-file');
+    // 點擊卡片出現 popup
+    for (let i = 0; i < lawyerCard.length; i++) {
+      lawyerCard[i].addEventListener('click', () => {
+        document.querySelector('.complaint-share-popup').style.display =
+          'block';
+      });
+    }
+
+    document
+      .querySelector('.complaint-share-background')
+      .addEventListener('click', function () {
+        document.querySelector('.complaint-share-popup').style.display = 'none';
+      });
+  }
+  let complaintTypeItem = document.querySelectorAll('.complaint-type li');
+  for (let i = 0; i < complaintTypeItem.length; i++) {
+    complaintTypeItem[i].addEventListener('click', () => {
+      window.location.href = 'complaint';
+    });
   }
 });

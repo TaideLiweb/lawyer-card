@@ -11,8 +11,7 @@
 
 .dayContainer {
     width: 380px;
-    height: 355px;
-    gap: 10px;
+    height: 330px;
     min-width: 380px;
     max-width: 380px;
 }
@@ -60,4 +59,10 @@
 
 .event.busy {
     background: #f64747;
+}
+
+.flatpickr-calendar .date-confirm {
+    padding: 10px 0px;
+    justify-content: center;
+    border-top: 1px solid #eee;
 }
